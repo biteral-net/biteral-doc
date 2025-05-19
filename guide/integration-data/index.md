@@ -1,4 +1,4 @@
 ---
-icon: database
+expanded: false
 ---
-# Integración de datos
+# Integrar datos

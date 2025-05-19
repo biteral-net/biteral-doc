@@ -1,4 +1,4 @@
 ---
-icon: gear
+expanded: false
 ---
-# Integración de herramientas
+# Integrar herramientas
