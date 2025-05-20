@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - first-version
+      - main
 
 jobs:
   publish:
