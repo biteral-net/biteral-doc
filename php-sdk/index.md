@@ -1,5 +1,6 @@
 ---
 title: PHP SDK
+icon: file-code
 ---
 # PHP SDK
 

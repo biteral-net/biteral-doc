@@ -1,6 +1,7 @@
 ---
 label: API
 expanded: true
+icon: /static/icons/technology/api.svg
 ---
 # API
 
