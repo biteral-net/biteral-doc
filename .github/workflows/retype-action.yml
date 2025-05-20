@@ -6,7 +6,6 @@ on:
       - main
 
 jobs:
-  runs-on: self-hosted
   publish:
     runs-on: ubuntu-latest
     permissions:
