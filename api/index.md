@@ -1,5 +1,6 @@
 ---
-title: API
+label: API
+expanded: true
 ---
 # API
 
