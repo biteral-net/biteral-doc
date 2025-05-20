@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:1.5;">
+    <path vector-effect="non-scaling-stroke" d="M6.421,30C6.421,43.022 16.978,53.579 30,53.579C16.978,53.579 6.421,43.022 6.421,30C6.421,23.781 8.878,17.815 13.255,13.4C13.279,13.376 23.482,23.244 23.506,23.22" style="fill:none;stroke:black;stroke-width:1.2px;"/>
+    <path vector-effect="non-scaling-stroke" d="M53.579,30C53.579,16.978 43.022,6.421 30,6.421C43.022,6.421 53.579,16.978 53.579,30C53.579,36.247 51.1,42.238 46.688,46.658C46.683,46.663 36.434,36.837 36.429,36.842" style="fill:none;stroke:black;stroke-width:1.2px;"/>
+    <circle vector-effect="non-scaling-stroke" cx="30" cy="30" r="16.508" style="fill:none;stroke:black;stroke-width:1.2px;"/>
+    <circle vector-effect="non-scaling-stroke" cx="30" cy="30" r="9.39" style="fill:none;stroke:black;stroke-width:1.2px;"/>
+</svg>

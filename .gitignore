@@ -1,0 +1,8 @@
+# Annoying files
+.DS_Store
+thumbs.db
+._*
+.sync-conflict-*
+
+# Do not track VSCode workspace
+*.code-workspace
