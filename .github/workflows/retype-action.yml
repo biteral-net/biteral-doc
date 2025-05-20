@@ -1,5 +1,4 @@
 name: Publish Retype powered website to GitHub Pages
-runs-on: self-hosted
 on:
   workflow_dispatch:
   push:
@@ -7,6 +6,7 @@ on:
       - main
 
 jobs:
+  runs-on: self-hosted
   publish:
     runs-on: ubuntu-latest
     permissions:
