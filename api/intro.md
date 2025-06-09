@@ -1,7 +1,6 @@
 ---
-label: API
-expanded: true
-icon: /static/icons/technology/api.svg
+label: Cómo conectar
+order: 1000
 ---
 # API
 
@@ -26,13 +25,17 @@ Sin embargo, la API key de pruebas tiene algunos límites:
 
 ### Cómo conectar
 
-Realiza peticiones [!badge variant="light" text="HTTPS"] a [!badge variant="light" text="https:\/\/api.biteral.net/v1"] incluyendo vuestra API key en el header [!badge variant="light" text="X-Key"]:
+Realiza peticiones [!badge variant="light" text="HTTPS"] a [!badge variant="light" text="https:\/\/api.biteral.net"] incluyendo los siguientes headers:
+
+- [!badge variant="warning" text="X-API-Key"] Vuestra API key
+- [!badge variant="warning" text="X-API-Version"] La versión mayor de la API que vas a utilizar, por ejemplo: [!badge variant="light" text="1"]
 
 +++ Curl
 ```shell
 curl \
-    -G https://api.biteral.net/v1/info \
-    -H 'X-Key: ux3HzRTaLGKvZjTb7ufaFUgJPvXbcNX7DWbnWAAUxQjHYqZJ'
+    -G https://api.biteral.net/status \
+    -H 'X-API-Key: ux3HzRTaLGKvZjTb7ufaFUgJPvXbcNX7DWbnWAAUxQjHYqZJ' \
+    -H 'X-API-Version: 1'
 ```
 +++ PHP
 ```php
