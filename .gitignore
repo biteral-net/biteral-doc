@@ -6,3 +6,5 @@ thumbs.db
 
 # Do not track VSCode workspace
 *.code-workspace
+
+.retype
