@@ -9,21 +9,24 @@
     <meta name="generator" content="Retype 3.10.0">
 
     <!-- Primary Meta Tags -->
-    <title>Productos | Inteligencia artificial para impulsar su comercio online</title>
-    <meta name="title" content="Productos | Inteligencia artificial para impulsar su comercio online">
+    <title>API | Inteligencia artificial para impulsar su comercio online</title>
+    <meta name="title" content="API | Inteligencia artificial para impulsar su comercio online">
+    <meta name="description" content="La API REST de Biteral es el principal método de conexión de vuestro sistema a Biteral, y es el método recomendado para integraciones de cualquier...">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://docs.biteral.net/guide/integration-data/products/">
+    <link rel="canonical" href="https://docs.biteral.net/api/intro/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://docs.biteral.net/guide/integration-data/products/">
-    <meta property="og:title" content="Productos | Inteligencia artificial para impulsar su comercio online">
+    <meta property="og:url" content="https://docs.biteral.net/api/intro/">
+    <meta property="og:title" content="API | Inteligencia artificial para impulsar su comercio online">
+    <meta property="og:description" content="La API REST de Biteral es el principal método de conexión de vuestro sistema a Biteral, y es el método recomendado para integraciones de cualquier...">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://docs.biteral.net/guide/integration-data/products/">
-    <meta property="twitter:title" content="Productos | Inteligencia artificial para impulsar su comercio online">
+    <meta property="twitter:url" content="https://docs.biteral.net/api/intro/">
+    <meta property="twitter:title" content="API | Inteligencia artificial para impulsar su comercio online">
+    <meta property="twitter:description" content="La API REST de Biteral es el principal método de conexión de vuestro sistema a Biteral, y es el método recomendado para integraciones de cualquier...">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
@@ -33,6 +36,7 @@
     <script data-cfasync="false" src="/resources/js/config.js?v=3.10.0.802779890695" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="/resources/js/retype.js?v=3.10.0" data-turbo-eval="false" defer></script>
     <script id="lunr-js" data-cfasync="false" src="/resources/js/lunr.js?v=3.10.0.802779890695" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="/resources/js/prism.js?v=3.10.0.802779890695" defer></script>
 
     <script>
         if (!window.localStorage.getItem('doc_theme')) {
@@ -186,12 +190,143 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="retype-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="productos" class="break-words">
+<doc-anchor-target id="api" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#productos">#</doc-anchor-trigger>
-        <span>Productos</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#api">#</doc-anchor-trigger>
+        <span>API</span>
     </h1>
 </doc-anchor-target>
+<p>La API REST de Biteral es el principal método de conexión de vuestro sistema a Biteral, y es el método recomendado para integraciones de cualquier tamaño flexibles y fiables.</p>
+<p>Si utilizas PHP, es recomendable utilizar el <a href="/php-sdk">SDK de Biteral para PHP</a>.</p>
+<doc-anchor-target id="antes-de-empezar">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#antes-de-empezar">#</doc-anchor-trigger>
+        <span>Antes de empezar</span>
+    </h3>
+</doc-anchor-target>
+<ol>
+<li>Crea una cuenta en <a href="https://biteral.net/signup">Biteral</a></li>
+<li>Obtén vuestra API key de pruebas desde el <a href="https://biteral.net/dashboard">dashboard</a></li>
+</ol>
+<doc-panel id="limitaciones-de-la-api-key-de-pruebas" collapsed>
+    <template #title>Limitaciones de la API key de pruebas</template>
+<p>La API key de pruebas os permite utilizar Biteral gratuitamente, ideal para realizar pruebas desde vuestro entorno de desarrollo y ver resultados reales sobre cómo funcionaría Biteral con vuestro sistema.</p>
+<p>Sin embargo, la API key de pruebas tiene algunos límites:</p>
+<ul class="list-icon">
+<li><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M13 17.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm-.25-8.25a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0v-4.5Z"/><path d="M9.836 3.244c.963-1.665 3.365-1.665 4.328 0l8.967 15.504c.963 1.667-.24 3.752-2.165 3.752H3.034c-1.926 0-3.128-2.085-2.165-3.752Zm3.03.751a1.002 1.002 0 0 0-1.732 0L2.168 19.499A1.002 1.002 0 0 0 3.034 21h17.932a1.002 1.002 0 0 0 .866-1.5L12.866 3.994Z"/></g></g></svg> Algunos endpoints tienen el máximo de peticiones por segundo limitado.</li>
+<li><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M13 17.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm-.25-8.25a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0v-4.5Z"/><path d="M9.836 3.244c.963-1.665 3.365-1.665 4.328 0l8.967 15.504c.963 1.667-.24 3.752-2.165 3.752H3.034c-1.926 0-3.128-2.085-2.165-3.752Zm3.03.751a1.002 1.002 0 0 0-1.732 0L2.168 19.499A1.002 1.002 0 0 0 3.034 21h17.932a1.002 1.002 0 0 0 .866-1.5L12.866 3.994Z"/></g></g></svg> Algunos endpoints sólo pueden recibir cierto número de peticiones por día.</li>
+</ul>
+</doc-panel>
+<doc-anchor-target id="cómo-conectar">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#cómo-conectar">#</doc-anchor-trigger>
+        <span>Cómo conectar</span>
+    </h3>
+</doc-anchor-target>
+<p>Realiza peticiones <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-gray-700 dark:text-dark-600 bg-white border border-gray-300 dark:border-transparent h-6 px-2 text-xs rounded-md">
+    <span>HTTPS</span>
+</span> a <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-gray-700 dark:text-dark-600 bg-white border border-gray-300 dark:border-transparent h-6 px-2 text-xs rounded-md">
+    <span>https://api.biteral.net</span>
+</span> incluyendo los siguientes headers:</p>
+<ul>
+<li><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-6 px-2 text-xs rounded-md">
+    <span>X-API-Key</span>
+</span> Vuestra API key</li>
+<li><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-6 px-2 text-xs rounded-md">
+    <span>X-API-Version</span>
+</span> La versión mayor de la API que vas a utilizar, por ejemplo: <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-gray-700 dark:text-dark-600 bg-white border border-gray-300 dark:border-transparent h-6 px-2 text-xs rounded-md">
+    <span>1</span>
+</span></li>
+</ul>
+<doc-tabs>
+<doc-tab v-cloak id="curl">
+<template #title>Curl</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">curl \
+    -G https://api.biteral.net/status \
+    -H 'X-API-Key: ux3HzRTaLGKvZjTb7ufaFUgJPvXbcNX7DWbnWAAUxQjHYqZJ' \
+    -H 'X-API-Version: 1'</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="php">
+<template #title>PHP</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-php"><code v-pre class="language-php">use Biteral\Client;
+$biteralClient = new Client('ux3HzRTaLGKvZjTb7ufaFUgJPvXbcNX7DWbnWAAUxQjHYqZJ');
+$status = $biteralClient-&gt;getInfo();
+print_r($status);</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="códigos-de-respuesta">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#códigos-de-respuesta">#</doc-anchor-trigger>
+        <span>Códigos de respuesta</span>
+    </h3>
+</doc-anchor-target>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Código</th>
+<th>Tipo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>La solicitud se completó exitosamente.</td>
+</tr>
+<tr>
+<td>201</td>
+<td>Created</td>
+<td>La solicitud se completó y se creó un nuevo recurso.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>Bad Request</td>
+<td>La petición se realizó de forma incorrecta, o alguno de los datos incluidos no tenía el formato o la sintaxis correcta.</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td>La solicitud requiere autenticación, y no proporcionaste una API Key válida.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td>El cliente no tiene permiso para acceder al recurso solicitado.</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+<td>El recurso solicitado no se encontró.</td>
+</tr>
+<tr>
+<td>405</td>
+<td>Method Not Allowed</td>
+<td>El método HTTP utilizado no está permitido para el recurso solicitado.</td>
+</tr>
+<tr>
+<td>429</td>
+<td>Too Many Requests</td>
+<td>Realizaste demasiadas solicitudes en un período de tiempo corto.</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error</td>
+<td>El servidor encontró un error interno que impidió procesar la solicitud.</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable</td>
+<td>El servidor no está disponible temporalmente debido a mantenimiento o sobrecarga.</td>
+</tr>
+</tbody>
+</table>
+</div>
 
                                 
                                 <!-- Required only on API pages -->
@@ -201,20 +336,20 @@
                             
                                 <nav id="retype-nextprev" class="print:hidden flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="/guide/integration-data/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Anterior</span>
-                                                <span class="block mt-1">Integrar datos</span>
+                                                <span class="block mt-1">Inicio</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="/guide/integration-data/customers/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="/api/versions/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Siguiente</span>
-                                                <span class="block mt-1">Clientes</span>
+                                                <span class="block mt-1">Versiones</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -264,6 +399,6 @@
 
     <div id="retype-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Productos", level: 3, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Cómo conectar", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
