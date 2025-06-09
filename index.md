@@ -1,6 +1,5 @@
 ---
 title: Inicio
-icon: arrow-right
 ---
 # Documentación Biteral
 
