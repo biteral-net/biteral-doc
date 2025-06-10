@@ -10,4 +10,4 @@ Por eso, es imprescindible que añadas el header [!badge variant="warning" text=
 
 > En la documentación marcamos cada funcionalidad con una etiqueta como [!badge variant="success" text="v1"] para que sepas en qué versión está disponible.
 
-> Para obtener información sobre las versiones disponible, utiliza el endpoint [!badge variant="dark" text="/status"](/api/endpoints/status.md)
+> Para obtener información sobre las versiones disponibles, utiliza el endpoint [!badge variant="dark" text="/status"](/api/endpoints/status.md)
