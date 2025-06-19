@@ -3,40 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.10.0.803662009452">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.10.0.803674215516">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.10.0">
 
     <!-- Primary Meta Tags -->
-    <title>Instalaci&#243;n | Inteligencia artificial para impulsar su comercio online</title>
-    <meta name="title" content="Instalación | Inteligencia artificial para impulsar su comercio online">
-    <meta name="description" content="El SDK de Biteral PHP es un package para composer que te permite integrar con facilidad Biteral en bases de código PHP.">
+    <title>/products | Inteligencia artificial para impulsar su comercio online</title>
+    <meta name="title" content="/products | Inteligencia artificial para impulsar su comercio online">
+    <meta name="description" content="Actualiza los datos que especifiques sobre un producto. Los datos que no especifiques no cambiarán.">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://docs.biteral.net/php-sdk/installation/">
+    <link rel="canonical" href="https://docs.biteral.net/api/endpoints/products/patch/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://docs.biteral.net/php-sdk/installation/">
-    <meta property="og:title" content="Instalación | Inteligencia artificial para impulsar su comercio online">
-    <meta property="og:description" content="El SDK de Biteral PHP es un package para composer que te permite integrar con facilidad Biteral en bases de código PHP.">
+    <meta property="og:url" content="https://docs.biteral.net/api/endpoints/products/patch/">
+    <meta property="og:title" content="/products | Inteligencia artificial para impulsar su comercio online">
+    <meta property="og:description" content="Actualiza los datos que especifiques sobre un producto. Los datos que no especifiques no cambiarán.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://docs.biteral.net/php-sdk/installation/">
-    <meta property="twitter:title" content="Instalación | Inteligencia artificial para impulsar su comercio online">
-    <meta property="twitter:description" content="El SDK de Biteral PHP es un package para composer que te permite integrar con facilidad Biteral en bases de código PHP.">
+    <meta property="twitter:url" content="https://docs.biteral.net/api/endpoints/products/patch/">
+    <meta property="twitter:title" content="/products | Inteligencia artificial para impulsar su comercio online">
+    <meta property="twitter:description" content="Actualiza los datos que especifiques sobre un producto. Los datos que no especifiques no cambiarán.">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link href="/static/favicon.png" rel="icon">
-    <link href="/resources/css/retype.css?v=3.10.0.803662009452" rel="stylesheet">
+    <link href="/resources/css/retype.css?v=3.10.0.803674215516" rel="stylesheet">
 
-    <script data-cfasync="false" src="/resources/js/config.js?v=3.10.0.803662009452" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="/resources/js/config.js?v=3.10.0.803674215516" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="/resources/js/retype.js?v=3.10.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="/resources/js/lunr.js?v=3.10.0.803662009452" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="/resources/js/prism.js?v=3.10.0.803662009452" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="/resources/js/lunr.js?v=3.10.0.803674215516" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="/resources/js/prism.js?v=3.10.0.803674215516" defer></script>
 
     <script>
         if (!window.localStorage.getItem('doc_theme')) {
@@ -190,48 +190,21 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="retype-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="php-sdk" class="break-words">
+<doc-anchor-target id="products" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#php-sdk">#</doc-anchor-trigger>
-        <span>PHP SDK</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#products">#</doc-anchor-trigger>
+        <span>/products</span>
     </h1>
 </doc-anchor-target>
-<p>El SDK de Biteral PHP es un package para composer que te permite integrar con facilidad Biteral en bases de código PHP.</p>
-<p>
-<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
-    <div class="flex items-center text-blue-500 dark:text-blue-400">
-        <span class="inline-block mb-px">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
-        </span>
-        <span class="inline-block font-medium ml-2">SDK de Biteral en Github</span>
-    </div>
-    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
-        <span>https://github.com/biteral-net/biteral-sdk-php</span>
-    </div>
-    <a href="https://github.com/biteral-net/biteral-sdk-php" class="absolute block inset-0"></a>
-</div>
-</p>
-<doc-anchor-target id="instala-el-sdk-con-composer">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#instala-el-sdk-con-composer">#</doc-anchor-trigger>
-        <span>Instala el SDK con composer</span>
-    </h3>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-bash"><code v-pre class="language-bash">composer require biteral/biteral-sdk-php</code></pre>
-</doc-codeblock></div>
-<p>Con esto ya puedes empezar a integrar Biteral. Primero, crea un cliente:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-php"><code v-pre class="language-php">use Biteral\Client;
-$biteralClient = new Client('ux3HzRTaLGKvZjTb7ufaFUgJPvXbcNX7DWbnWAAUxQjHYqZJ');</code></pre>
-</doc-codeblock></div>
-<p>y realiza peticiones como <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
-    <span>getInfo</span>
+<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-6 px-2 text-xs rounded-md">
+    <span>PATCH</span>
+</span> <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-6 px-2 text-xs rounded-md">
+    <span>v1</span>
 </span></p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-php"><code v-pre class="language-php">$status = $biteralClient-&gt;getInfo();</code></pre>
-</doc-codeblock></div>
-<p>que devuelve un array con información sobre la conexión o el estado de la API:</p>
+<p>Actualiza los datos que especifiques sobre un producto. Los datos que no especifiques no cambiarán.</p>
+<doc-tabs>
+<doc-tab v-cloak id="resultado">
+<template #title>Resultado</template>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-json"><code v-pre class="language-json">{
     &quot;entity&quot;: &quot;Status&quot;,
@@ -257,6 +230,8 @@ $biteralClient = new Client('ux3HzRTaLGKvZjTb7ufaFUgJPvXbcNX7DWbnWAAUxQjHYqZJ');
     &quot;environment&quot;: &quot;prod&quot;
 }</code></pre>
 </doc-codeblock></div>
+</doc-tab>
+</doc-tabs>
 
                                 
                                 <!-- Required only on API pages -->
@@ -266,20 +241,20 @@ $biteralClient = new Client('ux3HzRTaLGKvZjTb7ufaFUgJPvXbcNX7DWbnWAAUxQjHYqZJ');
                             
                                 <nav id="retype-nextprev" class="print:hidden flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="/guide/integration-tools/profiletags/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="/api/endpoints/products/put/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Anterior</span>
-                                                <span class="block mt-1">Etiquetas de cliente</span>
+                                                <span class="block mt-1">Put</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="/php-sdk/usage/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="/api/endpoints/products/get/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Siguiente</span>
-                                                <span class="block mt-1">Uso</span>
+                                                <span class="block mt-1">Get</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -329,6 +304,6 @@ $biteralClient = new Client('ux3HzRTaLGKvZjTb7ufaFUgJPvXbcNX7DWbnWAAUxQjHYqZJ');
 
     <div id="retype-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Instalación", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Patch", level: 4, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
