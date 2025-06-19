@@ -28,7 +28,7 @@ Sin embargo, la API key de pruebas tiene algunos límites:
 Realiza peticiones [!badge variant="light" text="HTTPS"] a [!badge variant="light" text="https:\/\/api.biteral.net"] incluyendo los siguientes headers:
 
 - [!badge variant="warning" text="X-API-Key"] Vuestra API key
-- [!badge variant="warning" text="X-API-Version"] La versión mayor de la API que vas a utilizar, por ejemplo: [!badge variant="light" text="1"]
+- [!badge variant="warning" text="X-API-Version"] La versión principal de la API que vas a utilizar, por ejemplo: [!badge variant="light" text="1"]
 
 +++ Curl
 ```shell
