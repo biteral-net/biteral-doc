@@ -1,10 +1,11 @@
 ---
-label: /status
+label: Put
+order: 90
 ---
-# /status
-[!badge variant="success" text="GET"] [!badge variant="success" text="v1"]
+# /products
+[!badge variant="success" text="PUT"] [!badge variant="success" text="v1"]
 
-Obtiene información sobre el estado de la API y otros parámetros útiles como tus credenciales, la versión que estás utilizando y las versiones disponibles.
+Reemplaza todo el contenido del producto en lugar de cambiar sólo algunos datos como haría una petición [!badge variant="secondary" text="PATCH"]. Esto significa que si omites algún dato (por ejemplo, la descripción o los atributos), esos datos se eliminarán del producto en Biteral.
 
 +++ Resultado
 ```json

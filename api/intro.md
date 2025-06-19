@@ -40,8 +40,8 @@ curl \
 +++ PHP
 ```php
 use Biteral\Client;
-$biteralClient = new Client('ux3HzRTaLGKvZjTb7ufaFUgJPvXbcNX7DWbnWAAUxQjHYqZJ');
-$status = $biteralClient->getInfo();
+$client = new Client('ux3HzRTaLGKvZjTb7ufaFUgJPvXbcNX7DWbnWAAUxQjHYqZJ');
+$status = $client->getInfo();
 print_r($status);
 ```
 +++
