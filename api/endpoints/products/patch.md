@@ -1,10 +1,11 @@
 ---
-label: /status
+label: Patch
+order: 80
 ---
-# /status
-[!badge variant="success" text="GET"] [!badge variant="success" text="v1"]
+# /products
+[!badge variant="success" text="PATCH"] [!badge variant="success" text="v1"]
 
-Obtiene información sobre el estado de la API y otros parámetros útiles como tus credenciales, la versión que estás utilizando y las versiones disponibles.
+Actualiza los datos que especifiques sobre un producto. Los datos que no especifiques no cambiarán.
 
 +++ Resultado
 ```json
