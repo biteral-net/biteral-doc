@@ -4,7 +4,7 @@ label: /status
 # /status
 [!badge variant="success" text="GET"] [!badge variant="success" text="v1"]
 
-Obtener información sobre el estado de la API y otros parámetros útiles como tus credenciales, la versión que estás utilizando las versiones disponibles.
+Obtener información sobre el estado de la API y otros parámetros útiles como tus credenciales, la versión que estás utilizando y las versiones disponibles.
 
 +++ Resultado
 ```json
