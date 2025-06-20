@@ -4,14 +4,33 @@ order: 60
 icon: chevron-right
 ---
 # /products
-[!badge variant="success" text="DELETE"] [!badge variant="success" text="v1"]
+[!badge variant="success" text="v1"]
 
-Elimina un producto.
+### `DELETE` Eliminar un producto
 
-#### Parámetros
++++ JSON request body
+
+Para localizar un producto a través de su código:
+
+```json
+{ "code": "N39291" }
+```
+
+Para localizar un producto a través de su id en Biteral:
+
+```json
+{ "id": "pro_f28Jfk0i28iXIs" }
+```
+
++++ Documentación
+
 |
 --|--
 [!badge variant="warning" text="code"]|Código de producto, por ejemplo `N39291`
-[!badge variant="warning" text="id"]|Id en Biteral del producto, por ejemplo `pro_f28Jfk2i22i2Is`
+[!badge variant="warning" text="id"]|Identificador del producto en Biteral, por ejemplo: `pro_f28Jfk0i28iXIs`
 
-Especifica uno de los dos parámetros.
++++ Resultado
+
+Este endpoint no devuelve ningún resultado
+
++++

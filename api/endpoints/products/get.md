@@ -4,24 +4,37 @@ order: 70
 icon: chevron-right
 ---
 # /products
-[!badge variant="success" text="GET"] [!badge variant="success" text="v1"]
+[!badge variant="success" text="v1"]
 
-Obtiene información sobre un producto en Biteral.
+### `GET` Obtener un producto
 
-#### Parámetros
++++ JSON request body
+
+Para localizar un producto a través de su código:
+
+```json
+{ "code": "N39291" }
+```
+
+Para localizar un producto a través de su id en Biteral:
+
+```json
+{ "id": "pro_f28Jfk0i28iXIs" }
+```
+
++++ Documentación
+
 |
 --|--
 [!badge variant="warning" text="code"]|Código de producto, por ejemplo `N39291`
-[!badge variant="warning" text="id"]|Id en Biteral del producto, por ejemplo `pro_f28Jfk2i22i2Is`
+[!badge variant="warning" text="id"]|Identificador del producto en Biteral, por ejemplo: `pro_f28Jfk0i28iXIs`
 
-Especifica uno de los dos parámetros.
-
-#### Resultado
++++ Resultado
 
 ```json
 {
     "entity": "Product",
-    "id": "pro_f28Jfk2i22i2Is",
+    "id": "pro_f28Jfk0i28iXIs",
     "data": {
         "code": "N39291",
         "isActive": true,
@@ -56,3 +69,5 @@ Especifica uno de los dos parámetros.
     "readyAt": "2025-06-21T12:33:08+00:00"
 }
 ```
+
++++
