@@ -1,5 +1,6 @@
 ---
 title: Inicio
+icon: home
 ---
 # Documentación Biteral
 

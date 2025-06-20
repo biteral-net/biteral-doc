@@ -12,7 +12,7 @@ La eficacia de las herramientas de Biteral depende directamente de la calidad de
 
 Si no puedes proporcionar datos de calidad en todos los campos (título, descripción o atributos), asegúrate de que al menos uno de ellos contenga información completa y relevante.
 
-#### Ejemplos de títulos
+### Ejemplos de títulos
 
 [!badge variant="danger" icon="circle-slash" text="Mala calidad"] | [!badge variant="success" icon="check" text="Buena calidad"]
 --- | ---
@@ -23,7 +23,7 @@ Oso de peluche | Oso de peluche Disney gigante, 100 cm, color marrón claro
 Silla de oficina | Silla ergonómica de oficina con respaldo de malla, reposabrazos ajustables y ruedas giratorias
 Novela histórica | “La sombra del viento” de Carlos Ruiz Zafón, edición tapa blanda, 576 páginas
 
-#### Ejemplos de descripciones
+### Ejemplos de descripciones
 
 [!badge variant="danger" icon="circle-slash" text="Mala calidad"] | [!badge variant="success" icon="check" text="Buena calidad"]
 --- | ---
@@ -32,7 +32,7 @@ Teléfono con buena cámara y muchas funciones. Muy rápido. | El Samsung Galaxy
 Sartén resistente y fácil de limpiar. Buena para cocinar de todo. | Sartén antiadherente de 24 cm fabricada en aluminio fundido, compatible con todo tipo de cocinas, incluida inducción. Revestimiento libre de PFOA, mango ergonómico de baquelita resistente al calor. Apta para lavavajillas.
 Vela con olor agradable. Perfecta para casa. | Vela aromática fabricada con cera de soja natural, fragancia de vainilla con notas de madera. Duración aproximada: 40 horas. Presentación en frasco de vidrio ámbar con tapa metálica. Ideal para ambientes relajantes.
 
-#### Ejemplos de atributos
+### Ejemplos de atributos
 
 
 ||| [!badge variant="danger" icon="circle-slash" text="Mala calidad"]

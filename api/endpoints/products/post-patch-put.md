@@ -1,14 +1,45 @@
 ---
-label: Post
+label: Post, patch & put
 order: 100
 icon: chevron-right
 ---
 # /products
-[!badge variant="success" text="POST"] [!badge variant="success" text="PATCH"] [!badge variant="success" text="PUT"] [!badge variant="success" text="v1"]
+[!badge variant="success" text="v1"]
 
-Crea un producto en Biteral al realizar una petición `POST`.
+### `POST` Crear un producto
 
-#### Parámetros
++++ JSON request body
+
+```json
+{
+    "code": "N39291",
+    "title": "Zapatillas deportivas urbanas para hombre – modelo AirFlow",
+    "description": "Estas zapatillas combinan estilo y comodidad para el uso diario. Diseñadas con materiales transpirables, suela de goma antideslizante y plantilla ergonómica, son ideales tanto para caminar por la ciudad como para entrenar en interiores. El modelo AirFlow ofrece un ajuste perfecto y un diseño moderno que se adapta a cualquier look casual. Disponibles en varias tallas y colores.",
+    "price": {
+        "amount": 49.95,
+        "currency": "EUR"
+    },
+    "attributes": [
+        {"name": "Material", "value": "Cuero"},
+        {"name": "Color", "value": "negro con detalles en gris"},
+        {"name": "Tallas disponibles", "value": "39, 40, 41, 42, 43, 44"},
+        {"name": "Suela", "value": "goma antideslizante"},
+        {"name": "Peso", "value": "850g (par, talla 42)"},
+        {"name": "Uso recomendado", "value": "Uso diario y entrenamiento ligero"},
+    ],
+    "brand": {
+        "code": "OW142398",
+        "name": "Nike"
+    },
+    "category": {
+        "code": "MC418298",
+        "name": "Zapatillas deportivas"
+    }
+}
+```
+
++++ Documentación
+
 |
 --|--
 [!badge variant="warning" text="code"]|Código de producto, por ejemplo `N39291` [!badge variant="danger" icon="lock" text="Requerido"]|
@@ -16,18 +47,16 @@ Crea un producto en Biteral al realizar una petición `POST`.
 [!badge variant="warning" text="description"]|Descripción del producto.
 [!badge variant="warning" text="price"]|El precio del producto, por ejemplo `24.95`
 [!badge variant="warning" text="currency"]|La moneda en la que se expresa el precio, según el estándar [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217). Por ejemplo `EUR`
-[!badge variant="warning" text="attributes"]|Los atributos del producto, en formato JSON, por ejemplo: `[{"name": "Material", "value": "cuero"}, {"name": "Color", "value": "negro con detalles en gris"}]`
-[!badge variant="warning" text="brandName"]|El nombre de la marca del producto.
-[!badge variant="warning" text="brandCode"]|Código de la marca del producto, por ejemplo `OW142398`
-[!badge variant="warning" text="categoryName"]|El nombre de la categoría del producto.
-[!badge variant="warning" text="categoryCode"]|Código de la categoría, por ejemplo `MC418298`
+[!badge variant="warning" text="attributes"]|Los atributos del producto
+[!badge variant="warning" text="brand"]|La marca del producto
+[!badge variant="warning" text="category"]|La categoría del producto
 
-#### Resultado
++++ Resultado
 
 ```json
 {
     "entity": "Product",
-    "id": "pro_f28Jfk2i22i2Is",
+    "id": "pro_f28Jfk0i28iXIs",
     "data": {
         "code": "N39291",
         "isActive": true,
@@ -63,10 +92,55 @@ Crea un producto en Biteral al realizar una petición `POST`.
 }
 ```
 
-#### Actualizar con `PATCH`
++++
+
+### `PATCH` Actualizar un producto
 
 Para actualizar los datos sobre un producto, realiza una petición `PATCH` a este endpoint. Los datos especificados se actualizarán, y los demás permanecerán igual.
 
-#### Reemplazar con `PUT`
+### `PUT` Reemplazar un producto
 
 Para reemplazar todos los datos sobre un producto, realiza una petición `PUT`. Los datos que no especifiques se eliminarán del producto.
+
+### Cargar varios productos a la vez
+
+Puedes cargar los productos uno a uno, pero es más rápido cargarlos en bloques. Para hacerlo, pasa los productos en forma de un array, por ejemplo:
+
+```json
+[
+    {
+        "code": "N39291",
+        "title": "Zapatillas deportivas urbanas para hombre – modelo AirFlow",
+        "description": "Estas zapatillas combinan estilo y comodidad para el uso diario. Diseñadas con materiales transpirables, suela de goma antideslizante y plantilla ergonómica, son ideales tanto para caminar por la ciudad como para entrenar en interiores. El modelo AirFlow ofrece un ajuste perfecto y un diseño moderno que se adapta a cualquier look casual. Disponibles en varias tallas y colores.",
+        "price": {
+            "amount": 49.95,
+            "currency": "EUR"
+        },
+        "attributes": [
+            {"name": "Material", "value": "Cuero"},
+            {"name": "Color", "value": "negro con detalles en gris"},
+            {"name": "Tallas disponibles", "value": "39, 40, 41, 42, 43, 44"},
+            {"name": "Suela", "value": "goma antideslizante"},
+            {"name": "Peso", "value": "850g (par, talla 42)"},
+            {"name": "Uso recomendado", "value": "Uso diario y entrenamiento ligero"},
+        ],
+        "brand": {
+            "code": "OW142398",
+            "name": "Nike"
+        },
+        "category": {
+            "code": "MC418298",
+            "name": "Zapatillas deportivas"
+        }
+    },
+    {
+        "code" : "J481955"
+        ...
+    },
+    ...
+]
+```
+
+!!!secondary
+Puedes cargar hasta 100 productos a la vez utilizando este método
+!!!
