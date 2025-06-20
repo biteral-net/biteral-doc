@@ -4,3 +4,35 @@
         location.reload();
     }
 </script>
+
+<style>
+    :root {
+        --font-family-title: 'D-DIN Exp';
+    }
+
+    @font-face
+    {
+        font-family: 'D-DIN Exp';
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+        src:
+            url("static/fonts/DIN/DIN-Exp.woff");
+            format('woff');
+    }
+
+    @font-face
+    {
+        font-family: 'D-DIN Exp';
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+        src:
+            url("static/fonts/DIN/DIN-Exp-Bold.woff");
+            format('woff');
+    }
+
+    h1, h2, h3, h4, h5 {
+        font-family: var(--font-family-title);
+    }
+</style>
