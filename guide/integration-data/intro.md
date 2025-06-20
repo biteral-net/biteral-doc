@@ -24,13 +24,12 @@ Identificadores internos para el seguimiento de cada cliente: ubicación, tipo d
 Acciones que los clientes realizan: visitas a productos, compras, añadir al carrito, etc.
 |||
 
-### Decide el método de integración de datos
+### Métodos de integración
 
-Para empezar, decide si vas a realizar peticiones a la API de Biteral directamente, o si prefieres utilizar el SDK para PHP de Biteral:
+||| **:icon-file-code: SDK PHP**
+Si trabajas con PHP, te recomendamos utilizar [el SDK para PHP de Biteral](/php-sdk/intro). Es la forma más sencilla, flexible y segura de integrar la plataforma.
+||| **![](/static/icons/technology/api.svg){width="18"} Api**
+Utiliza la [API de Biteral](/api/intro) desde cualquier plataforma o lenguaje de programación conectando directamente.
+|||
 
-[!ref Cómo utilizar la API directamente](/api/intro)
-[!ref Cómo utilizar el SDK para PHP](/php-sdk/intro)
-
-!!!secondary
-Si utilizas PHP te recomendamos que utilices el SDK, que permite conectar con Biteral muy fácilmente y proporciona herramientas adicionales que te facilitarán enormemente la integración.
-!!!
+Continúa a la página siguiente para aprender cómo enviar tus primeros productos a Biteral:
