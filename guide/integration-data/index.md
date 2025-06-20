@@ -1,5 +1,5 @@
 ---
-label: Introducción
+label: Integrar datos
 order: 1000
 icon: bookmark
 expanded: true

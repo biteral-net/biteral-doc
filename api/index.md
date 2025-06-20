@@ -1,7 +1,8 @@
 ---
-label: Cómo conectar
-order: 1000
-icon: chevron-right
+expanded: false
+label: API
+icon: /static/icons/technology/api.svg
+order: 100
 ---
 # API
 

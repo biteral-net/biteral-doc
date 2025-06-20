@@ -108,8 +108,7 @@ $product = $client->products()->post(
             category: new ProductCategoryPayload('MC418298', 'Zapatillas deportivas')
         ),
         new ProductPayload(
-            code: 'N39291',
-            title: 'Zapatillas deportivas urbanas para hombre – modelo AirFlow',
+            code: 'J481955',
             ...
         ),
         ...
