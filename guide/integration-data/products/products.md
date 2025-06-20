@@ -4,7 +4,7 @@ icon: /static/icons/product.svg
 ---
 # ![](/static/icons/product.svg){width="40"} Productos
 
-Para empezar, realiza un envío masivo de todos los productos que están a la venta para que Biteral pueda trabajar. Más adelante podrás actualizar productos individualmente, o eliminarlos cuando ya no estén disponibles.
+Primero realiza un envío masivo de todos los productos que están a la venta para que Biteral pueda empezar a trabajar. Más adelante podrás actualizar productos individualmente, o eliminarlos cuando ya no estén disponibles.
 
 Puedes hacer peticiones a la API directamente, o utilizar el [SDK de Biteral para PHP](/php-sdk).
 
@@ -20,7 +20,6 @@ $client->products()->post(
         code: 'N39291',
         title: 'Zapatillas deportivas urbanas para hombre – modelo AirFlow',
         description: 'Estas zapatillas combinan estilo y comodidad para el uso diario. Diseñadas con materiales transpirables, suela de goma antideslizante y plantilla ergonómica, son ideales tanto para caminar por la ciudad como para entrenar en interiores. El modelo AirFlow ofrece un ajuste perfecto y un diseño moderno que se adapta a cualquier look casual. Disponibles en varias tallas y colores.',
-        brand: 'Nike',
         attributes: [
             new ProductAttribute('Material', 'cuero'),
             new ProductAttribute('Color', 'negro con detalles en gris'),
