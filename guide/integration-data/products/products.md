@@ -6,13 +6,13 @@ icon: /static/icons/product.svg
 
 Primero realiza un envío masivo de todos los productos que están a la venta para que Biteral pueda empezar a trabajar. Más adelante podrás actualizar productos individualmente, o eliminarlos cuando ya no estén disponibles.
 
-Puedes hacer peticiones a la API directamente, o utilizar el [SDK de Biteral para PHP](/php-sdk).
+Puedes hacer peticiones a la API directamente, o utilizar el [SDK de Biteral para PHP](/php-sdk/intro).
 
 [!ref Cómo realizar peticiones a la API](/api/intro)
 
 #### Enviar un producto con la API
 
-Haz una petición [!badge variant="secondary" text="POST"] al endpoint [!badge /products](/api/endpoints/products/post). Si utilizas el SDK para PHP, tendría este aspecto:
+Haz una petición [!badge variant="secondary" text="POST"] al endpoint [!badge /products](/api/endpoints/products/post-patch-put). Si utilizas el SDK para PHP, tendría este aspecto:
 
 ```php
 $client->products()->post(
@@ -48,7 +48,7 @@ Cuanta más información precisa, estructurada y actualizada recibimos, mejores 
 
 #### Actualización de productos
 
-Cuando los datos de vuestros productos cambien, haz una petición [!badge variant="secondary" text="PATCH"] al endpoint [!badge /products](/api/endpoints/products/patch) con el código de producto que cambió, y especifica sólo los datos que han cambiado:
+Cuando los datos de vuestros productos cambien, haz una petición [!badge variant="secondary" text="PATCH"] al endpoint [!badge /products](/api/endpoints/products/post-patch-put) con el código de producto que cambió, y especifica sólo los datos que han cambiado:
 
 ```php
 $client->products()->patch(
@@ -64,7 +64,7 @@ $client->products()->patch(
 
 Normalmente no querrás que los productos que están fuera de stock sean tenidos en cuenta por las herramientas de Biteral como, por ejemplo, las recomendaciones personalizadas.
 
-Si es así, cuando un producto esté fuera de stock, haz una petición [!badge variant="secondary" text="PATCH"] al endpoint [!badge /products](/api/endpoints/products/post) con el dato [!badge variant="warning" text="isActive"] como `false`:
+Si es así, cuando un producto esté fuera de stock, haz una petición [!badge variant="secondary" text="PATCH"] al endpoint [!badge /products](/api/endpoints/products/post-patch-put) con el dato [!badge variant="warning" text="isActive"] como `false`:
 
 ```php
 $client->products()->post(

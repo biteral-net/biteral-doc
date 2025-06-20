@@ -1,5 +1,8 @@
 ---
-expanded: false
+label: Introducción
+order: 1000
+icon: bookmark
+expanded: true
 ---
 # Integrar datos
 
@@ -21,4 +24,4 @@ Identificadores internos para el seguimiento de cada cliente: ubicación, tipo d
 Acciones que los clientes realizan: visitas a productos, compras, añadir al carrito, etc.
 |||
 
-A continuación veremos cómo integrar cada uno de ellos a través de la API.
+A continuación veremos cómo integrar cada uno de ellos en vuestro sistema.

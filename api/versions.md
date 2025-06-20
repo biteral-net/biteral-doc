@@ -1,6 +1,7 @@
 ---
 label: Versiones
 order: 900
+icon: chevron-right
 ---
 # Versiones
 

@@ -1,12 +1,13 @@
 ---
 label: Cómo conectar
 order: 1000
+icon: chevron-right
 ---
 # API
 
 La API REST de Biteral es el principal método de conexión de vuestro sistema a Biteral, y es el método recomendado para integraciones de cualquier tamaño flexibles y fiables.
 
-Si utilizas PHP, es recomendable utilizar el [SDK de Biteral para PHP](/php-sdk).
+Si utilizas PHP, es recomendable utilizar el [SDK de Biteral para PHP](/php-sdk/intro).
 
 ### Antes de empezar
 

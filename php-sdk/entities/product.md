@@ -2,6 +2,7 @@
 label: Product
 expanded: false
 order: 80
+icon: chevron-right
 ---
 # Entidad [!badge variant="info" text="Product"]
 
