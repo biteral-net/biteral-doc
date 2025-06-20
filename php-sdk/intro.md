@@ -1,8 +1,8 @@
 ---
-label: PHP SDK
-icon: file-code
 expanded: false
-order: 80
+label: Introducción
+order: 1000
+icon: chevron-right
 ---
 # PHP SDK
 
@@ -56,11 +56,3 @@ que devuelve un array con información sobre la conexión o el estado de la API:
     "environment": "prod"
 }
 ```
-
-### Uso
-
-Las clases y métodos del SDK son un reflejo de la API, y hemos incluido ejemplos de uso del SDK en [las guías](/guide/integration-data/products) y en cada [endpoint](/api/endpoints/status).
-
-!!!
-Las sugerencias de código de tu IDE te mostrarán documentación sobre cada método y cómo utilizarlo.
-!!!

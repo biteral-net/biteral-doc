@@ -1,3 +1,4 @@
 expanded: false
 label: Entidades
-order: 100
+order: 10
+icon: file-directory

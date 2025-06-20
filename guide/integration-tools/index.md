@@ -1,4 +1,0 @@
----
-expanded: false
----
-# Integrar herramientas
