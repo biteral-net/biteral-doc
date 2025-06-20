@@ -34,15 +34,37 @@ Vela con olor agradable. Perfecta para casa. | Vela aromática fabricada con cer
 
 #### Ejemplos de atributos
 
-| &nbsp; | [!badge variant="danger" icon="circle-slash" text="Mala calidad"] | [!badge variant="success" icon="check" text="Buena calidad"]
---- | --- | ---
-|**Cámara fotográfica** | **Zoom** Sí | **Zoom** Óptico 10x, digital 100x |
-&nbsp; | **Calidad de imagen** alta | **Sensor** CMOS APS-C de 24.2 MP |
-&nbsp; | **Vídeo** Sí | **Vídeo** Full HD 1080p a 60 fps |
-|**Bolso de mujer** | **Material** Piel | **Material** Piel auténtica con tratamiento antidesgaste |
-&nbsp; | **Uso** Diario | **Dimensiones** 32×24×12 cm |
-|**Colchón** | **Medidas** Cama grande | **Medidas** 150x190cm |
-&nbsp; | **Material** Espuma viscoelástica | **Material** Capa viscoelástica de 4cm, espuma HR 30 kg/m³, con tratamiento antibacteriano |
-|**Gel de ducha** | **Aroma** Cítrico | **Aroma** Cítrico fresco con notas de lima y mandarina |
-&nbsp; | **Tipo de piel** Todo tipo | **Tipo de piel** Apto para todo tipo de piel, incluso sensible |
-&nbsp; | **Envase** 500 ml | **Envase** 500 ml, botella reciclable con dosificador |
+
+||| [!badge variant="danger" icon="circle-slash" text="Mala calidad"]
+**Cámara fotográfica**
+- **Zoom** Sí
+- **Vídeo** Sí
+- **Sensor** 24.2 MP
+||| [!badge variant="success" icon="check" text="Buena calidad"]
+**Cámara fotográfica**
+- **Zoom** Óptico 10x, digital 100x
+- **Vídeo** Full HD 1080p a 60 fps
+- **Sensor** CMOS APS-C de 24.2 MP
+|||
+
+||| [!badge variant="danger" icon="circle-slash" text="Mala calidad"]
+**Colchón**
+- **Tamaño** Cama grande
+- **Material** Espuma viscoelástica
+||| [!badge variant="success" icon="check" text="Buena calidad"]
+**Colchón**
+- **Tamaño** Queen size, 150x190cm
+- **Material** Capa viscoelástica de 4cm, espuma HR 30 kg/m³, con tratamiento antibacteriano
+|||
+
+||| [!badge variant="danger" icon="circle-slash" text="Mala calidad"]
+**Gel de ducha**
+- **Aroma** Cítrico
+- **Tipo de piel** Todo tipo
+- **Envase** 500ml
+||| [!badge variant="success" icon="check" text="Buena calidad"]
+**Gel de ducha**
+- **Aroma** Cítrico fresco con notas de lima y mandarina
+- **Tipo de piel** Apto para todo tipo de piel, incluso sensible
+- **Envase** 500 ml, botella reciclable con dosificador
+|||
