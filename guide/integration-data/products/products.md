@@ -10,26 +10,25 @@ Lo más recomendable es comenzar cargando todos los productos disponibles en vue
 
 +++ PHP SDK
 
-Llama al método [!badge variant="info" text="products()->post"](/php-sdk/products) pasando un objeto [!badge variant="info" text="ProductPayload"] como parámetro:
+Llama al método [!badge variant="info" text="products()->post"](/php-sdk/products) pasando un objeto [!badge variant="info" text="Product"] como parámetro:
 
 ```php
 $product = $client->products()->post(
-    new ProductPayload(
+    new Product(
         code: 'N39291',
         title: 'Zapatillas deportivas urbanas para hombre – modelo AirFlow',
         description: 'Estas zapatillas combinan estilo y comodidad para el uso diario. Diseñadas con materiales transpirables, suela de goma antideslizante y plantilla ergonómica, son ideales tanto para caminar por la ciudad como para entrenar en interiores. El modelo AirFlow ofrece un ajuste perfecto y un diseño moderno que se adapta a cualquier look casual. Disponibles en varias tallas y colores.',
-        price: 45.95,
-        currency: Currency::EURO,
+        price: new Price(45.95, Currency::EURO),
         attributes: [
-            new ProductAttributePayload('Material', 'cuero'),
-            new ProductAttributePayload('Color', 'negro con detalles en gris'),
-            new ProductAttributePayload('Tallas disponibles', '39, 40, 41, 42, 43, 44'),
-            new ProductAttributePayload('Suela', 'goma antideslizante'),
-            new ProductAttributePayload('Peso', '850g (par, talla 42)'),
-            new ProductAttributePayload('Uso recomendado', 'Uso diario y entrenamiento ligero')
+            new ProductAttribute('Material', 'cuero'),
+            new ProductAttribute('Color', 'negro con detalles en gris'),
+            new ProductAttribute('Tallas disponibles', '39, 40, 41, 42, 43, 44'),
+            new ProductAttribute('Suela', 'goma antideslizante'),
+            new ProductAttribute('Peso', '850g (par, talla 42)'),
+            new ProductAttribute('Uso recomendado', 'Uso diario y entrenamiento ligero')
         ],
-        brand: new ProductBrandPayload('OW142398', 'Nike'),
-        category: new ProductCategoryPayload('MC418298', 'Zapatillas deportivas')
+        brand: new ProductBrand('OW142398', 'Nike'),
+        category: new ProductCategory('MC418298', 'Zapatillas deportivas')
     )
 );
 ```
