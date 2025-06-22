@@ -27,9 +27,9 @@ Acciones que los clientes realizan: visitas a productos, compras, añadir al car
 ### Métodos de integración
 
 ||| **:icon-file-code: SDK PHP**
-Si trabajas con PHP, te recomendamos utilizar [el SDK para PHP de Biteral](/php-sdk/intro). Es la forma más sencilla, flexible y segura de integrar la plataforma.
+Si trabajas con PHP, te recomendamos utilizar [el SDK para PHP de Biteral](/php-sdk/index.md). Es la forma más sencilla, flexible y segura de integrar la plataforma.
 ||| **![](/static/icons/technology/api.svg){width="18"} Api**
-Utiliza la [API de Biteral](/api/intro) desde cualquier plataforma o lenguaje de programación conectando directamente.
+Utiliza la [API de Biteral](/api) desde cualquier plataforma o lenguaje de programación conectando directamente.
 |||
 
 Continúa a la página siguiente para aprender cómo enviar tus primeros productos a Biteral:

@@ -1,7 +1,7 @@
 ---
 label: Post, patch & put
 order: 100
-icon: chevron-right
+icon: arrow-right
 ---
 # /products
 [!badge variant="success" text="v1"]

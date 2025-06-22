@@ -1,7 +1,7 @@
 ---
 label: Delete
 order: 60
-icon: chevron-right
+icon: arrow-right
 ---
 # /products
 [!badge variant="success" text="v1"]

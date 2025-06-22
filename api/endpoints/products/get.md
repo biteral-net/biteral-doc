@@ -1,7 +1,7 @@
 ---
 label: Get
 order: 70
-icon: chevron-right
+icon: arrow-right
 ---
 # /products
 [!badge variant="success" text="v1"]
