@@ -81,4 +81,4 @@ En el [dashboard](https://biteral.net/account/dashboard) podrás ver los product
 
 Cuanta más información precisa, estructurada y actualizada recibimos, mejores son las recomendaciones, análisis y resultados que podemos generar para tu e-commerce. Asegúrate de proporcionar títulos claros, descripciones completas y atributos relevantes.
 
-[!ref Calidad de los datos de productos](/guide/integration-data/products/data-quality.md)
+[!ref Calidad de los datos de productos](/guide/integration-data/products/data-quality)
