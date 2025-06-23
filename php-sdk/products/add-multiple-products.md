@@ -36,9 +36,9 @@ $product = $client->products()->post(
 );
 ```
 
-!!!secondary
-Puedes cargar hasta 100 productos a la vez utilizando este método
-!!!
+Puedes pasar tantos productos como necesites en el array, aunque es posible que encuentres problemas de memoria si pasas arrays demasiado grandes, dependiendo de la configuración de vuestro servidor.
+
+Internamente los productos siempre se cargan de 100 en 100, así que no obtendrás ningún extra de velocidad con arrays de más de 100 productos.
 
 Aquí tienes un pequeño snippet que puedes utilizar como referencia para cargar todos vuestros productos en Biteral rápidamente:
 
@@ -53,12 +53,13 @@ use Biteral\Payload\ProductCategoryPayload;
 $client = new Client('ux3HzRTaLGKvZjTb7ufaFUgJPvXbcNX7DWbnWAAUxQjHYqZJ');
 
 $productPayloads = [];
-/* Obtén todos vuestros productos utilizando vuestros propios métodos,
-de forma que puedas hacer un bucle while o foreach que itere sobre
-todos vuestros productos, como éste: */
+// Obtén todos vuestros productos utilizando vuestros propios métodos,
+// de manera que puedas iterar sobre ellos con un bucle while o foreach,
+// como en el siguiente ejemplo:
 foreach ($products as $product) {
 
-    // Crea un objeto ProductPayload con los datos de vuestro producto, y lo añade al array $productPayloads
+    // Crea un objeto ProductPayload con los datos de vuestro producto,
+    // y lo añade al array $productPayloads
     $productPayloads[] =
         new ProductPayload(
             code: $product->getCode(),
@@ -66,7 +67,9 @@ foreach ($products as $product) {
             description: $product->getDescription(),
             price: new PricePayload($product->getPrice(), $product->getCurrency()),
             attributes:
-                // Itera sobre todos los atributos de vuestro producto y crea un array donde cada elemento es un objeto ProductAttributePayload
+                // Itera sobre todos los atributos de vuestro producto
+                // y crea un array donde cada elemento es un objeto
+                // ProductAttributePayload
                 array_map(
                     fn ($attribute) =>
                         new ProductAttributePayload($attribute->getName(), $attribute->getValue()),

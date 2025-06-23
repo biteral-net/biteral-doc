@@ -11,5 +11,5 @@ Representa una característica de uno de vuestros productos
 
 ||
 ---|---|---
-[!badge icon="screen-full" text="name"]|string|Nombre de la característica, por ejemplo: `Color`
+[!badge icon="screen-full" text="title"]|string|Nombre de la característica, por ejemplo: `Color`
 [!badge icon="screen-full" text="value"]|string|Valor de la característica, por ejemplo: `Azul`

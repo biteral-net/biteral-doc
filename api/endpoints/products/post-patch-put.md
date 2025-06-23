@@ -20,12 +20,12 @@ icon: arrow-right
         "currency": "EUR"
     },
     "attributes": [
-        {"name": "Material", "value": "Cuero"},
-        {"name": "Color", "value": "negro con detalles en gris"},
-        {"name": "Tallas disponibles", "value": "39, 40, 41, 42, 43, 44"},
-        {"name": "Suela", "value": "goma antideslizante"},
-        {"name": "Peso", "value": "850g (par, talla 42)"},
-        {"name": "Uso recomendado", "value": "Uso diario y entrenamiento ligero"},
+        {"title": "Material", "value": "Cuero"},
+        {"title": "Color", "value": "negro con detalles en gris"},
+        {"title": "Tallas disponibles", "value": "39, 40, 41, 42, 43, 44"},
+        {"title": "Suela", "value": "goma antideslizante"},
+        {"title": "Peso", "value": "850g (par, talla 42)"},
+        {"title": "Uso recomendado", "value": "Uso diario y entrenamiento ligero"},
     ],
     "brand": {
         "code": "OW142398",
@@ -119,12 +119,12 @@ Puedes cargar los productos uno a uno, pero es más rápido cargarlos en bloques
             "currency": "EUR"
         },
         "attributes": [
-            {"name": "Material", "value": "Cuero"},
-            {"name": "Color", "value": "negro con detalles en gris"},
-            {"name": "Tallas disponibles", "value": "39, 40, 41, 42, 43, 44"},
-            {"name": "Suela", "value": "goma antideslizante"},
-            {"name": "Peso", "value": "850g (par, talla 42)"},
-            {"name": "Uso recomendado", "value": "Uso diario y entrenamiento ligero"},
+            {"title": "Material", "value": "Cuero"},
+            {"title": "Color", "value": "negro con detalles en gris"},
+            {"title": "Tallas disponibles", "value": "39, 40, 41, 42, 43, 44"},
+            {"title": "Suela", "value": "goma antideslizante"},
+            {"title": "Peso", "value": "850g (par, talla 42)"},
+            {"title": "Uso recomendado", "value": "Uso diario y entrenamiento ligero"},
         ],
         "brand": {
             "code": "OW142398",
