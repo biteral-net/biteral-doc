@@ -33,7 +33,7 @@ Para localizar un producto a través de su id en Biteral:
 
 ```json
 {
-    "entity": "Product",
+    "object": "product",
     "id": "pro_f28Jfk0i28iXIs",
     "data": {
         "code": "N39291",
@@ -43,24 +43,24 @@ Para localizar un producto a través de su id en Biteral:
         "price": 49.95,
         "currency": "EUR",
         "attributes": [
-            {"entity": "ProductAttribute", "name": "Material", "value": "Cuero"},
-            {"entity": "ProductAttribute", "name": "Color", "value": "negro con detalles en gris"},
-            {"entity": "ProductAttribute", "name": "Tallas disponibles", "value": "39, 40, 41, 42, 43, 44"},
-            {"entity": "ProductAttribute", "name": "Suela", "value": "goma antideslizante"},
-            {"entity": "ProductAttribute", "name": "Peso", "value": "850g (par, talla 42)"},
-            {"entity": "ProductAttribute", "name": "Uso recomendado", "value": "Uso diario y entrenamiento ligero"},
+            {"object": "product_attribute", "name": "Material", "value": "Cuero"},
+            {"object": "product_attribute", "name": "Color", "value": "negro con detalles en gris"},
+            {"object": "product_attribute", "name": "Tallas disponibles", "value": "39, 40, 41, 42, 43, 44"},
+            {"object": "product_attribute", "name": "Suela", "value": "goma antideslizante"},
+            {"object": "product_attribute", "name": "Peso", "value": "850g (par, talla 42)"},
+            {"object": "product_attribute", "name": "Uso recomendado", "value": "Uso diario y entrenamiento ligero"},
         ],
         "brand": {
-            "entity": "Brand",
+            "object": "brand",
             "id": "pbr_fja9AiaijfaKf",
             "code": "OW142398",
             "name": "Nike"
         },
         "category": {
-            "entity": "ProductCategory",
+            "object": "product-category",
             "id": "pca_19FAkfaqcmz0f",
             "code": "MC418298",
-            "name": "Zapatillas deportivas"
+            "title": "Zapatillas deportivas"
         }
     },
     "processingStatus": "ready",

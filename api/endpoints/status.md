@@ -10,10 +10,10 @@ Obtiene información sobre el estado de la API y otros parámetros útiles como 
 +++ Resultado
 ```json
 {
-    "entity": "Status",
+    "object": "Status",
     "availableApiVersions": [
         {
-            "entity": "ApiVersion",
+            "object": "ApiVersion",
             "version": "1.0.0",
             "status": "stable",
             "isDeprecated": false

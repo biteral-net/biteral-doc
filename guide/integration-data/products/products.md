@@ -62,7 +62,7 @@ Haz una petición [!badge variant="secondary" text="POST"] al endpoint [!badge /
     },
     "category": {
         "code": "MC418298",
-        "name": "Zapatillas deportivas"
+        "title": "Zapatillas deportivas"
     }
 }
 ```

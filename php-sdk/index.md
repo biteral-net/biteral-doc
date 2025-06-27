@@ -33,10 +33,10 @@ que devuelve un array con información sobre la conexión o el estado de la API:
 
 ```json
 {
-    "entity": "Status",
+    "object": "Status",
     "availableApiVersions": [
         {
-            "entity": "ApiVersion",
+            "object": "ApiVersion",
             "version": "1.0.0",
             "status": "stable",
             "isDeprecated": false
