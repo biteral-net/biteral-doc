@@ -24,13 +24,10 @@ Para localizar un producto a través de su id en Biteral:
 
 +++ Documentación
 
-|
---|--
-[!badge variant="warning" text="code"]|Código de producto, por ejemplo `N39291`
-[!badge variant="warning" text="id"]|Identificador del producto en Biteral, por ejemplo: `pro_f28Jfk0i28iXIs`
+[!badge variant="warning" text="code"]
+: Código de producto, por ejemplo `N39291`
 
-+++ Resultado
-
-Este endpoint no devuelve ningún resultado
+[!badge variant="warning" text="id"]
+: Identificador del producto en Biteral, por ejemplo: `pro_f28Jfk0i28iXIs`
 
 +++
