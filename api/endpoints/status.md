@@ -1,6 +1,6 @@
 ---
 label: /status
-icon: skip
+icon: arrow-right
 ---
 # /status
 [!badge variant="success" text="GET"] [!badge variant="success" text="v1"]

@@ -33,29 +33,69 @@ icon: arrow-right
     },
     "category": {
         "code": "MC418298",
-        "title": "Zapatillas deportivas"
+        "title": "Zapatillas deportivas",
+        "description": "Calzado diseñado para ofrecer comodidad, soporte y rendimiento en actividades físicas o deportivas. Estas zapatillas también se adaptan al uso urbano y diario gracias a sus diseños modernos y materiales versátiles. Incluyen características como suelas antideslizantes, tejidos transpirables y estilos que combinan funcionalidad con moda."
     }
 }
 ```
 
 +++ Documentación
 
-|
---|--
-[!badge variant="warning" text="code"]|Código de producto, por ejemplo `N39291` [!badge variant="danger" icon="lock" text="Requerido"]|
-[!badge variant="warning" text="title"]|Título del producto [!badge variant="danger" icon="lock" text="Requerido"]
-[!badge variant="warning" text="description"]|Descripción del producto.
-[!badge variant="warning" text="price"]|El precio del producto, por ejemplo `24.95`
-[!badge variant="warning" text="currency"]|La moneda en la que se expresa el precio, según el estándar [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217). Por ejemplo `EUR`
-[!badge variant="warning" text="attributes"]|Los atributos del producto
-[!badge variant="warning" text="brand"]|La marca del producto
-[!badge variant="warning" text="category"]|La categoría del producto
+[!badge variant="danger" icon="lock" text="code"]
+: Código de producto, por ejemplo `N39291`
+
+[!badge variant="danger" icon="lock" text="title"]
+: Título del producto
+
+[!badge variant="warning" text="description"]
+: Descripción del producto.
+
+[!badge variant="warning" text="price"]
+: El precio del producto. Un objeto JSON donde [!badge variant="danger" icon="lock" text="amount"] es el precio del producto, y [!badge variant="danger" icon="lock" text="currency"] es la moneda en la que se expresa el precio, según el estándar [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217). Por ejemplo:
+```json
+    {
+        "amount": 49.95,
+        "currency": "EUR"
+    }
+```
+
+[!badge variant="warning" text="attributes"]
+: Los atributos del producto. Un array de objetos JSON donde [!badge variant="danger" icon="lock" text="title"] es el título del atributo y [!badge variant="warning" text="value"] es su value. Por ejemplo:
+```json
+    [
+        {"title": "Material", "value": "Cuero"},
+        {"title": "Color", "value": "negro con detalles en gris"},
+        {"title": "Tallas disponibles", "value": "39, 40, 41, 42, 43, 44"},
+        {"title": "Suela", "value": "goma antideslizante"},
+        {"title": "Peso", "value": "850g (par, talla 42)"},
+        {"title": "Uso recomendado", "value": "Uso diario y entrenamiento ligero"},
+    ]
+```
+
+[!badge variant="warning" text="brand"]
+: La marca del producto. Un objeto JSON donde [!badge variant="danger" icon="lock" text="code"] es el código de la marca y [!badge variant="warning" text="name"] su nombre. Por ejemplo:
+```json
+    {
+        "code": "OW142398",
+        "name": "Nike"
+    }
+```
+
+[!badge variant="warning" text="category"]
+: La categoría del producto. Un objeto JSON donde [!badge variant="danger" icon="lock" text="code"] es el código de la categoría, [!badge variant="warning" text="title"] su título y [!badge variant="warning" text="description"] su descripción. Por ejemplo:
+```json
+    {
+        "code": "MC418298",
+        "title": "Zapatillas deportivas",
+        "description": "Calzado diseñado para ofrecer comodidad, soporte y rendimiento en actividades físicas o deportivas. Estas zapatillas también se adaptan al uso urbano y diario gracias a sus diseños modernos y materiales versátiles. Incluyen características como suelas antideslizantes, tejidos transpirables y estilos que combinan funcionalidad con moda."
+    }
+```
 
 +++
 
 ### Actualizar un producto
 
-Para actualizar los datos sobre un producto, realiza la misma `POST` a este endpoint con los nuevos datos. Los datos que no especifiques se eliminarán del producto.
+Para actualizar los datos sobre un producto, realiza la misma petición `POST` a este endpoint con los nuevos datos. Los datos que no especifiques se eliminarán del producto.
 
 ### Cargar varios productos a la vez
 
@@ -85,7 +125,8 @@ Puedes cargar los productos uno a uno, pero es más rápido cargarlos en bloques
         },
         "category": {
             "code": "MC418298",
-            "title": "Zapatillas deportivas"
+            "title": "Zapatillas deportivas",
+            "description": "Calzado diseñado para ofrecer comodidad, soporte y rendimiento en actividades físicas o deportivas. Estas zapatillas también se adaptan al uso urbano y diario gracias a sus diseños modernos y materiales versátiles. Incluyen características como suelas antideslizantes, tejidos transpirables y estilos que combinan funcionalidad con moda."
         }
     },
     {

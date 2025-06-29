@@ -24,10 +24,11 @@ Para localizar un producto a través de su id en Biteral:
 
 +++ Documentación
 
-|
---|--
-[!badge variant="warning" text="code"]|Código de producto, por ejemplo `N39291`
-[!badge variant="warning" text="id"]|Identificador del producto en Biteral, por ejemplo: `pro_f28Jfk0i28iXIs`
+[!badge variant="warning" text="code"]
+: Código de producto, por ejemplo `N39291`
+
+[!badge variant="warning" text="id"]
+: Identificador del producto en Biteral, por ejemplo: `pro_f28Jfk0i28iXIs`
 
 +++ Resultado
 
@@ -43,22 +44,22 @@ Para localizar un producto a través de su id en Biteral:
         "price": 49.95,
         "currency": "EUR",
         "attributes": [
-            {"object": "product_attribute", "name": "Material", "value": "Cuero"},
-            {"object": "product_attribute", "name": "Color", "value": "negro con detalles en gris"},
-            {"object": "product_attribute", "name": "Tallas disponibles", "value": "39, 40, 41, 42, 43, 44"},
-            {"object": "product_attribute", "name": "Suela", "value": "goma antideslizante"},
-            {"object": "product_attribute", "name": "Peso", "value": "850g (par, talla 42)"},
-            {"object": "product_attribute", "name": "Uso recomendado", "value": "Uso diario y entrenamiento ligero"},
+            {"object": "product_attribute", "id": "att_3EoZrPlPxgvwj4", "name": "Material", "value": "Cuero"},
+            {"object": "product_attribute", "id": "att_B7AIkhAqOUclJI", "name": "Color", "value": "negro con detalles en gris"},
+            {"object": "product_attribute", "id": "att_MCa0JyCrr13OAU", "name": "Tallas disponibles", "value": "39, 40, 41, 42, 43, 44"},
+            {"object": "product_attribute", "id": "att_n8BtH1ukAGxaFE", "name": "Suela", "value": "goma antideslizante"},
+            {"object": "product_attribute", "id": "att_Sf9xT97JwARbOi", "name": "Peso", "value": "850g (par, talla 42)"},
+            {"object": "product_attribute", "id": "att_vm470WEdaNrQNZ", "name": "Uso recomendado", "value": "Uso diario y entrenamiento ligero"},
         ],
         "brand": {
             "object": "brand",
-            "id": "pbr_fja9AiaijfaKf",
+            "id": "bra_fja9AiaijfaKf",
             "code": "OW142398",
             "name": "Nike"
         },
         "category": {
             "object": "product-category",
-            "id": "pca_19FAkfaqcmz0f",
+            "id": "cat_19FAkfaqcmz0f",
             "code": "MC418298",
             "title": "Zapatillas deportivas"
         }
