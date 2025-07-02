@@ -3,20 +3,19 @@ label: Delete
 order: 60
 icon: arrow-right
 ---
-# /products
-[!badge variant="success" text="v1"]
+# /products [!badge variant="success" text="DELETE"] [!badge variant="success" text="v1"]
 
-### `DELETE` Eliminar un producto
+### Eliminar un producto
 
 +++ JSON request body
 
-Para localizar un producto a través de su código:
+Para eliminar un producto a través de su código:
 
 ```json
 { "code": "N39291" }
 ```
 
-Para localizar un producto a través de su id en Biteral:
+Para eliminar un producto a través de su id en Biteral:
 
 ```json
 { "id": "pro_f28Jfk0i28iXIs" }
