@@ -23,16 +23,18 @@ Obtiene información sobre el estado de la API y otros parámetros útiles como 
         ],
         "latestStableMajorApiVersion": 1,
         "requestMajorApiVersion": 1,
-        "clientId": "cli_mKXzG4ZP8UwXYu",
-        "projectId": "prj_KCNAunhFSSS6yK",
+        "clientId": "cli_FnPwntyztB5vXi",
+        "projectId": "prj_DXwRnr27kHGcCZ",
         "roles": [
             "ROLE_API_USER"
         ],
         "permissions": [
             "status",
-            "ingest"
+            "depotIngest",
+            "depotFetch",
+            "depotDelete"
         ],
-        "serverTime": "2025-07-02T17:52:44+00:00",
+        "serverTime": "2025-07-09T11:00:32+00:00",
         "environment": "prod"
     }
 }

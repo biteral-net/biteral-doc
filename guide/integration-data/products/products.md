@@ -41,7 +41,7 @@ Haz una petición [!badge variant="secondary" text="POST"] al endpoint [!badge /
 
 ```json
 {
-    "code": "N39291",
+    "code": "N30123",
     "title": "Zapatillas deportivas urbanas para hombre – modelo AirFlow",
     "description": "Estas zapatillas combinan estilo y comodidad para el uso diario. Diseñadas con materiales transpirables, suela de goma antideslizante y plantilla ergonómica, son ideales tanto para caminar por la ciudad como para entrenar en interiores. El modelo AirFlow ofrece un ajuste perfecto y un diseño moderno que se adapta a cualquier look casual. Disponibles en varias tallas y colores.",
     "price": {
@@ -54,15 +54,16 @@ Haz una petición [!badge variant="secondary" text="POST"] al endpoint [!badge /
         {"title": "Tallas disponibles", "value": "39, 40, 41, 42, 43, 44"},
         {"title": "Suela", "value": "goma antideslizante"},
         {"title": "Peso", "value": "850g (par, talla 42)"},
-        {"title": "Uso recomendado", "value": "Uso diario y entrenamiento ligero"},
+        {"title": "Uso recomendado", "value": "Uso diario y entrenamiento ligero"}
     ],
     "brand": {
-        "code": "OW142398",
+        "code": "OW142302",
         "name": "Nike"
     },
     "category": {
-        "code": "MC418298",
-        "title": "Zapatillas deportivas"
+        "code": "MC418292",
+        "title": "Zapatillas deportivas",
+        "description": "Calzado diseñado para ofrecer comodidad, soporte y rendimiento en actividades físicas o deportivas. Estas zapatillas también se adaptan al uso urbano y diario gracias a sus diseños modernos y materiales versátiles. Incluyen características como suelas antideslizantes, tejidos transpirables y estilos que combinan funcionalidad con moda."
     }
 }
 ```
