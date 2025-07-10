@@ -1,6 +1,7 @@
 ---
 label: /status
 icon: arrow-right
+order: 1000
 ---
 # /status [!badge variant="success" text="GET"] [!badge variant="success" text="v1"]
 

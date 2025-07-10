@@ -5,7 +5,7 @@ icon: arrow-right
 ---
 # /products [!badge variant="success" text="POST"] [!badge variant="success" text="v1"]
 
-### Crear o modificar un producto
+Crear o modificar un producto.
 
 +++ JSON request body
 

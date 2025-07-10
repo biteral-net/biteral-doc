@@ -5,7 +5,7 @@ icon: arrow-right
 ---
 # /products [!badge variant="success" text="DELETE"] [!badge variant="success" text="v1"]
 
-### Eliminar un producto
+Eliminar un producto.
 
 +++ JSON request body
 

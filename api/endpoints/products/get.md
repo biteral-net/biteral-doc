@@ -5,7 +5,7 @@ icon: arrow-right
 ---
 # /products [!badge variant="success" text="GET"] [!badge variant="success" text="v1"]
 
-### Obtener un producto
+Obtener un producto.
 
 +++ JSON request body
 
