@@ -11,13 +11,17 @@ Obtener una lista de productos que encajan con una búsqueda realizada en lengua
 
 ```json
 {
-    "query": "Un regalo para un aficionado a la cocina"
+    "query": "Un regalo para un aficionado a la cocina",
+    "limit": 10
 }
 ```
 +++ Documentación
 
 [!badge variant="danger" icon="lock" text="query"]
 : La cadena escrita por el usuario para encontrar productos en lenguaje natural, por ejemplo `Un regalo para un aficionado a la cocina`
+
+[!badge variant="warning" text="limit"]
+: Limita el número máximo de productos a obtener, por ejemplo `5`. Por defecto, se obtienen `10` productos como máximo.
 
 +++ Resultado
 
