@@ -15,7 +15,7 @@ Crear o modificar un producto.
     "title": "Zapatillas deportivas urbanas para hombre – modelo AirFlow",
     "description": "Estas zapatillas combinan estilo y comodidad para el uso diario. Diseñadas con materiales transpirables, suela de goma antideslizante y plantilla ergonómica, son ideales tanto para caminar por la ciudad como para entrenar en interiores. El modelo AirFlow ofrece un ajuste perfecto y un diseño moderno que se adapta a cualquier look casual. Disponibles en varias tallas y colores.",
     "price": {
-        "amount": 49.95,
+        "amount": "49.95",
         "currency": "EUR"
     },
     "attributes": [
@@ -60,7 +60,7 @@ Crear o modificar un producto.
 : El precio del producto. Un objeto JSON donde [!badge variant="danger" icon="lock" text="amount"] es el precio del producto, y [!badge variant="danger" icon="lock" text="currency"] es la moneda en la que se expresa el precio, según el estándar [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217). Por ejemplo:
 ```json
     {
-        "amount": 49.95,
+        "amount": "49.95",
         "currency": "EUR"
     }
 ```
@@ -128,7 +128,7 @@ Puedes cargar los productos uno a uno, pero es más rápido cargarlos en bloques
         "title": "Zapatillas deportivas urbanas para hombre – modelo AirFlow",
         "description": "Estas zapatillas combinan estilo y comodidad para el uso diario. Diseñadas con materiales transpirables, suela de goma antideslizante y plantilla ergonómica, son ideales tanto para caminar por la ciudad como para entrenar en interiores. El modelo AirFlow ofrece un ajuste perfecto y un diseño moderno que se adapta a cualquier look casual. Disponibles en varias tallas y colores.",
         "price": {
-            "amount": 49.95,
+            "amount": "49.95",
             "currency": "EUR"
         }
     },

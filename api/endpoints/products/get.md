@@ -126,8 +126,15 @@ Para obtener un producto a través de su id en Biteral:
             }
         },
         "price": {
-            "amount": 49.95,
+            "amount": "49.95",
             "currency": "EUR"
+        },
+        "imageUrl": "https://m.media-amazon.com/images/I/61cELGQXXhL._AC_UL320_.jpg",
+        "metadata": {
+            "videoUrl": "https://m.media-amazon.com/videos/C/dk14lkKlsnw._AC_UL1080_.mp4",
+            "currentDiscountRate": "50%",
+            "isNew": true,
+            "isFeatured": false
         }
     }
 }

@@ -40,7 +40,7 @@ Obtener una lista de productos que encajan con una búsqueda realizada en lengua
         "brand": null,
         "category": null,
         "price": {
-            "amount": 39.90,
+            "amount": "39.90",
             "currency": "EUR"
         }
     },
@@ -58,7 +58,7 @@ Obtener una lista de productos que encajan con una búsqueda realizada en lengua
             "brand": null,
             "category": null,
             "price": {
-                "amount": 29.50,
+                "amount": "29.50",
                 "currency": "EUR"
             }
         }
@@ -77,7 +77,7 @@ Obtener una lista de productos que encajan con una búsqueda realizada en lengua
             "brand": null,
             "category": null,
             "price": {
-                "amount": 19.95,
+                "amount": "19.95",
                 "currency": "EUR"
             }
         }

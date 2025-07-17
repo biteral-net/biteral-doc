@@ -78,7 +78,7 @@ De igual modo, las respuestas se dan también en formato JSON, por ejemplo:
         "brand": null,
         "category": null,
         "price": {
-            "amount": 49.95,
+            "amount": "49.95",
             "currency": "EUR"
         }
     }
