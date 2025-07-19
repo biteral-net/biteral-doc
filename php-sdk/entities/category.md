@@ -2,6 +2,7 @@
 label: Category
 expanded: false
 icon: arrow-right
+order: 990
 ---
 # Category
 

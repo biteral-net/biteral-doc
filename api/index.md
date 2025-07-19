@@ -53,15 +53,23 @@ print_r($status);
 
 ### Enviar y recibir datos en la API
 
-Los endpoints que aceptan datos reciben los datos en formato JSON. Por ejemplo, éste es el cuerpo de una petición [!badge variant="secondary" text="GET"] al endpoint [!badge /products](/api/endpoints/products/get) para obtener los datos de un producto:
+Los endpoints [!badge variant="success" text="POST"], [!badge variant="success" text="PUT"] y [!badge variant="success" text="PATCH"] normalmente aceptan los datos en formato JSON a través del `body` de la petición. Por ejemplo, éste es el cuerpo de una petición [!badge variant="success" text="POST"] al endpoint [!badge /products](/api/endpoints/products/post) para enviar un producto a Biteral:
 
 ```json
 {
-    "id": "pro_f28Jfk0i28iXIs"
+    "code": "N30123",
+    "title": "Zapatillas deportivas urbanas para hombre – modelo AirFlow",
+    "description": "Estas zapatillas combinan estilo y comodidad para el uso diario. Diseñadas con materiales transpirables, suela de goma antideslizante y plantilla ergonómica, son ideales tanto para caminar por la ciudad como para entrenar en interiores. El modelo AirFlow ofrece un ajuste perfecto y un diseño moderno que se adapta a cualquier look casual. Disponibles en varias tallas y colores."
 }
 ```
 
-De igual modo, las respuestas se dan también en formato JSON, por ejemplo:
+Otros endpoints del tipo [!badge variant="success" text="GET"] o [!badge variant="success" text="DELETE"] aceptan datos a través de los parámetros en la URL de la petición. Por ejemplo, ésta es la URL para una petición [!badge variant="success" text="GET"] al endpoint [!badge /products](/api/endpoints/products/get) que obtiene los datos de un producto:
+
+```
+https://api.biteral.net/products?code=B00YUU43VS
+```
+
+Todos los endpoints responden siempre en formato JSON, por ejemplo:
 
 ```json
 {

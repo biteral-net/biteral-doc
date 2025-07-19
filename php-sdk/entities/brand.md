@@ -2,6 +2,7 @@
 label: Brand
 expanded: false
 icon: arrow-right
+order: 980
 ---
 # Brand
 

@@ -7,21 +7,9 @@ icon: arrow-right
 
 Eliminar un producto.
 
-+++ JSON request body
-
-Para eliminar un producto a través de su código:
-
-```json
-{ "code": "N39291" }
-```
-
-Para eliminar un producto a través de su id en Biteral:
-
-```json
-{ "id": "pro_f28Jfk0i28iXIs" }
-```
 
 +++ Documentación
+Especifica uno de estos dos parámetros para obtener un producto a través de su código o de su Id en Biteral:
 
 [!badge variant="warning" text="code"]
 : Código de producto, por ejemplo `N39291`

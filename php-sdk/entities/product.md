@@ -2,6 +2,7 @@
 label: Product
 expanded: false
 icon: arrow-right
+order: 1000
 ---
 # Product
 
