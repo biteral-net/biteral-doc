@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.10.0.806071528634">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.10.0.806266057103">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.10.0">
@@ -31,12 +31,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link href="/static/favicon.png" rel="icon">
-    <link href="/resources/css/retype.css?v=3.10.0.806071528634" rel="stylesheet">
+    <link href="/resources/css/retype.css?v=3.10.0.806266057103" rel="stylesheet">
 
-    <script data-cfasync="false" src="/resources/js/config.js?v=3.10.0.806071528634" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="/resources/js/config.js?v=3.10.0.806266057103" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="/resources/js/retype.js?v=3.10.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="/resources/js/lunr.js?v=3.10.0.806071528634" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="/resources/js/prism.js?v=3.10.0.806071528634" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="/resources/js/lunr.js?v=3.10.0.806266057103" data-turbo-eval="false" defer></script>
 
     <script>
         if (!window.localStorage.getItem('doc_theme')) {
@@ -202,19 +201,9 @@
 </doc-anchor-target>
 <p>Eliminar un producto.</p>
 <doc-tabs>
-<doc-tab v-cloak id="json-request-body">
-<template #title>JSON request body</template>
-<p>Para eliminar un producto a través de su código:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-json"><code v-pre class="language-json">{ &quot;code&quot;: &quot;N39291&quot; }</code></pre>
-</doc-codeblock></div>
-<p>Para eliminar un producto a través de su id en Biteral:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-json"><code v-pre class="language-json">{ &quot;id&quot;: &quot;pro_f28Jfk0i28iXIs&quot; }</code></pre>
-</doc-codeblock></div>
-</doc-tab>
 <doc-tab v-cloak id="documentación">
 <template #title>Documentación</template>
+<p>Especifica uno de estos dos parámetros para obtener un producto a través de su código o de su Id en Biteral:</p>
 <dl>
 <dt><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-6 px-2 text-xs rounded-md">
     <span>code</span>
@@ -223,7 +212,8 @@
 <dt><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-6 px-2 text-xs rounded-md">
     <span>id</span>
 </span></dt>
-<dd><p>Identificador del producto en Biteral, por ejemplo: <code v-pre>pro_f28Jfk0i28iXIs</code></p>
+<dd>
+<p>Identificador del producto en Biteral, por ejemplo: <code v-pre>pro_f28Jfk0i28iXIs</code></p>
 </dd>
 </dl>
 </doc-tab>
@@ -300,6 +290,6 @@
 
     <div id="retype-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Delete", level: 4, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Delete", level: 4, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
