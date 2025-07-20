@@ -9,24 +9,24 @@
     <meta name="generator" content="Retype 3.10.0">
 
     <!-- Primary Meta Tags -->
-    <title>Payloads | Inteligencia artificial para impulsar su comercio online</title>
-    <meta name="title" content="Payloads | Inteligencia artificial para impulsar su comercio online">
-    <meta name="description" content="Los Payloads son los objetos que utilizas para proporcionar datos a Biteral sobre vuestro e-commerce.">
+    <title>ProductAttributePayload | Inteligencia artificial para impulsar su comercio online</title>
+    <meta name="title" content="ProductAttributePayload | Inteligencia artificial para impulsar su comercio online">
+    <meta name="description" content="Representa una característica de uno de vuestros productos">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://docs.biteral.net/php-sdk/payloads/">
+    <link rel="canonical" href="https://docs.biteral.net/php-sdk/payloads/product-attribute-payload/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://docs.biteral.net/php-sdk/payloads/">
-    <meta property="og:title" content="Payloads | Inteligencia artificial para impulsar su comercio online">
-    <meta property="og:description" content="Los Payloads son los objetos que utilizas para proporcionar datos a Biteral sobre vuestro e-commerce.">
+    <meta property="og:url" content="https://docs.biteral.net/php-sdk/payloads/product-attribute-payload/">
+    <meta property="og:title" content="ProductAttributePayload | Inteligencia artificial para impulsar su comercio online">
+    <meta property="og:description" content="Representa una característica de uno de vuestros productos">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://docs.biteral.net/php-sdk/payloads/">
-    <meta property="twitter:title" content="Payloads | Inteligencia artificial para impulsar su comercio online">
-    <meta property="twitter:description" content="Los Payloads son los objetos que utilizas para proporcionar datos a Biteral sobre vuestro e-commerce.">
+    <meta property="twitter:url" content="https://docs.biteral.net/php-sdk/payloads/product-attribute-payload/">
+    <meta property="twitter:title" content="ProductAttributePayload | Inteligencia artificial para impulsar su comercio online">
+    <meta property="twitter:description" content="Representa una característica de uno de vuestros productos">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
@@ -36,7 +36,6 @@
     <script data-cfasync="false" src="/resources/js/config.js?v=3.10.0.806345733574" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="/resources/js/retype.js?v=3.10.0" data-turbo-eval="false" defer></script>
     <script id="lunr-js" data-cfasync="false" src="/resources/js/lunr.js?v=3.10.0.806345733574" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="/resources/js/prism.js?v=3.10.0.806345733574" defer></script>
 
     <script>
         if (!window.localStorage.getItem('doc_theme')) {
@@ -190,40 +189,48 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="retype-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="payloads" class="break-words">
+<doc-anchor-target id="productattributepayload" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#payloads">#</doc-anchor-trigger>
-        <span>Payloads</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#productattributepayload">#</doc-anchor-trigger>
+        <span>ProductAttributePayload</span>
     </h1>
 </doc-anchor-target>
-<p>Los Payloads son los objetos que utilizas para proporcionar datos a Biteral sobre vuestro e-commerce.</p>
-<p>Por ejemplo, cuando <a href="/php-sdk/products">añades un producto a Biteral</a> con <code v-pre>$client-&gt;products()-&gt;post()</code>, debes proporcionar como parámetro un objeto de la clase <a href="/php-sdk/payloads/product-payload/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
-    <span>ProductPayload</span>
-</a></p>
-<p>Además, muchos métodos del SDK devuelven datos en forma de <a href="/php-sdk/entities/">entidades</a>, que son objetos que a su vez contienen Payloads de uno de estos tipos. Por ejemplo, cuando obtienes un producto con <code v-pre>$client-&gt;products()-&gt;get()</code>, obtienes como resultado un objeto (entidad) de la clase <a href="/php-sdk/entities/product/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
-    <span>Product</span>
-</a> que incluye, entre otras cosas, el Payload original del objeto, disponible en <code v-pre>$result-&gt;payload</code></p>
-<doc-anchor-target id="ejemplo">
+<p>Representa una característica de uno de vuestros productos</p>
+<doc-anchor-target id="propiedades">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#ejemplo">#</doc-anchor-trigger>
-        <span>Ejemplo</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#propiedades">#</doc-anchor-trigger>
+        <span>Propiedades</span>
     </h3>
 </doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-php"><code v-pre class="language-php">// Añadir un producto
-$client-&gt;products()-&gt;post(
-    new ProductPayload(
-        code: 'N39291',
-        title: 'Zapatillas deportivas urbanas para hombre – modelo AirFlow'
-    )
-);
-
-// Obtener el producto que acabas de añadir
-$result = $client-&gt;products()-&gt;getByCode('N39291');
-
-// Muestra el título del producto
-echo $result-&gt;payload-&gt;title; // &quot;Zapatillas deportivas urbanas para hombre – modelo AirFlow&quot;</code></pre>
-</doc-codeblock></div>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3.75 15a.75.75 0 0 1 .75.75v3.5c0 .138.112.25.25.25h3.5a.75.75 0 0 1 0 1.5h-3.5A1.75 1.75 0 0 1 3 19.25v-3.5a.75.75 0 0 1 .75-.75Zm16.5 0a.75.75 0 0 1 .75.75v3.5A1.75 1.75 0 0 1 19.25 21h-3.5a.75.75 0 0 1 0-1.5h3.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 .75-.75ZM4.75 4.5a.25.25 0 0 0-.25.25v3.5a.75.75 0 0 1-1.5 0v-3.5C3 3.784 3.784 3 4.75 3h3.5a.75.75 0 0 1 0 1.5ZM15 3.75a.75.75 0 0 1 .75-.75h3.5c.966 0 1.75.784 1.75 1.75v3.5a.75.75 0 0 1-1.5 0v-3.5a.25.25 0 0 0-.25-.25h-3.5a.75.75 0 0 1-.75-.75Z"/></g></svg></span>
+    <span>title</span>
+</span></td>
+<td>string</td>
+<td>Nombre de la característica, por ejemplo: <code v-pre>Color</code></td>
+</tr>
+<tr>
+<td><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3.75 15a.75.75 0 0 1 .75.75v3.5c0 .138.112.25.25.25h3.5a.75.75 0 0 1 0 1.5h-3.5A1.75 1.75 0 0 1 3 19.25v-3.5a.75.75 0 0 1 .75-.75Zm16.5 0a.75.75 0 0 1 .75.75v3.5A1.75 1.75 0 0 1 19.25 21h-3.5a.75.75 0 0 1 0-1.5h3.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 .75-.75ZM4.75 4.5a.25.25 0 0 0-.25.25v3.5a.75.75 0 0 1-1.5 0v-3.5C3 3.784 3.784 3 4.75 3h3.5a.75.75 0 0 1 0 1.5ZM15 3.75a.75.75 0 0 1 .75-.75h3.5c.966 0 1.75.784 1.75 1.75v3.5a.75.75 0 0 1-1.5 0v-3.5a.25.25 0 0 0-.25-.25h-3.5a.75.75 0 0 1-.75-.75Z"/></g></svg></span>
+    <span>value</span>
+</span></td>
+<td>string</td>
+<td>Valor de la característica, por ejemplo: <code v-pre>Azul</code></td>
+</tr>
+</tbody>
+</table>
+</div>
 
                                 
                                 <!-- Required only on API pages -->
@@ -233,20 +240,20 @@ echo $result-&gt;payload-&gt;title; // &quot;Zapatillas deportivas urbanas para 
                             
                                 <nav id="retype-nextprev" class="print:hidden flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="/php-sdk/entities/brand/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="/php-sdk/payloads/price-payload/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Anterior</span>
-                                                <span class="block mt-1">Brand</span>
+                                                <span class="block mt-1">Price​Payload</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="/php-sdk/payloads/brand-payload/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="/php-sdk/payloads/product-payload/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Siguiente</span>
-                                                <span class="block mt-1">Brand​Payload</span>
+                                                <span class="block mt-1">Product​Payload</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -296,6 +303,6 @@ echo $result-&gt;payload-&gt;title; // &quot;Zapatillas deportivas urbanas para 
 
     <div id="retype-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Payloads", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "ProductAttributePayload", level: 3, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>

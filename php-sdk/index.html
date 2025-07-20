@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.10.0.806266057103">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.10.0.806345733574">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.10.0">
@@ -31,12 +31,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link href="/static/favicon.png" rel="icon">
-    <link href="/resources/css/retype.css?v=3.10.0.806266057103" rel="stylesheet">
+    <link href="/resources/css/retype.css?v=3.10.0.806345733574" rel="stylesheet">
 
-    <script data-cfasync="false" src="/resources/js/config.js?v=3.10.0.806266057103" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="/resources/js/config.js?v=3.10.0.806345733574" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="/resources/js/retype.js?v=3.10.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="/resources/js/lunr.js?v=3.10.0.806266057103" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="/resources/js/prism.js?v=3.10.0.806266057103" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="/resources/js/lunr.js?v=3.10.0.806345733574" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="/resources/js/prism.js?v=3.10.0.806345733574" defer></script>
 
     <script>
         if (!window.localStorage.getItem('doc_theme')) {
@@ -226,35 +226,17 @@
 $client = new Client('ux3HzRTaLGKvZjTb7ufaFUgJPvXbcNX7DWbnWAAUxQjHYqZJ');</code></pre>
 </doc-codeblock></div>
 <p>y realiza peticiones como <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
-    <span>getStatus</span>
+    <span>status()-&gt;get()</span>
 </span></p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-php"><code v-pre class="language-php">$status = $client-&gt;getStatus();</code></pre>
+<pre translate="no" class="language-php"><code v-pre class="language-php">$status = $client-&gt;status()-&gt;get();</code></pre>
 </doc-codeblock></div>
-<p>que devuelve un array con información sobre la conexión o el estado de la API:</p>
+<p>que devuelve una entidad <a href="/php-sdk/entities/status/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
+    <span>Status</span>
+</a> con el que puedes obtener información sobre la conexión o el estado de la API, por ejemplo:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-json"><code v-pre class="language-json">{
-    &quot;object&quot;: &quot;Status&quot;,
-    &quot;availableApiVersions&quot;: [
-        {
-            &quot;object&quot;: &quot;ApiVersion&quot;,
-            &quot;version&quot;: &quot;1.0.0&quot;,
-            &quot;status&quot;: &quot;stable&quot;,
-            &quot;isDeprecated&quot;: false
-        }
-    ],
-    &quot;latestStableMajorApiVersion&quot;: 1,
-    &quot;requestMajorApiVersion&quot;: 1,
-    &quot;clientId&quot;: &quot;cli_EeLdmCtWoWqNYj&quot;,
-    &quot;projectId&quot;: &quot;prj_fHsHWBCvdnICot&quot;,
-    &quot;roles&quot;: [
-        &quot;ROLE_API_USER&quot;
-    ],
-    &quot;permissions&quot;: [
-        &quot;status&quot;
-    ],
-    &quot;serverTime&quot;: &quot;2025-06-09T09:30:01+00:00&quot;,
-    &quot;environment&quot;: &quot;prod&quot;
+<pre translate="no" class="language-php"><code v-pre class="language-php">if ($status-&gt;latestStableMajorApiVersion === $status-&gt;requestMajorApiVersion) {
+    echo &quot;Estás utilizando la versión de API más reciente&quot;;
 }</code></pre>
 </doc-codeblock></div>
 

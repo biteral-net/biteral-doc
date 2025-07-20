@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.10.0.806266057103">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.10.0.806345733574">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.10.0">
@@ -31,12 +31,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link href="/static/favicon.png" rel="icon">
-    <link href="/resources/css/retype.css?v=3.10.0.806266057103" rel="stylesheet">
+    <link href="/resources/css/retype.css?v=3.10.0.806345733574" rel="stylesheet">
 
-    <script data-cfasync="false" src="/resources/js/config.js?v=3.10.0.806266057103" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="/resources/js/config.js?v=3.10.0.806345733574" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="/resources/js/retype.js?v=3.10.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="/resources/js/lunr.js?v=3.10.0.806266057103" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="/resources/js/prism.js?v=3.10.0.806266057103" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="/resources/js/lunr.js?v=3.10.0.806345733574" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="/resources/js/prism.js?v=3.10.0.806345733574" defer></script>
 
     <script>
         if (!window.localStorage.getItem('doc_theme')) {
@@ -204,12 +204,12 @@
     </h3>
 </doc-anchor-target>
 <p>Llama a <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-gray-700 dark:text-dark-600 bg-white border border-gray-300 dark:border-transparent h-6 px-2 text-xs rounded-md">
-    <span>products()-&gt;post()</span>
+    <span>products()-&gt;ingest()</span>
 </span> pasando un objeto <a href="/php-sdk/payloads/product-payload/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
     <span>ProductPayload</span>
 </a> como parámetro:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-php"><code v-pre class="language-php">$product = $client-&gt;products()-&gt;post(
+<pre translate="no" class="language-php"><code v-pre class="language-php">$productPayload =
     new ProductPayload(
         code: 'N39291',
         title: 'Zapatillas deportivas urbanas para hombre – modelo AirFlow',
@@ -223,77 +223,74 @@
             new ProductAttributePayload('Peso', '850g (par, talla 42)'),
             new ProductAttributePayload('Uso recomendado', 'Uso diario y entrenamiento ligero')
         ],
-        brand: new ProductBrandPayload('OW142398', 'Nike'),
+        brand: new BrandPayload('OW142398', 'Nike'),
         category: new ProductCategoryPayload('MC418298', 'Zapatillas deportivas')
-    )
-);</code></pre>
+    );
+
+$client-&gt;products()-&gt;ingest($productPayload);</code></pre>
 </doc-codeblock></div>
-<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-gray-700 dark:text-dark-600 bg-white border border-gray-300 dark:border-transparent h-6 px-2 text-xs rounded-md">
-    <span>products()-&gt;post()</span>
-</span> devuelve un objeto <a href="/php-sdk/entities/product/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
-    <span>Product</span>
-</a> que te permite, por ejemplo, averiguar el id en Biteral del producto que acabas de añadir:</p>
-<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
-    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title border-r">
-        <span>PHP</span>
-    </div>
-    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title">
-        <span>Resultado</span>
-    </div>
-    <div class="docs-columns-code docs-columns-content border-r border-gray-200 dark:border-dark-650">
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-php"><code v-pre class="language-php">echo $product-&gt;id;</code></pre>
-</doc-codeblock></div>
-    </div>
-    <div class="docs-columns-code docs-columns-content">
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-bash"><code v-pre class="language-bash">pro_f28Jfk0i28iXIs</code></pre>
-</doc-codeblock></div>
-    </div>
-</div>
+<p>Esto añadirá el producto a Biteral. Ten en cuenta que el producto se añadirá al proyecto que corresponde a la API key que estés utilizando.</p>
 <doc-anchor-target id="actualización-de-productos">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#actualización-de-productos">#</doc-anchor-trigger>
         <span>Actualización de productos</span>
     </h3>
 </doc-anchor-target>
-<p>Cuando los datos de vuestros productos cambien, utiliza el método <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-gray-700 dark:text-dark-600 bg-white border border-gray-300 dark:border-transparent h-6 px-2 text-xs rounded-md">
-    <span>products()-&gt;patch()</span>
-</span> y pasa como parámetro un objeto <a href="/php-sdk/payloads/product-payload/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
-    <span>ProductPayload</span>
-</a> con sólo los datos que han cambiado:</p>
+<p>Para cambiar los datos de un producto que ya cargaste, llama a <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-gray-700 dark:text-dark-600 bg-white border border-gray-300 dark:border-transparent h-6 px-2 text-xs rounded-md">
+    <span>products()-&gt;ingest()</span>
+</span> igual que cuando lo creaste arriba. Esta vez puedes especificar tan sólo los datos que cambiaron, aunque puedes enviar todos los demás datos de nuevo si te resulta más cómodo:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-php"><code v-pre class="language-php">$client-&gt;products()-&gt;patch(
+<pre translate="no" class="language-php"><code v-pre class="language-php">$productPayload =
     new ProductPayload(
         code: 'N39291',
-        title: 'Zapatillas deportivas urbanas unisex – modelo AirFlow',
-        price: new Price(45.95, Currency::EURO),
-    )
-);</code></pre>
+        price: new PricePayload(49.95, Currency::EURO)
+    );
+
+$client-&gt;products()-&gt;ingest($productPayload);</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="productos-fuera-de-stock">
+<p>Al actualizar productos, es imprescindible especificar al menos <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3.75 15a.75.75 0 0 1 .75.75v3.5c0 .138.112.25.25.25h3.5a.75.75 0 0 1 0 1.5h-3.5A1.75 1.75 0 0 1 3 19.25v-3.5a.75.75 0 0 1 .75-.75Zm16.5 0a.75.75 0 0 1 .75.75v3.5A1.75 1.75 0 0 1 19.25 21h-3.5a.75.75 0 0 1 0-1.5h3.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 .75-.75ZM4.75 4.5a.25.25 0 0 0-.25.25v3.5a.75.75 0 0 1-1.5 0v-3.5C3 3.784 3.784 3 4.75 3h3.5a.75.75 0 0 1 0 1.5ZM15 3.75a.75.75 0 0 1 .75-.75h3.5c.966 0 1.75.784 1.75 1.75v3.5a.75.75 0 0 1-1.5 0v-3.5a.25.25 0 0 0-.25-.25h-3.5a.75.75 0 0 1-.75-.75Z"/></g></svg></span>
+    <span>code</span>
+</span></p>
+<blockquote>
+<p>Si los datos que envías al actualizar un producto no contienen ningún cambio respecto a los valores actuales, no se considera una actualización. En ese caso, la petición <code v-pre>ingest</code> no cuenta para tu cuota de peticiones <code v-pre>ingest</code> facturables.</p>
+</blockquote>
+<doc-anchor-target id="desactivar-productos-temporalmente">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#productos-fuera-de-stock">#</doc-anchor-trigger>
-        <span>Productos fuera de stock</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#desactivar-productos-temporalmente">#</doc-anchor-trigger>
+        <span>Desactivar productos temporalmente</span>
     </h3>
 </doc-anchor-target>
-<p>Normalmente no querrás que los productos que están fuera de stock sean tenidos en cuenta por las herramientas de Biteral como, por ejemplo, las recomendaciones personalizadas.</p>
-<p>Si es así, utiliza también el método <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-gray-700 dark:text-dark-600 bg-white border border-gray-300 dark:border-transparent h-6 px-2 text-xs rounded-md">
-    <span>products()-&gt;patch()</span>
-</span> para poner <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-6 px-2 text-xs rounded-md">
+<p>En algunas ocasiones es posible que necesites desactivar temporalmente algunos productos de forma que no formen parte de los datos que manejan las herramientas de Biteral.</p>
+<blockquote>
+<p>Por ejemplo, lo más probable es que no desees obtener productos que están <strong>fuera de stock</strong> en los resultados de la búsqueda natural.</p>
+</blockquote>
+<p>En tales casos, pon <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3.75 15a.75.75 0 0 1 .75.75v3.5c0 .138.112.25.25.25h3.5a.75.75 0 0 1 0 1.5h-3.5A1.75 1.75 0 0 1 3 19.25v-3.5a.75.75 0 0 1 .75-.75Zm16.5 0a.75.75 0 0 1 .75.75v3.5A1.75 1.75 0 0 1 19.25 21h-3.5a.75.75 0 0 1 0-1.5h3.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 .75-.75ZM4.75 4.5a.25.25 0 0 0-.25.25v3.5a.75.75 0 0 1-1.5 0v-3.5C3 3.784 3.784 3 4.75 3h3.5a.75.75 0 0 1 0 1.5ZM15 3.75a.75.75 0 0 1 .75-.75h3.5c.966 0 1.75.784 1.75 1.75v3.5a.75.75 0 0 1-1.5 0v-3.5a.25.25 0 0 0-.25-.25h-3.5a.75.75 0 0 1-.75-.75Z"/></g></svg></span>
     <span>isActive</span>
-</span> a <code v-pre>false</code>:</p>
+</span> en tu producto a <code v-pre>false</code>:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-php"><code v-pre class="language-php">$client-&gt;products()-&gt;patch(
+<pre translate="no" class="language-php"><code v-pre class="language-php">$productPayload =
     new ProductPayload(
         code: 'N39291',
         isActive: false
-    )
-);</code></pre>
+    );
+
+$client-&gt;products()-&gt;ingest($productPayload);</code></pre>
 </doc-codeblock></div>
-<p>Cuando el producto vuelva a estar disponible, reactívalo poniendo <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-6 px-2 text-xs rounded-md">
+<p>Cuando el producto vuelva a estar disponible, reactívalo poniendo <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3.75 15a.75.75 0 0 1 .75.75v3.5c0 .138.112.25.25.25h3.5a.75.75 0 0 1 0 1.5h-3.5A1.75 1.75 0 0 1 3 19.25v-3.5a.75.75 0 0 1 .75-.75Zm16.5 0a.75.75 0 0 1 .75.75v3.5A1.75 1.75 0 0 1 19.25 21h-3.5a.75.75 0 0 1 0-1.5h3.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 .75-.75ZM4.75 4.5a.25.25 0 0 0-.25.25v3.5a.75.75 0 0 1-1.5 0v-3.5C3 3.784 3.784 3 4.75 3h3.5a.75.75 0 0 1 0 1.5ZM15 3.75a.75.75 0 0 1 .75-.75h3.5c.966 0 1.75.784 1.75 1.75v3.5a.75.75 0 0 1-1.5 0v-3.5a.25.25 0 0 0-.25-.25h-3.5a.75.75 0 0 1-.75-.75Z"/></g></svg></span>
     <span>isActive</span>
 </span> a <code v-pre>true</code></p>
+<blockquote>
+<p>Si actualizas los datos de un producto que está desactivado y deseas que siga desactivado, debes volver a enviar explícitamente <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3.75 15a.75.75 0 0 1 .75.75v3.5c0 .138.112.25.25.25h3.5a.75.75 0 0 1 0 1.5h-3.5A1.75 1.75 0 0 1 3 19.25v-3.5a.75.75 0 0 1 .75-.75Zm16.5 0a.75.75 0 0 1 .75.75v3.5A1.75 1.75 0 0 1 19.25 21h-3.5a.75.75 0 0 1 0-1.5h3.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 .75-.75ZM4.75 4.5a.25.25 0 0 0-.25.25v3.5a.75.75 0 0 1-1.5 0v-3.5C3 3.784 3.784 3 4.75 3h3.5a.75.75 0 0 1 0 1.5ZM15 3.75a.75.75 0 0 1 .75-.75h3.5c.966 0 1.75.784 1.75 1.75v3.5a.75.75 0 0 1-1.5 0v-3.5a.25.25 0 0 0-.25-.25h-3.5a.75.75 0 0 1-.75-.75Z"/></g></svg></span>
+    <span>isActive</span>
+</span> como <code v-pre>false</code> en la petición. Esto se debe a que el valor por defecto de <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3.75 15a.75.75 0 0 1 .75.75v3.5c0 .138.112.25.25.25h3.5a.75.75 0 0 1 0 1.5h-3.5A1.75 1.75 0 0 1 3 19.25v-3.5a.75.75 0 0 1 .75-.75Zm16.5 0a.75.75 0 0 1 .75.75v3.5A1.75 1.75 0 0 1 19.25 21h-3.5a.75.75 0 0 1 0-1.5h3.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 .75-.75ZM4.75 4.5a.25.25 0 0 0-.25.25v3.5a.75.75 0 0 1-1.5 0v-3.5C3 3.784 3.784 3 4.75 3h3.5a.75.75 0 0 1 0 1.5ZM15 3.75a.75.75 0 0 1 .75-.75h3.5c.966 0 1.75.784 1.75 1.75v3.5a.75.75 0 0 1-1.5 0v-3.5a.25.25 0 0 0-.25-.25h-3.5a.75.75 0 0 1-.75-.75Z"/></g></svg></span>
+    <span>isActive</span>
+</span> es <code v-pre>true</code> cuando no lo especificas en tus peticiones.</p>
+</blockquote>
 <doc-anchor-target id="productos-descatalogados">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#productos-descatalogados">#</doc-anchor-trigger>
