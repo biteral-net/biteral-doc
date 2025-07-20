@@ -10,7 +10,7 @@ Biteral analiza los datos de vuestros productos y el comportamiento de vuestros 
 
 Aunque podéis enviarnos los datos en un archivo Excel o CSV, lo más recomendable es hacerlo a través de la API. Esto garantiza la máxima flexibilidad y permite que Biteral funcione en tiempo real, adaptándose siempre a los datos más recientes.
 
-!!!secondary
+!!!
 En muchos casos, esta inmediatez es clave: por ejemplo, Biteral puede sugerir productos más adecuados justo después de una compra, aprovechando al máximo el momento de mayor interés del cliente.
 !!!
 
