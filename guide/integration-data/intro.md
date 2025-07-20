@@ -1,8 +1,7 @@
 ---
-label: Integrar datos
+label: Introducción
 order: 1000
-icon: bookmark
-expanded: true
+icon: arrow-right
 ---
 # Integrar datos
 
@@ -27,9 +26,9 @@ Acciones que los clientes realizan: visitas a productos, compras, añadir al car
 ### Métodos de integración
 
 ||| **:icon-file-code: SDK PHP**
-Si trabajas con PHP, te recomendamos utilizar el [SDK de Biteral para PHP](/php-sdk). Es la forma más sencilla, flexible y segura de integrar la plataforma.
+Si trabajas con PHP, te recomendamos utilizar el [SDK de Biteral para PHP](/php-sdk/install). Es la forma más sencilla, flexible y segura de integrar la plataforma.
 ||| **![](/static/icons/technology/api.svg){width="18"} Api**
-Utiliza la [API de Biteral](/api) desde cualquier plataforma o lenguaje de programación conectando directamente.
+Utiliza la [API de Biteral](/api/connect) desde cualquier plataforma o lenguaje de programación conectando directamente.
 |||
 
 Continúa a la página siguiente para aprender cómo enviar tus primeros productos a Biteral:

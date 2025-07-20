@@ -11,7 +11,7 @@ Lo más recomendable es comenzar cargando todos los productos disponibles en vue
 
 +++ PHP SDK
 
-Una vez hayas [instalado el SDK](/php-sdk), llama al método [!badge variant="info" text="products()->ingest"](/php-sdk/products/add-products) pasando un objeto [!badge variant="info" text="ProductPayload"](/php-sdk/payloads/product-payload) como parámetro:
+Una vez hayas [instalado el SDK](/php-sdk/install), llama al método [!badge variant="info" text="products()->ingest"](/php-sdk/products/add-products) pasando un objeto [!badge variant="info" text="ProductPayload"](/php-sdk/payloads/product-payload) como parámetro:
 
 ```php
 $product = $client->products()->post(
@@ -35,7 +35,7 @@ $product = $client->products()->post(
 ```
 +++ API
 
-Una vez hayas aprendido [cómo conectar con la API](/api), haz una petición [!badge variant="success" text="POST"] al endpoint [!badge /products](/api/endpoints/products/post) con el JSON body:
+Una vez hayas aprendido [cómo conectar con la API](/api/connect), haz una petición [!badge variant="success" text="POST"] al endpoint [!badge /products](/api/endpoints/products/post) con el JSON body:
 
 ```json
 {

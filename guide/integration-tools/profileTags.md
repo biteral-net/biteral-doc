@@ -1,5 +1,5 @@
 ---
-order: 700
+order: 960
 label: Etiquetas de cliente
 icon: /static/icons/products/profileTags.svg
 ---

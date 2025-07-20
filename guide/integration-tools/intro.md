@@ -1,8 +1,8 @@
 ---
-label: Integrar herramientas
+label: Introducción
 expanded: true
-order: 990
-icon: file-directory
+order: 1000
+icon: arrow-right
 ---
 # Integrar herramientas
 
