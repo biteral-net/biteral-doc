@@ -13,6 +13,6 @@ Representa una de las categorías de vuestros productos en Biteral. Además de l
 ||
 ---|---|---
 [!badge icon="screen-full" text="id"]|string|Id de la categoría en Biteral. Por ejemplo: `cat_hs14jd193K1ndJ`
-[!badge icon="screen-full" text="payload"]|[!badge variant="info" text="CategoryPayload"](/php-sdk/payloads/category-payload)|Payload con los datos de la categoría
 [!badge icon="screen-full" text="createdAt"]|int|Fecha de creación de la categoría. [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time).
 [!badge icon="screen-full" text="updatedAt"]|int|Fecha en la que la categoría se actualizó por última vez. [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time).
+[!badge icon="screen-full" text="payload"]|[!badge variant="info" text="CategoryPayload"](/php-sdk/payloads/category-payload)|Payload de los datos de la categoría

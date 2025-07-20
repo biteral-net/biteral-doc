@@ -6,7 +6,7 @@ icon: arrow-right
 ---
 # Productos descatalogados
 
-Cuando un producto ya no está a la venta, elimínalo de Biteral con el método [!badge variant="light" text="products()->deleteByCode()"], que te permite eliminar un producto a través de vuestro código de producto:
+Cuando un producto ya no está a la venta, elimínalo de Biteral con el método [!badge variant="light" text="products()->deleteByCode()"]:
 
 ```php
 $client->products()->deleteByCode('N39291');
