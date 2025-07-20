@@ -7,15 +7,7 @@ icon: arrow-right
 
 Obtener una lista de productos que encajan con una búsqueda realizada en lenguage natural.
 
-+++ JSON request body
-
-```json
-{
-    "query": "Un regalo para un aficionado a la cocina",
-    "limit": 10
-}
-```
-+++ Documentación
++++ Parámetros
 
 [!badge variant="danger" icon="lock" text="query"]
 : La cadena escrita por el usuario para encontrar productos en lenguaje natural, por ejemplo `Un regalo para un aficionado a la cocina`
@@ -32,7 +24,7 @@ Obtener una lista de productos que encajan con una búsqueda realizada en lengua
     "createdAt": "2025-07-02T17:51:50+00:00",
     "updatedAt": null,
     "isActive": true,
-    "data": {
+    "payload": {
         "code": "DJA8298",
         "title": "Set de regalo para aficionados a la cocina – edición gourmet",
         "description": "Este set de regalo es perfecto para quienes disfrutan cocinando. Incluye una tabla de cortar de bambú, cuchillo de chef profesional de acero inoxidable, delantal personalizado, y un libro de recetas gourmet. Todo presentado en una elegante caja de regalo. Ideal para sorprender a cualquier amante de la cocina con herramientas prácticas y de alta calidad.",
@@ -50,7 +42,7 @@ Obtener una lista de productos que encajan con una búsqueda realizada en lengua
         "createdAt": "2025-07-03T09:22:30+00:00",
         "updatedAt": null,
         "isActive": true,
-        "data": {
+        "payload": {
             "code": "FNN1848",
             "title": "Kit de especias del mundo – 12 sabores internacionales",
             "description": "Descubre una colección exclusiva de 12 especias seleccionadas de diferentes rincones del mundo. Presentado en frascos de vidrio con etiquetas artesanales, este kit es perfecto para dar un toque especial a cualquier plato y ampliar el repertorio culinario del destinatario.",
@@ -69,7 +61,7 @@ Obtener una lista de productos que encajan con una búsqueda realizada en lengua
         "createdAt": "2025-07-04T14:10:00+00:00",
         "updatedAt": null,
         "isActive": true,
-        "data": {
+        "payload": {
             "code": "SJD2818",
             "title": "Delantal personalizado con bolsillo – diseño vintage",
             "description": "Un delantal elegante y funcional con diseño vintage, confeccionado en algodón grueso. Cuenta con bolsillo frontal y puede personalizarse con nombre o frase. Un detalle práctico y original para chefs aficionados.",

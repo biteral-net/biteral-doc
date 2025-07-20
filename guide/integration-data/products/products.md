@@ -27,7 +27,7 @@ $product = $client->products()->post(
             new ProductAttributePayload('Peso', '850g (par, talla 42)'),
             new ProductAttributePayload('Uso recomendado', 'Uso diario y entrenamiento ligero')
         ],
-        brand: new ProductBrandPayload('OW142398', 'Nike'),
+        brand: new BrandPayload('OW142398', 'Nike'),
         category: new ProductCategoryPayload('MC418298', 'Zapatillas deportivas')
     )
 );

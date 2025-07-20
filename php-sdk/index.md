@@ -23,36 +23,16 @@ use Biteral\Client;
 $client = new Client('ux3HzRTaLGKvZjTb7ufaFUgJPvXbcNX7DWbnWAAUxQjHYqZJ');
 ```
 
-y realiza peticiones como [!badge getStatus]
+y realiza peticiones como [!badge status()->get()]
 
 ```php
-$status = $client->getStatus();
+$status = $client->status()->get();
 ```
 
-que devuelve un array con información sobre la conexión o el estado de la API:
+que devuelve una entidad [!badge variant="info" text="Status"](/php-sdk/entities/status) con el que puedes obtener información sobre la conexión o el estado de la API, por ejemplo:
 
-```json
-{
-    "object": "Status",
-    "availableApiVersions": [
-        {
-            "object": "ApiVersion",
-            "version": "1.0.0",
-            "status": "stable",
-            "isDeprecated": false
-        }
-    ],
-    "latestStableMajorApiVersion": 1,
-    "requestMajorApiVersion": 1,
-    "clientId": "cli_EeLdmCtWoWqNYj",
-    "projectId": "prj_fHsHWBCvdnICot",
-    "roles": [
-        "ROLE_API_USER"
-    ],
-    "permissions": [
-        "status"
-    ],
-    "serverTime": "2025-06-09T09:30:01+00:00",
-    "environment": "prod"
+```php
+if ($status->latestStableMajorApiVersion === $status->requestMajorApiVersion) {
+    echo "Estás utilizando la versión de API más reciente";
 }
 ```

@@ -50,6 +50,9 @@ Crear o modificar un producto.
 [!badge variant="danger" icon="lock" text="code"]
 : Código de producto, por ejemplo `N39291` [!badge variant="light" icon="arrow-both" text="255"]
 
+[!badge variant="warning" text="isActive"]
+: Indica si el producto está habilitado para ser utilizado por los servicios de Biteral, como recomendaciones, búsqueda o análisis. Si no se incluye este campo al enviar o actualizar el producto, se asume automáticamente que el producto está activo `true`. Poner isActive a `false` permite mantener el producto en el sistema sin que participe en ningún procesamiento o resultado de los servicios.
+
 [!badge variant="danger" icon="lock" text="title"]
 : Título del producto. [!badge variant="light" icon="arrow-both" text="10000"]
 

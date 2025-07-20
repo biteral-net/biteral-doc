@@ -24,7 +24,7 @@ $product = $client->products()->post(
                 new ProductAttributePayload('Peso', '850g (par, talla 42)'),
                 new ProductAttributePayload('Uso recomendado', 'Uso diario y entrenamiento ligero')
             ],
-            brand: new ProductBrandPayload('OW142398', 'Nike'),
+            brand: new BrandPayload('OW142398', 'Nike'),
             category: new ProductCategoryPayload('MC418298', 'Zapatillas deportivas')
         ),
         new ProductPayload(
@@ -47,7 +47,7 @@ use Biteral\Client;
 use Biteral\Payload\ProductPayload;
 use Biteral\Payload\PricePayload;
 use Biteral\Payload\ProductAttributePayload;
-use Biteral\Payload\ProductBrandPayload;
+use Biteral\Payload\BrandPayload;
 use Biteral\Payload\ProductCategoryPayload;
 
 $client = new Client('ux3HzRTaLGKvZjTb7ufaFUgJPvXbcNX7DWbnWAAUxQjHYqZJ');
@@ -75,7 +75,7 @@ foreach ($products as $product) {
                         new ProductAttributePayload($attribute->getName(), $attribute->getValue()),
                     $product->getAttributes()
                 ),
-            brand: new ProductBrandPayload($product->getBrand()->getCode(), $product->getBrand()->getName()),
+            brand: new BrandPayload($product->getBrand()->getCode(), $product->getBrand()->getName()),
             category: new ProductCategoryPayload($product->getCategory()->getCode(), $product->getCategory()->getTitle())
         );
 

@@ -1,9 +1,9 @@
 ---
-label: AttributePayload
+label: ProductAttributePayload
 expanded: false
 icon: arrow-right
 ---
-# AttributePayload
+# ProductAttributePayload
 
 Representa una característica de uno de vuestros productos
 

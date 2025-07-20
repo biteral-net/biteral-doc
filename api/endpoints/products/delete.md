@@ -9,7 +9,7 @@ Eliminar un producto.
 
 
 +++ Documentación
-Especifica uno de estos dos parámetros para obtener un producto a través de su código o de su Id en Biteral:
+Especifica uno de estos dos parámetros para eliminar un producto a través de su código o de su Id en Biteral:
 
 [!badge variant="warning" text="code"]
 : Código de producto, por ejemplo `N39291`
