@@ -3,4 +3,4 @@ label: Eventos
 order: 990
 icon: /static/icons/event.svg
 ---
-# Integrar eventos
+# ![](/static/icons/event.svg){width="40"} Integrar eventos

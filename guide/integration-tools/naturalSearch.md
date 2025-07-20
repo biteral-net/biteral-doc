@@ -3,4 +3,4 @@ order: 900
 label: Buscador natural
 icon: /static/icons/products/naturalSearch.svg
 ---
-# Buscador natural
+# ![](/static/icons/products/naturalSearch.svg){width="40"} Buscador natural

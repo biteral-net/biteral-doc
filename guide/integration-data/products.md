@@ -3,7 +3,7 @@ label: Productos
 order: 1000
 icon: /static/icons/product.svg
 ---
-# Integrar productos
+# ![](/static/icons/product.svg){width="40"} Integrar productos
 
 Lo más recomendable es comenzar cargando todos los productos disponibles en vuestro e-commerce para que Biteral pueda empezar a trabajar con ellos, pero primero veamos cómo cargar un único producto:
 

@@ -1,6 +1,6 @@
 ---
-order: 970
+order: 870
 label: Análisis de tendencias
 icon: /static/icons/products/trendAnalysis.svg
 ---
-# Análisis de tendencias
+# ![](/static/icons/products/trendAnalysis.svg){width="40"} Análisis de tendencias

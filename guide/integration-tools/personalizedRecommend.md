@@ -1,6 +1,6 @@
 ---
-order: 980
+order: 890
 label: Recomendaciones
 icon: /static/icons/products/personalizedRecommend.svg
 ---
-# Recomendaciones personalizadas
+# ![](/static/icons/products/personalizedRecommend.svg){width="40"} Recomendaciones
