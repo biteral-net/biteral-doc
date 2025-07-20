@@ -3,40 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.10.0.806345733574">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.10.0.806347532104">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.10.0">
 
     <!-- Primary Meta Tags -->
-    <title>Operar con productos | Inteligencia artificial para impulsar su comercio online</title>
-    <meta name="title" content="Operar con productos | Inteligencia artificial para impulsar su comercio online">
-    <meta name="description" content="El SDK para PHP permite cargar productos en Biteral, modificarlos y eliminarlos, además de otras operaciones que te resultarán útiles cuando...">
+    <title>ProductAttributePayload | Inteligencia artificial para impulsar su comercio online</title>
+    <meta name="title" content="ProductAttributePayload | Inteligencia artificial para impulsar su comercio online">
+    <meta name="description" content="Representa una característica de uno de vuestros productos">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://docs.biteral.net/php-sdk/products/">
+    <link rel="canonical" href="https://docs.biteral.net/php-sdk/payloads/attribute-payload/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://docs.biteral.net/php-sdk/products/">
-    <meta property="og:title" content="Operar con productos | Inteligencia artificial para impulsar su comercio online">
-    <meta property="og:description" content="El SDK para PHP permite cargar productos en Biteral, modificarlos y eliminarlos, además de otras operaciones que te resultarán útiles cuando...">
+    <meta property="og:url" content="https://docs.biteral.net/php-sdk/payloads/attribute-payload/">
+    <meta property="og:title" content="ProductAttributePayload | Inteligencia artificial para impulsar su comercio online">
+    <meta property="og:description" content="Representa una característica de uno de vuestros productos">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://docs.biteral.net/php-sdk/products/">
-    <meta property="twitter:title" content="Operar con productos | Inteligencia artificial para impulsar su comercio online">
-    <meta property="twitter:description" content="El SDK para PHP permite cargar productos en Biteral, modificarlos y eliminarlos, además de otras operaciones que te resultarán útiles cuando...">
+    <meta property="twitter:url" content="https://docs.biteral.net/php-sdk/payloads/attribute-payload/">
+    <meta property="twitter:title" content="ProductAttributePayload | Inteligencia artificial para impulsar su comercio online">
+    <meta property="twitter:description" content="Representa una característica de uno de vuestros productos">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link href="/static/favicon.png" rel="icon">
-    <link href="/resources/css/retype.css?v=3.10.0.806345733574" rel="stylesheet">
+    <link href="/resources/css/retype.css?v=3.10.0.806347532104" rel="stylesheet">
 
-    <script data-cfasync="false" src="/resources/js/config.js?v=3.10.0.806345733574" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="/resources/js/config.js?v=3.10.0.806347532104" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="/resources/js/retype.js?v=3.10.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="/resources/js/lunr.js?v=3.10.0.806345733574" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="/resources/js/prism.js?v=3.10.0.806345733574" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="/resources/js/lunr.js?v=3.10.0.806347532104" data-turbo-eval="false" defer></script>
 
     <script>
         if (!window.localStorage.getItem('doc_theme')) {
@@ -190,122 +189,48 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="retype-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="operar-con-productos" class="break-words">
+<doc-anchor-target id="productattributepayload" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#operar-con-productos">#</doc-anchor-trigger>
-        <span>Operar con productos</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#productattributepayload">#</doc-anchor-trigger>
+        <span>ProductAttributePayload</span>
     </h1>
 </doc-anchor-target>
-<p>El SDK para PHP permite cargar productos en Biteral, modificarlos y eliminarlos, además de otras operaciones que te resultarán útiles cuando implementes las herramientas.</p>
-<doc-anchor-target id="crear-un-producto">
+<p>Representa una característica de uno de vuestros productos</p>
+<doc-anchor-target id="propiedades">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#crear-un-producto">#</doc-anchor-trigger>
-        <span>Crear un producto</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#propiedades">#</doc-anchor-trigger>
+        <span>Propiedades</span>
     </h3>
 </doc-anchor-target>
-<p>Llama a <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-gray-700 dark:text-dark-600 bg-white border border-gray-300 dark:border-transparent h-6 px-2 text-xs rounded-md">
-    <span>products()-&gt;ingest()</span>
-</span> pasando un objeto <a href="/php-sdk/payloads/product-payload/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
-    <span>ProductPayload</span>
-</a> como parámetro:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-php"><code v-pre class="language-php">$productPayload =
-    new ProductPayload(
-        code: 'N39291',
-        title: 'Zapatillas deportivas urbanas para hombre – modelo AirFlow',
-        description: 'Estas zapatillas combinan estilo y comodidad para el uso diario. Diseñadas con materiales transpirables, suela de goma antideslizante y plantilla ergonómica, son ideales tanto para caminar por la ciudad como para entrenar en interiores. El modelo AirFlow ofrece un ajuste perfecto y un diseño moderno que se adapta a cualquier look casual. Disponibles en varias tallas y colores.',
-        price: new PricePayload(45.95, Currency::EURO),
-        attributes: [
-            new ProductAttributePayload('Material', 'cuero'),
-            new ProductAttributePayload('Color', 'negro con detalles en gris'),
-            new ProductAttributePayload('Tallas disponibles', '39, 40, 41, 42, 43, 44'),
-            new ProductAttributePayload('Suela', 'goma antideslizante'),
-            new ProductAttributePayload('Peso', '850g (par, talla 42)'),
-            new ProductAttributePayload('Uso recomendado', 'Uso diario y entrenamiento ligero')
-        ],
-        brand: new BrandPayload('OW142398', 'Nike'),
-        category: new ProductCategoryPayload('MC418298', 'Zapatillas deportivas')
-    );
-
-$client-&gt;products()-&gt;ingest($productPayload);</code></pre>
-</doc-codeblock></div>
-<p>Esto añadirá el producto a Biteral. Ten en cuenta que el producto se añadirá al proyecto que corresponde a la API key que estés utilizando.</p>
-<doc-anchor-target id="actualización-de-productos">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#actualización-de-productos">#</doc-anchor-trigger>
-        <span>Actualización de productos</span>
-    </h3>
-</doc-anchor-target>
-<p>Para cambiar los datos de un producto que ya cargaste, llama a <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-gray-700 dark:text-dark-600 bg-white border border-gray-300 dark:border-transparent h-6 px-2 text-xs rounded-md">
-    <span>products()-&gt;ingest()</span>
-</span> igual que cuando lo creaste arriba. Esta vez puedes especificar tan sólo los datos que cambiaron, aunque puedes enviar todos los demás datos de nuevo si te resulta más cómodo:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-php"><code v-pre class="language-php">$productPayload =
-    new ProductPayload(
-        code: 'N39291',
-        price: new PricePayload(49.95, Currency::EURO)
-    );
-
-$client-&gt;products()-&gt;ingest($productPayload);</code></pre>
-</doc-codeblock></div>
-<p>Al actualizar productos, es imprescindible especificar al menos <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
     <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3.75 15a.75.75 0 0 1 .75.75v3.5c0 .138.112.25.25.25h3.5a.75.75 0 0 1 0 1.5h-3.5A1.75 1.75 0 0 1 3 19.25v-3.5a.75.75 0 0 1 .75-.75Zm16.5 0a.75.75 0 0 1 .75.75v3.5A1.75 1.75 0 0 1 19.25 21h-3.5a.75.75 0 0 1 0-1.5h3.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 .75-.75ZM4.75 4.5a.25.25 0 0 0-.25.25v3.5a.75.75 0 0 1-1.5 0v-3.5C3 3.784 3.784 3 4.75 3h3.5a.75.75 0 0 1 0 1.5ZM15 3.75a.75.75 0 0 1 .75-.75h3.5c.966 0 1.75.784 1.75 1.75v3.5a.75.75 0 0 1-1.5 0v-3.5a.25.25 0 0 0-.25-.25h-3.5a.75.75 0 0 1-.75-.75Z"/></g></svg></span>
-    <span>code</span>
-</span></p>
-<blockquote>
-<p>Si los datos que envías al actualizar un producto no contienen ningún cambio respecto a los valores actuales, no se considera una actualización. En ese caso, la petición <code v-pre>ingest</code> no cuenta para tu cuota de peticiones <code v-pre>ingest</code> facturables.</p>
-</blockquote>
-<doc-anchor-target id="desactivar-productos-temporalmente">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#desactivar-productos-temporalmente">#</doc-anchor-trigger>
-        <span>Desactivar productos temporalmente</span>
-    </h3>
-</doc-anchor-target>
-<p>En algunas ocasiones es posible que necesites desactivar temporalmente algunos productos de forma que no formen parte de los datos que manejan las herramientas de Biteral.</p>
-<blockquote>
-<p>Por ejemplo, lo más probable es que no desees obtener productos que están <strong>fuera de stock</strong> en los resultados de la búsqueda natural.</p>
-</blockquote>
-<p>En tales casos, pon <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
+    <span>title</span>
+</span></td>
+<td>string</td>
+<td>Nombre de la característica, por ejemplo: <code v-pre>Color</code></td>
+</tr>
+<tr>
+<td><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
     <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3.75 15a.75.75 0 0 1 .75.75v3.5c0 .138.112.25.25.25h3.5a.75.75 0 0 1 0 1.5h-3.5A1.75 1.75 0 0 1 3 19.25v-3.5a.75.75 0 0 1 .75-.75Zm16.5 0a.75.75 0 0 1 .75.75v3.5A1.75 1.75 0 0 1 19.25 21h-3.5a.75.75 0 0 1 0-1.5h3.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 .75-.75ZM4.75 4.5a.25.25 0 0 0-.25.25v3.5a.75.75 0 0 1-1.5 0v-3.5C3 3.784 3.784 3 4.75 3h3.5a.75.75 0 0 1 0 1.5ZM15 3.75a.75.75 0 0 1 .75-.75h3.5c.966 0 1.75.784 1.75 1.75v3.5a.75.75 0 0 1-1.5 0v-3.5a.25.25 0 0 0-.25-.25h-3.5a.75.75 0 0 1-.75-.75Z"/></g></svg></span>
-    <span>isActive</span>
-</span> en tu producto a <code v-pre>false</code>:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-php"><code v-pre class="language-php">$productPayload =
-    new ProductPayload(
-        code: 'N39291',
-        isActive: false
-    );
-
-$client-&gt;products()-&gt;ingest($productPayload);</code></pre>
-</doc-codeblock></div>
-<p>Cuando el producto vuelva a estar disponible, reactívalo poniendo <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
-    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3.75 15a.75.75 0 0 1 .75.75v3.5c0 .138.112.25.25.25h3.5a.75.75 0 0 1 0 1.5h-3.5A1.75 1.75 0 0 1 3 19.25v-3.5a.75.75 0 0 1 .75-.75Zm16.5 0a.75.75 0 0 1 .75.75v3.5A1.75 1.75 0 0 1 19.25 21h-3.5a.75.75 0 0 1 0-1.5h3.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 .75-.75ZM4.75 4.5a.25.25 0 0 0-.25.25v3.5a.75.75 0 0 1-1.5 0v-3.5C3 3.784 3.784 3 4.75 3h3.5a.75.75 0 0 1 0 1.5ZM15 3.75a.75.75 0 0 1 .75-.75h3.5c.966 0 1.75.784 1.75 1.75v3.5a.75.75 0 0 1-1.5 0v-3.5a.25.25 0 0 0-.25-.25h-3.5a.75.75 0 0 1-.75-.75Z"/></g></svg></span>
-    <span>isActive</span>
-</span> a <code v-pre>true</code></p>
-<blockquote>
-<p>Si actualizas los datos de un producto que está desactivado y deseas que siga desactivado, debes volver a enviar explícitamente <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
-    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3.75 15a.75.75 0 0 1 .75.75v3.5c0 .138.112.25.25.25h3.5a.75.75 0 0 1 0 1.5h-3.5A1.75 1.75 0 0 1 3 19.25v-3.5a.75.75 0 0 1 .75-.75Zm16.5 0a.75.75 0 0 1 .75.75v3.5A1.75 1.75 0 0 1 19.25 21h-3.5a.75.75 0 0 1 0-1.5h3.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 .75-.75ZM4.75 4.5a.25.25 0 0 0-.25.25v3.5a.75.75 0 0 1-1.5 0v-3.5C3 3.784 3.784 3 4.75 3h3.5a.75.75 0 0 1 0 1.5ZM15 3.75a.75.75 0 0 1 .75-.75h3.5c.966 0 1.75.784 1.75 1.75v3.5a.75.75 0 0 1-1.5 0v-3.5a.25.25 0 0 0-.25-.25h-3.5a.75.75 0 0 1-.75-.75Z"/></g></svg></span>
-    <span>isActive</span>
-</span> como <code v-pre>false</code> en la petición. Esto se debe a que el valor por defecto de <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
-    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3.75 15a.75.75 0 0 1 .75.75v3.5c0 .138.112.25.25.25h3.5a.75.75 0 0 1 0 1.5h-3.5A1.75 1.75 0 0 1 3 19.25v-3.5a.75.75 0 0 1 .75-.75Zm16.5 0a.75.75 0 0 1 .75.75v3.5A1.75 1.75 0 0 1 19.25 21h-3.5a.75.75 0 0 1 0-1.5h3.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 .75-.75ZM4.75 4.5a.25.25 0 0 0-.25.25v3.5a.75.75 0 0 1-1.5 0v-3.5C3 3.784 3.784 3 4.75 3h3.5a.75.75 0 0 1 0 1.5ZM15 3.75a.75.75 0 0 1 .75-.75h3.5c.966 0 1.75.784 1.75 1.75v3.5a.75.75 0 0 1-1.5 0v-3.5a.25.25 0 0 0-.25-.25h-3.5a.75.75 0 0 1-.75-.75Z"/></g></svg></span>
-    <span>isActive</span>
-</span> es <code v-pre>true</code> cuando no lo especificas en tus peticiones.</p>
-</blockquote>
-<doc-anchor-target id="productos-descatalogados">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#productos-descatalogados">#</doc-anchor-trigger>
-        <span>Productos descatalogados</span>
-    </h3>
-</doc-anchor-target>
-<p>Cuando un producto ya no está a la venta, elimínalo de Biteral con el método <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-gray-700 dark:text-dark-600 bg-white border border-gray-300 dark:border-transparent h-6 px-2 text-xs rounded-md">
-    <span>products()-&gt;deleteByCode()</span>
-</span>, que te permite eliminar un producto a través de vuestro código de producto:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-php"><code v-pre class="language-php">$client-&gt;products()-&gt;deleteByCode('N39291');</code></pre>
-</doc-codeblock></div>
-<p>También puedes utilizar <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-gray-700 dark:text-dark-600 bg-white border border-gray-300 dark:border-transparent h-6 px-2 text-xs rounded-md">
-    <span>products()-&gt;deleteById()</span>
-</span>, que te permitie eliminar un producto utilizando su id en Biteral.</p>
+    <span>value</span>
+</span></td>
+<td>string</td>
+<td>Valor de la característica, por ejemplo: <code v-pre>Azul</code></td>
+</tr>
+</tbody>
+</table>
+</div>
 
                                 
                                 <!-- Required only on API pages -->
@@ -315,20 +240,20 @@ $client-&gt;products()-&gt;ingest($productPayload);</code></pre>
                             
                                 <nav id="retype-nextprev" class="print:hidden flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="/php-sdk/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="/php-sdk/payloads/price-payload/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Anterior</span>
-                                                <span class="block mt-1">PHP SDK</span>
+                                                <span class="block mt-1">Price​Payload</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="/php-sdk/products/add-multiple-products/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="/php-sdk/payloads/product-payload/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Siguiente</span>
-                                                <span class="block mt-1">Carga masiva</span>
+                                                <span class="block mt-1">Product​Payload</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -378,6 +303,6 @@ $client-&gt;products()-&gt;ingest($productPayload);</code></pre>
 
     <div id="retype-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Operar con productos", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "ProductAttributePayload", level: 3, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>

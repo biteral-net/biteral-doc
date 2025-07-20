@@ -9,24 +9,24 @@
     <meta name="generator" content="Retype 3.10.0">
 
     <!-- Primary Meta Tags -->
-    <title>Calidad de datos sobre productos | Inteligencia artificial para impulsar su comercio online</title>
-    <meta name="title" content="Calidad de datos sobre productos | Inteligencia artificial para impulsar su comercio online">
-    <meta name="description" content="Cuanta más información precisa, estructurada y actualizada recibimos, mejores son las recomendaciones, análisis y resultados que podemos generar para...">
+    <title>Actualizar productos | Inteligencia artificial para impulsar su comercio online</title>
+    <meta name="title" content="Actualizar productos | Inteligencia artificial para impulsar su comercio online">
+    <meta name="description" content="Para cambiar los datos de un producto que ya cargaste, llama a nuevamente, pero esta vez especifica sólo los datos que cambian.">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://docs.biteral.net/guide/integration-data/products/data-quality/">
+    <link rel="canonical" href="https://docs.biteral.net/php-sdk/products/update-products/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://docs.biteral.net/guide/integration-data/products/data-quality/">
-    <meta property="og:title" content="Calidad de datos sobre productos | Inteligencia artificial para impulsar su comercio online">
-    <meta property="og:description" content="Cuanta más información precisa, estructurada y actualizada recibimos, mejores son las recomendaciones, análisis y resultados que podemos generar para...">
+    <meta property="og:url" content="https://docs.biteral.net/php-sdk/products/update-products/">
+    <meta property="og:title" content="Actualizar productos | Inteligencia artificial para impulsar su comercio online">
+    <meta property="og:description" content="Para cambiar los datos de un producto que ya cargaste, llama a nuevamente, pero esta vez especifica sólo los datos que cambian.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://docs.biteral.net/guide/integration-data/products/data-quality/">
-    <meta property="twitter:title" content="Calidad de datos sobre productos | Inteligencia artificial para impulsar su comercio online">
-    <meta property="twitter:description" content="Cuanta más información precisa, estructurada y actualizada recibimos, mejores son las recomendaciones, análisis y resultados que podemos generar para...">
+    <meta property="twitter:url" content="https://docs.biteral.net/php-sdk/products/update-products/">
+    <meta property="twitter:title" content="Actualizar productos | Inteligencia artificial para impulsar su comercio online">
+    <meta property="twitter:description" content="Para cambiar los datos de un producto que ya cargaste, llama a nuevamente, pero esta vez especifica sólo los datos que cambian.">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
@@ -36,6 +36,7 @@
     <script data-cfasync="false" src="/resources/js/config.js?v=3.10.0.806347532104" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="/resources/js/retype.js?v=3.10.0" data-turbo-eval="false" defer></script>
     <script id="lunr-js" data-cfasync="false" src="/resources/js/lunr.js?v=3.10.0.806347532104" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="/resources/js/prism.js?v=3.10.0.806347532104" defer></script>
 
     <script>
         if (!window.localStorage.getItem('doc_theme')) {
@@ -189,13 +190,28 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="retype-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="calidad-de-datos-sobre-productos" class="break-words">
+<doc-anchor-target id="actualizar-productos" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#calidad-de-datos-sobre-productos">#</doc-anchor-trigger>
-        <span>Calidad de datos sobre productos</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#actualizar-productos">#</doc-anchor-trigger>
+        <span>Actualizar productos</span>
     </h1>
 </doc-anchor-target>
-<p>Cuanta más información precisa, estructurada y actualizada recibimos, mejores son las recomendaciones, análisis y resultados que podemos generar para tu e-commerce. Asegúrate de proporcionar títulos claros, descripciones completas y atributos relevantes.</p>
+<p>Para cambiar los datos de un producto que ya cargaste, llama a <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-gray-700 dark:text-dark-600 bg-white border border-gray-300 dark:border-transparent h-6 px-2 text-xs rounded-md">
+    <span>products()-&gt;ingest()</span>
+</span> nuevamente, pero esta vez especifica sólo los datos que cambian. También puedes especificar los demás datos si te resulta más cómodo, aunque no hayan cambiado.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-php"><code v-pre class="language-php">$productPayload =
+    new ProductPayload(
+        code: 'N39291',
+        price: new PricePayload(49.95, Currency::EURO)
+    );
+
+$client-&gt;products()-&gt;ingest($productPayload);</code></pre>
+</doc-codeblock></div>
+<p>Al actualizar productos, es imprescindible especificar al menos <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3.75 15a.75.75 0 0 1 .75.75v3.5c0 .138.112.25.25.25h3.5a.75.75 0 0 1 0 1.5h-3.5A1.75 1.75 0 0 1 3 19.25v-3.5a.75.75 0 0 1 .75-.75Zm16.5 0a.75.75 0 0 1 .75.75v3.5A1.75 1.75 0 0 1 19.25 21h-3.5a.75.75 0 0 1 0-1.5h3.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 .75-.75ZM4.75 4.5a.25.25 0 0 0-.25.25v3.5a.75.75 0 0 1-1.5 0v-3.5C3 3.784 3.784 3 4.75 3h3.5a.75.75 0 0 1 0 1.5ZM15 3.75a.75.75 0 0 1 .75-.75h3.5c.966 0 1.75.784 1.75 1.75v3.5a.75.75 0 0 1-1.5 0v-3.5a.25.25 0 0 0-.25-.25h-3.5a.75.75 0 0 1-.75-.75Z"/></g></svg></span>
+    <span>code</span>
+</span></p>
 <div class="flex mb-6">
     <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-blue-500 dark:bg-blue-400"></div>
     <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr-lg rounded-br-lg doc-callout bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
@@ -209,191 +225,8 @@
             </svg>
         </div>
         <div class="pr-5 ml-3 w-full">
-<p>La eficacia de las herramientas de Biteral depende directamente de la calidad de los datos de producto que proporciones.</p>
+<p>Si los datos que envías al actualizar un producto no contienen ningún cambio respecto a los valores actuales, no se considera una actualización. En ese caso, la petición <code v-pre>ingest</code> no cuenta para tu cuota de peticiones <code v-pre>ingest</code> facturables.</p>
         </div>
-    </div>
-</div>
-<p>Si no puedes proporcionar datos de calidad en todos los campos (título, descripción o atributos), asegúrate de que al menos uno de ellos contenga información completa y relevante.</p>
-<doc-anchor-target id="ejemplos-de-títulos">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#ejemplos-de-títulos">#</doc-anchor-trigger>
-        <span>Ejemplos de títulos</span>
-    </h3>
-</doc-anchor-target>
-<div class="table-wrapper scrollbar overflow-hidden">
-<table class="comfortable">
-<thead>
-<tr>
-<th><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-red-600 bg-red-100 h-6 px-2 text-xs rounded-md">
-    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1ZM5.834 19.227A9.464 9.464 0 0 0 12 21.5a9.5 9.5 0 0 0 9.5-9.5 9.464 9.464 0 0 0-2.273-6.166ZM2.5 12a9.464 9.464 0 0 0 2.273 6.166L18.166 4.773A9.463 9.463 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12Z"/></g></svg></span>
-    <span>Mala calidad</span>
-</span></th>
-<th><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-6 px-2 text-xs rounded-md">
-    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M21.03 5.72a.75.75 0 0 1 0 1.06l-11.5 11.5a.747.747 0 0 1-1.072-.012l-5.5-5.75a.75.75 0 1 1 1.084-1.036l4.97 5.195L19.97 5.72a.75.75 0 0 1 1.06 0Z"/></g></svg></span>
-    <span>Buena calidad</span>
-</span></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Camiseta</td>
-<td>Camiseta técnica de running para mujer, transpirable, color azul marino</td>
-</tr>
-<tr>
-<td>Móvil Android</td>
-<td>Smartphone Samsung Galaxy A54 5G, 128 GB, pantalla AMOLED 6.4”</td>
-</tr>
-<tr>
-<td>Sartén antiadherente</td>
-<td>Sartén antiadherente de aluminio fundido 24 cm, apta para inducción</td>
-</tr>
-<tr>
-<td>Oso de peluche</td>
-<td>Oso de peluche Disney gigante, 100 cm, color marrón claro</td>
-</tr>
-<tr>
-<td>Silla de oficina</td>
-<td>Silla ergonómica de oficina con respaldo de malla, reposabrazos ajustables y ruedas giratorias</td>
-</tr>
-<tr>
-<td>Novela histórica</td>
-<td>“La sombra del viento” de Carlos Ruiz Zafón, edición tapa blanda, 576 páginas</td>
-</tr>
-</tbody>
-</table>
-</div>
-<doc-anchor-target id="ejemplos-de-descripciones">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#ejemplos-de-descripciones">#</doc-anchor-trigger>
-        <span>Ejemplos de descripciones</span>
-    </h3>
-</doc-anchor-target>
-<div class="table-wrapper scrollbar overflow-hidden">
-<table class="comfortable">
-<thead>
-<tr>
-<th><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-red-600 bg-red-100 h-6 px-2 text-xs rounded-md">
-    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1ZM5.834 19.227A9.464 9.464 0 0 0 12 21.5a9.5 9.5 0 0 0 9.5-9.5 9.464 9.464 0 0 0-2.273-6.166ZM2.5 12a9.464 9.464 0 0 0 2.273 6.166L18.166 4.773A9.463 9.463 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12Z"/></g></svg></span>
-    <span>Mala calidad</span>
-</span></th>
-<th><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-6 px-2 text-xs rounded-md">
-    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M21.03 5.72a.75.75 0 0 1 0 1.06l-11.5 11.5a.747.747 0 0 1-1.072-.012l-5.5-5.75a.75.75 0 1 1 1.084-1.036l4.97 5.195L19.97 5.72a.75.75 0 0 1 1.06 0Z"/></g></svg></span>
-    <span>Buena calidad</span>
-</span></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Chaqueta cómoda y bonita para invierno. Ideal para el frío.</td>
-<td>Chaqueta acolchada impermeable para mujer, perfecta para climas fríos y húmedos. Con capucha ajustable, bolsillos laterales con cremallera y forro térmico suave. Disponible en tallas S a XL. Ideal para uso diario o actividades al aire libre.</td>
-</tr>
-<tr>
-<td>Teléfono con buena cámara y muchas funciones. Muy rápido.</td>
-<td>El Samsung Galaxy A54 5G cuenta con una pantalla AMOLED de 6.4” FHD+, cámara triple de hasta 50 MP, 128 GB de almacenamiento interno y batería de 5000 mAh. Ideal para fotografía, redes sociales y juegos. Incluye cargador y funda transparente.</td>
-</tr>
-<tr>
-<td>Sartén resistente y fácil de limpiar. Buena para cocinar de todo.</td>
-<td>Sartén antiadherente de 24 cm fabricada en aluminio fundido, compatible con todo tipo de cocinas, incluida inducción. Revestimiento libre de PFOA, mango ergonómico de baquelita resistente al calor. Apta para lavavajillas.</td>
-</tr>
-<tr>
-<td>Vela con olor agradable. Perfecta para casa.</td>
-<td>Vela aromática fabricada con cera de soja natural, fragancia de vainilla con notas de madera. Duración aproximada: 40 horas. Presentación en frasco de vidrio ámbar con tapa metálica. Ideal para ambientes relajantes.</td>
-</tr>
-</tbody>
-</table>
-</div>
-<doc-anchor-target id="ejemplos-de-atributos">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#ejemplos-de-atributos">#</doc-anchor-trigger>
-        <span>Ejemplos de atributos</span>
-    </h3>
-</doc-anchor-target>
-<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
-    <div class="flex items-center px-5 py-3 font-medium leading-snug text-gray-900 border-b border-gray-200 dark:border-dark-650 dark:text-white border-r">
-        <span><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-red-600 bg-red-100 h-6 px-2 text-xs rounded-md">
-    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1ZM5.834 19.227A9.464 9.464 0 0 0 12 21.5a9.5 9.5 0 0 0 9.5-9.5 9.464 9.464 0 0 0-2.273-6.166ZM2.5 12a9.464 9.464 0 0 0 2.273 6.166L18.166 4.773A9.463 9.463 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12Z"/></g></svg></span>
-    <span>Mala calidad</span>
-</span></span>
-    </div>
-    <div class="flex items-center px-5 py-3 font-medium leading-snug text-gray-900 border-b border-gray-200 dark:border-dark-650 dark:text-white">
-        <span><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-6 px-2 text-xs rounded-md">
-    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M21.03 5.72a.75.75 0 0 1 0 1.06l-11.5 11.5a.747.747 0 0 1-1.072-.012l-5.5-5.75a.75.75 0 1 1 1.084-1.036l4.97 5.195L19.97 5.72a.75.75 0 0 1 1.06 0Z"/></g></svg></span>
-    <span>Buena calidad</span>
-</span></span>
-    </div>
-    <div class="px-5 py-3 docs-columns-content border-r border-gray-200 dark:border-dark-650">
-<p><strong>Cámara fotográfica</strong></p>
-<ul>
-<li><strong>Zoom</strong> Sí</li>
-<li><strong>Vídeo</strong> Sí</li>
-<li><strong>Sensor</strong> 24.2 MP</li>
-</ul>
-    </div>
-    <div class="px-5 py-3 docs-columns-content">
-<p><strong>Cámara fotográfica</strong></p>
-<ul>
-<li><strong>Zoom</strong> Óptico 10x, digital 100x</li>
-<li><strong>Vídeo</strong> Full HD 1080p a 60 fps</li>
-<li><strong>Sensor</strong> CMOS APS-C de 24.2 MP</li>
-</ul>
-    </div>
-</div>
-<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
-    <div class="flex items-center px-5 py-3 font-medium leading-snug text-gray-900 border-b border-gray-200 dark:border-dark-650 dark:text-white border-r">
-        <span><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-red-600 bg-red-100 h-6 px-2 text-xs rounded-md">
-    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1ZM5.834 19.227A9.464 9.464 0 0 0 12 21.5a9.5 9.5 0 0 0 9.5-9.5 9.464 9.464 0 0 0-2.273-6.166ZM2.5 12a9.464 9.464 0 0 0 2.273 6.166L18.166 4.773A9.463 9.463 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12Z"/></g></svg></span>
-    <span>Mala calidad</span>
-</span></span>
-    </div>
-    <div class="flex items-center px-5 py-3 font-medium leading-snug text-gray-900 border-b border-gray-200 dark:border-dark-650 dark:text-white">
-        <span><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-6 px-2 text-xs rounded-md">
-    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M21.03 5.72a.75.75 0 0 1 0 1.06l-11.5 11.5a.747.747 0 0 1-1.072-.012l-5.5-5.75a.75.75 0 1 1 1.084-1.036l4.97 5.195L19.97 5.72a.75.75 0 0 1 1.06 0Z"/></g></svg></span>
-    <span>Buena calidad</span>
-</span></span>
-    </div>
-    <div class="px-5 py-3 docs-columns-content border-r border-gray-200 dark:border-dark-650">
-<p><strong>Colchón</strong></p>
-<ul>
-<li><strong>Tamaño</strong> Cama grande</li>
-<li><strong>Material</strong> Espuma viscoelástica</li>
-</ul>
-    </div>
-    <div class="px-5 py-3 docs-columns-content">
-<p><strong>Colchón</strong></p>
-<ul>
-<li><strong>Tamaño</strong> Queen size, 150x190cm</li>
-<li><strong>Material</strong> Capa viscoelástica de 4cm, espuma HR 30 kg/m³, con tratamiento antibacteriano</li>
-</ul>
-    </div>
-</div>
-<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
-    <div class="flex items-center px-5 py-3 font-medium leading-snug text-gray-900 border-b border-gray-200 dark:border-dark-650 dark:text-white border-r">
-        <span><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-red-600 bg-red-100 h-6 px-2 text-xs rounded-md">
-    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1ZM5.834 19.227A9.464 9.464 0 0 0 12 21.5a9.5 9.5 0 0 0 9.5-9.5 9.464 9.464 0 0 0-2.273-6.166ZM2.5 12a9.464 9.464 0 0 0 2.273 6.166L18.166 4.773A9.463 9.463 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12Z"/></g></svg></span>
-    <span>Mala calidad</span>
-</span></span>
-    </div>
-    <div class="flex items-center px-5 py-3 font-medium leading-snug text-gray-900 border-b border-gray-200 dark:border-dark-650 dark:text-white">
-        <span><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-6 px-2 text-xs rounded-md">
-    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M21.03 5.72a.75.75 0 0 1 0 1.06l-11.5 11.5a.747.747 0 0 1-1.072-.012l-5.5-5.75a.75.75 0 1 1 1.084-1.036l4.97 5.195L19.97 5.72a.75.75 0 0 1 1.06 0Z"/></g></svg></span>
-    <span>Buena calidad</span>
-</span></span>
-    </div>
-    <div class="px-5 py-3 docs-columns-content border-r border-gray-200 dark:border-dark-650">
-<p><strong>Gel de ducha</strong></p>
-<ul>
-<li><strong>Aroma</strong> Cítrico</li>
-<li><strong>Tipo de piel</strong> Todo tipo</li>
-<li><strong>Envase</strong> 500ml</li>
-</ul>
-    </div>
-    <div class="px-5 py-3 docs-columns-content">
-<p><strong>Gel de ducha</strong></p>
-<ul>
-<li><strong>Aroma</strong> Cítrico fresco con notas de lima y mandarina</li>
-<li><strong>Tipo de piel</strong> Apto para todo tipo de piel, incluso sensible</li>
-<li><strong>Envase</strong> 500 ml, botella reciclable con dosificador</li>
-</ul>
     </div>
 </div>
 
@@ -405,20 +238,20 @@
                             
                                 <nav id="retype-nextprev" class="print:hidden flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="/guide/integration-data/products/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="/php-sdk/products/add-multiple-products/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Anterior</span>
-                                                <span class="block mt-1"> Productos</span>
+                                                <span class="block mt-1">Carga masiva</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="/guide/integration-data/events/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="/php-sdk/products/deactivate-products/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Siguiente</span>
-                                                <span class="block mt-1">Eventos</span>
+                                                <span class="block mt-1">Desactivar productos</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -468,6 +301,6 @@
 
     <div id="retype-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Calidad de datos", level: 4, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Actualizar productos", level: 3, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
