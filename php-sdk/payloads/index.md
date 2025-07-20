@@ -1,10 +1,3 @@
----
-expanded: false
-label: Payloads
-order: 10
-icon: file-directory
----
-
 # Payloads
 
 Los Payloads son los objetos que utilizas para proporcionar datos a Biteral sobre vuestro e-commerce.

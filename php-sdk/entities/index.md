@@ -1,10 +1,3 @@
----
-expanded: false
-label: Entidades
-order: 10
-icon: file-directory
----
-
 # Entidades
 
 Las entidades representan, por ejemplo, los clientes o productos de vuestro e-commerce dentro de Biteral. No solo contienen los datos originales que habéis proporcionado, sino también información adicional generada por Biteral, como el estado de procesamiento o el identificador interno de la entidad.
