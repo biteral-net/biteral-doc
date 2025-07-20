@@ -1,16 +1,17 @@
 ---
+label: Productos
 order: 1000
 icon: /static/icons/product.svg
 ---
-# ![](/static/icons/product.svg){width="40"} Productos
+# Integrar productos
 
-Lo más recomendable es comenzar cargando todos los productos disponibles en vuestro e-commerce, para que Biteral pueda empezar a trabajar con ellos. Más adelante podrás actualizar productos individualmente o eliminarlos cuando ya no estén disponibles.
+Lo más recomendable es comenzar cargando todos los productos disponibles en vuestro e-commerce para que Biteral pueda empezar a trabajar con ellos, pero primero veamos cómo cargar un único producto:
 
-### Cargar un producto
+### Cargar tu primer producto
 
 +++ PHP SDK
 
-Llama al método [!badge variant="info" text="products()->post"](/php-sdk/products) pasando un objeto [!badge variant="info" text="ProductPayload"](/php-sdk/payloads/product-payload) como parámetro:
+Una vez hayas [instalado el SDK](/php-sdk), llama al método [!badge variant="info" text="products()->ingest"](/php-sdk/products/add-products) pasando un objeto [!badge variant="info" text="ProductPayload"](/php-sdk/payloads/product-payload) como parámetro:
 
 ```php
 $product = $client->products()->post(
@@ -32,12 +33,9 @@ $product = $client->products()->post(
     )
 );
 ```
-
-Puedes [cargar varios productos a la vez](/php-sdk/products/add-multiple-products) para que el proceso sea más rápido.
-
 +++ API
 
-Haz una petición [!badge variant="secondary" text="POST"] al endpoint [!badge /products](/api/endpoints/products/post-patch-put) con el JSON body:
+Una vez hayas aprendido [cómo conectar con la API](/api), haz una petición [!badge variant="success" text="POST"] al endpoint [!badge /products](/api/endpoints/products/post) con el JSON body:
 
 ```json
 {
@@ -74,19 +72,22 @@ Haz una petición [!badge variant="secondary" text="POST"] al endpoint [!badge /
     }
 }
 ```
-
-Puedes [cargar varios productos a la vez](/api/endpoints/products/post-patch-put/#cargar-varios-productos-a-la-vez) para que el proceso sea más rápido.
-
 +++
 
-Es posible que pasen unos minutos hasta que los productos que cargas estén disponibles para las herramientas de Biteral.
+### Cargar muchos productos a la vez
 
-!!!secondary
-En el [dashboard](https://biteral.net/account/dashboard) podrás ver los productos cargados y el estado del proceso.
+Al cargar todo vuestro catálogo, realizar una petición por cada producto sería muy lento. En su lugar, utiliza el método de carga masiva de productos:
+
++++ PHP SDK
+El SDK permite realizar cargas masivas de productos de forma óptima, aquí encontrarás información sobre cómo hacerlo:
+
+[!ref text="Carga masiva con el SDK"](/php-sdk/products/add-products-batch)
++++ API
+Puedes cargar varios productos a la vez pasando un array de productos a la API, aquí encontrarás los detalles sobre cómo hacerlo:
+
+[!ref text="Carga masiva con la API"](/api/endpoints/products/post/#cargar-varios-productos-a-la-vez)
++++
+
 !!!
-
-### Calidad de los datos de productos
-
-Cuanta más información precisa, estructurada y actualizada recibimos, mejores son las recomendaciones, análisis y resultados que podemos generar para tu e-commerce. Asegúrate de proporcionar títulos claros, descripciones completas y atributos relevantes.
-
-[!ref Calidad de los datos de productos](/guide/integration-data/products/data-quality)
+Cuando cargas muchos productos a Biteral muy rápidamente, puede pasar un rato hasta que todos están disponibles para las herramientas de Biteral.
+!!!
