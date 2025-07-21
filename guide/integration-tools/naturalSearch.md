@@ -16,53 +16,88 @@ Como la búsqueda de productos se basa en información conceptualizada, los resu
 ### Realizar una búsqueda natural
 
 +++ PHP SDK
-
-Una vez hayas [cargado vuestros productos](/guide/integration-data/products), llama al método [!badge variant="info" text="naturalSearch()->query"](/php-sdk/products/add-products) pasando un objeto [!badge variant="info" text="NaturalSearchQuery"](/php-sdk/entities/natural-search-query) como parámetro:
+Una vez hayas [cargado vuestros productos](/guide/integration-data/products), llama a [!badge variant="info" text="naturalSearch()->query"](/php-sdk/products/add-products) con un objeto [!badge variant="info" text="NaturalSearchQuery"](/php-sdk/entities/natural-search-query) como parámetro:
 
 ```php
-$result = $client->naturalSearch()->query(
-    new NaturalSearchQuery(
-        query: 'N39291'
-    )
-);
+$products =
+    $client->naturalSearch()->query(
+        new NaturalSearchQuery(
+            query: 'Un regalo para alguien a quien le encanta cocinar'
+        )
+    );
 ```
-+++ API
 
-Una vez hayas aprendido [cómo conectar con la API](/api/connect), haz una petición [!badge variant="success" text="POST"] al endpoint [!badge /products](/api/endpoints/products/post) con el JSON body:
+Y obtendrás un array de objetos [!badge variant="info" text="Product"](/php-sdk/entities/product) como resultado:
+
+```php
+foreach ($products as $product) {
+    echo $product->payload->title."\n";
+}
+```
+
++++ API
+Una vez hayas [cargado vuestros productos](/guide/integration-data/products), haz una petición [!badge variant="success" text="GET"] al endpoint [!badge /natural-search](/api/endpoints/natural-search/get) pasando la búsqueda en el parámetro [!badge variant="warning" text="query"], por ejemplo: `Un regalo para alguien a quien le encanta cocinar`
+
+Y obtendrás los productos que coinciden así:
 
 ```json
 {
-    "code": "N30123",
-    "title": "Zapatillas deportivas urbanas para hombre – modelo AirFlow",
-    "description": "Estas zapatillas combinan estilo y comodidad para el uso diario. Diseñadas con materiales transpirables, suela de goma antideslizante y plantilla ergonómica, son ideales tanto para caminar por la ciudad como para entrenar en interiores. El modelo AirFlow ofrece un ajuste perfecto y un diseño moderno que se adapta a cualquier look casual. Disponibles en varias tallas y colores.",
-    "price": {
-        "amount": "49.95",
-        "currency": "EUR"
+    "object": "product",
+    "id": "pro_Fj2f4kN1m2dk41",
+    "createdAt": "2025-07-02T17:51:50+00:00",
+    "updatedAt": null,
+    "isActive": true,
+    "payload": {
+        "code": "DJA8298",
+        "title": "Set de regalo para aficionados a la cocina – edición gourmet",
+        "description": "Este set de regalo es perfecto para quienes disfrutan cocinando. Incluye una tabla de cortar de bambú, cuchillo de chef profesional de acero inoxidable, delantal personalizado, y un libro de recetas gourmet. Todo presentado en una elegante caja de regalo. Ideal para sorprender a cualquier amante de la cocina con herramientas prácticas y de alta calidad.",
+        "attributes": null,
+        "brand": null,
+        "category": null,
+        "price": {
+            "amount": "39.90",
+            "currency": "EUR"
+        }
     },
-    "attributes": [
-        {"title": "Material", "value": "Cuero"},
-        {"title": "Color", "value": "negro con detalles en gris"},
-        {"title": "Tallas disponibles", "value": "39, 40, 41, 42, 43, 44"},
-        {"title": "Suela", "value": "goma antideslizante"},
-        {"title": "Peso", "value": "850g (par, talla 42)"},
-        {"title": "Uso recomendado", "value": "Uso diario y entrenamiento ligero"}
-    ],
-    "brand": {
-        "code": "OW142302",
-        "name": "Nike"
+    {
+        "object": "product",
+        "id": "pro_Bk3l0gX8m9aj27",
+        "createdAt": "2025-07-03T09:22:30+00:00",
+        "updatedAt": null,
+        "isActive": true,
+        "payload": {
+            "code": "FNN1848",
+            "title": "Kit de especias del mundo – 12 sabores internacionales",
+            "description": "Descubre una colección exclusiva de 12 especias seleccionadas de diferentes rincones del mundo. Presentado en frascos de vidrio con etiquetas artesanales, este kit es perfecto para dar un toque especial a cualquier plato y ampliar el repertorio culinario del destinatario.",
+            "attributes": null,
+            "brand": null,
+            "category": null,
+            "price": {
+                "amount": "29.50",
+                "currency": "EUR"
+            }
+        }
     },
-    "category": {
-        "code": "MC418292",
-        "title": "Zapatillas deportivas",
-        "description": "Calzado diseñado para ofrecer comodidad, soporte y rendimiento en actividades físicas o deportivas. Estas zapatillas también se adaptan al uso urbano y diario gracias a sus diseños modernos y materiales versátiles. Incluyen características como suelas antideslizantes, tejidos transpirables y estilos que combinan funcionalidad con moda."
-    },
-    "imageUrl": "https://m.media-amazon.com/images/I/61cELGQXXhL._AC_UL320_.jpg",
-    "metadata": {
-        "videoUrl": "https://m.media-amazon.com/videos/C/dk14lkKlsnw._AC_UL1080_.mp4",
-        "currentDiscountRate": "50%",
-        "isNew": true,
-        "isFeatured": false
+    {
+        "object": "product",
+        "id": "pro_Yt7q1lRm4xzp90",
+        "createdAt": "2025-07-04T14:10:00+00:00",
+        "updatedAt": null,
+        "isActive": true,
+        "payload": {
+            "code": "SJD2818",
+            "title": "Delantal personalizado con bolsillo – diseño vintage",
+            "description": "Un delantal elegante y funcional con diseño vintage, confeccionado en algodón grueso. Cuenta con bolsillo frontal y puede personalizarse con nombre o frase. Un detalle práctico y original para chefs aficionados.",
+            "attributes": null,
+            "brand": null,
+            "category": null,
+            "price": {
+                "amount": "19.95",
+                "currency": "EUR"
+            }
+        }
     }
 }
 ```
+
 +++

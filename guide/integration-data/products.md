@@ -11,7 +11,7 @@ Lo más recomendable es comenzar cargando todos los productos disponibles en vue
 
 +++ PHP SDK
 
-Una vez hayas [instalado el SDK](/php-sdk/install), llama al método [!badge variant="info" text="products()->ingest"](/php-sdk/products/add-products) pasando un objeto [!badge variant="info" text="ProductPayload"](/php-sdk/payloads/product-payload) como parámetro:
+Una vez hayas [instalado el SDK](/php-sdk/install), llama a [!badge variant="info" text="products()->ingest"](/php-sdk/products/add-products) con un objeto [!badge variant="info" text="ProductPayload"](/php-sdk/payloads/product-payload) como parámetro:
 
 ```php
 use Biteral\Payload\Product\ProductPayload;

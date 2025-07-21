@@ -10,7 +10,7 @@ El SDK para PHP permite cargar productos en Biteral, modificarlos y eliminarlos,
 
 ### Crear un producto
 
-Llama a [!badge variant="light" text="products()->ingest()"] pasando un objeto [!badge variant="info" text="ProductPayload"](/php-sdk/payloads/product-payload) como parámetro:
+Llama a [!badge variant="light" text="products()->ingest()"] con un objeto [!badge variant="info" text="ProductPayload"](/php-sdk/payloads/product-payload) como parámetro:
 
 ```php
 use Biteral\Payload\Product\ProductPayload;
