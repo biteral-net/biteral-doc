@@ -1,8 +1,8 @@
 ---
+label: Inicio
 icon: home
 ---
-# Documentación Biteral
-
+#
 Esta documentación está orientada a desarrolladores y describe los métodos disponibles para integrar Biteral en vuestro comercio electrónico. La integración se divide en dos pasos principales:
 
 ||| [!button size="m" icon="arrow-right" text="Integración de datos"](/guide/integration-data/intro)
