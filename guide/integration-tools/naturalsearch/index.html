@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.10.0.806401934098">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.10.0.806407627194">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.10.0">
@@ -33,12 +33,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link href="/static/favicon.png" rel="icon">
-    <link href="/resources/css/retype.css?v=3.10.0.806401934098" rel="stylesheet">
+    <link href="/resources/css/retype.css?v=3.10.0.806407627194" rel="stylesheet">
 
-    <script data-cfasync="false" src="/resources/js/config.js?v=3.10.0.806401934098" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="/resources/js/config.js?v=3.10.0.806407627194" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="/resources/js/retype.js?v=3.10.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="/resources/js/lunr.js?v=3.10.0.806401934098" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="/resources/js/prism.js?v=3.10.0.806401934098" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="/resources/js/lunr.js?v=3.10.0.806407627194" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="/resources/js/prism.js?v=3.10.0.806407627194" defer></script>
 
     <script>
         if (!window.localStorage.getItem('doc_theme')) {
@@ -226,58 +226,94 @@
 <doc-tabs>
 <doc-tab v-cloak id="php-sdk">
 <template #title>PHP SDK</template>
-<p>Una vez hayas <a href="/guide/integration-data/products/">cargado vuestros productos</a>, llama al método <a href="/php-sdk/products/add-products/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
+<p>Una vez hayas <a href="/guide/integration-data/products/">cargado vuestros productos</a>, llama a <a href="/php-sdk/products/add-products/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
     <span>naturalSearch()-&gt;query</span>
-</a> pasando un objeto <a href="/php-sdk/entities/natural-search-query" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
+</a> con un objeto <a href="/php-sdk/entities/natural-search-query" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
     <span>NaturalSearchQuery</span>
 </a> como parámetro:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-php"><code v-pre class="language-php">$result = $client-&gt;naturalSearch()-&gt;query(
-    new NaturalSearchQuery(
-        query: 'N39291'
-    )
-);</code></pre>
+<pre translate="no" class="language-php"><code v-pre class="language-php">$products =
+    $client-&gt;naturalSearch()-&gt;query(
+        new NaturalSearchQuery(
+            query: 'Un regalo para alguien a quien le encanta cocinar'
+        )
+    );</code></pre>
+</doc-codeblock></div>
+<p>Y obtendrás un array de objetos <a href="/php-sdk/entities/product/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
+    <span>Product</span>
+</a> como resultado:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-php"><code v-pre class="language-php">foreach ($products as $product) {
+    echo $product-&gt;payload-&gt;title.&quot;\n&quot;;
+}</code></pre>
 </doc-codeblock></div>
 </doc-tab>
 <doc-tab v-cloak id="api">
 <template #title>API</template>
-<p>Una vez hayas aprendido <a href="/api/connect/">cómo conectar con la API</a>, haz una petición <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-6 px-2 text-xs rounded-md">
-    <span>POST</span>
-</span> al endpoint <a href="/api/endpoints/products/post/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 border border-blue-100 hover:border-blue-300 dark:hover:bg-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
-    <span>/products</span>
-</a> con el JSON body:</p>
+<p>Una vez hayas <a href="/guide/integration-data/products/">cargado vuestros productos</a>, haz una petición <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-6 px-2 text-xs rounded-md">
+    <span>GET</span>
+</span> al endpoint <a href="/api/endpoints/natural-search/get/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 border border-blue-100 hover:border-blue-300 dark:hover:bg-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
+    <span>/natural-search</span>
+</a> pasando la búsqueda en el parámetro <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-6 px-2 text-xs rounded-md">
+    <span>query</span>
+</span>, por ejemplo: <code v-pre>Un regalo para alguien a quien le encanta cocinar</code></p>
+<p>Y obtendrás los productos que coinciden así:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-json"><code v-pre class="language-json">{
-    &quot;code&quot;: &quot;N30123&quot;,
-    &quot;title&quot;: &quot;Zapatillas deportivas urbanas para hombre – modelo AirFlow&quot;,
-    &quot;description&quot;: &quot;Estas zapatillas combinan estilo y comodidad para el uso diario. Diseñadas con materiales transpirables, suela de goma antideslizante y plantilla ergonómica, son ideales tanto para caminar por la ciudad como para entrenar en interiores. El modelo AirFlow ofrece un ajuste perfecto y un diseño moderno que se adapta a cualquier look casual. Disponibles en varias tallas y colores.&quot;,
-    &quot;price&quot;: {
-        &quot;amount&quot;: &quot;49.95&quot;,
-        &quot;currency&quot;: &quot;EUR&quot;
+    &quot;object&quot;: &quot;product&quot;,
+    &quot;id&quot;: &quot;pro_Fj2f4kN1m2dk41&quot;,
+    &quot;createdAt&quot;: &quot;2025-07-02T17:51:50+00:00&quot;,
+    &quot;updatedAt&quot;: null,
+    &quot;isActive&quot;: true,
+    &quot;payload&quot;: {
+        &quot;code&quot;: &quot;DJA8298&quot;,
+        &quot;title&quot;: &quot;Set de regalo para aficionados a la cocina – edición gourmet&quot;,
+        &quot;description&quot;: &quot;Este set de regalo es perfecto para quienes disfrutan cocinando. Incluye una tabla de cortar de bambú, cuchillo de chef profesional de acero inoxidable, delantal personalizado, y un libro de recetas gourmet. Todo presentado en una elegante caja de regalo. Ideal para sorprender a cualquier amante de la cocina con herramientas prácticas y de alta calidad.&quot;,
+        &quot;attributes&quot;: null,
+        &quot;brand&quot;: null,
+        &quot;category&quot;: null,
+        &quot;price&quot;: {
+            &quot;amount&quot;: &quot;39.90&quot;,
+            &quot;currency&quot;: &quot;EUR&quot;
+        }
     },
-    &quot;attributes&quot;: [
-        {&quot;title&quot;: &quot;Material&quot;, &quot;value&quot;: &quot;Cuero&quot;},
-        {&quot;title&quot;: &quot;Color&quot;, &quot;value&quot;: &quot;negro con detalles en gris&quot;},
-        {&quot;title&quot;: &quot;Tallas disponibles&quot;, &quot;value&quot;: &quot;39, 40, 41, 42, 43, 44&quot;},
-        {&quot;title&quot;: &quot;Suela&quot;, &quot;value&quot;: &quot;goma antideslizante&quot;},
-        {&quot;title&quot;: &quot;Peso&quot;, &quot;value&quot;: &quot;850g (par, talla 42)&quot;},
-        {&quot;title&quot;: &quot;Uso recomendado&quot;, &quot;value&quot;: &quot;Uso diario y entrenamiento ligero&quot;}
-    ],
-    &quot;brand&quot;: {
-        &quot;code&quot;: &quot;OW142302&quot;,
-        &quot;name&quot;: &quot;Nike&quot;
+    {
+        &quot;object&quot;: &quot;product&quot;,
+        &quot;id&quot;: &quot;pro_Bk3l0gX8m9aj27&quot;,
+        &quot;createdAt&quot;: &quot;2025-07-03T09:22:30+00:00&quot;,
+        &quot;updatedAt&quot;: null,
+        &quot;isActive&quot;: true,
+        &quot;payload&quot;: {
+            &quot;code&quot;: &quot;FNN1848&quot;,
+            &quot;title&quot;: &quot;Kit de especias del mundo – 12 sabores internacionales&quot;,
+            &quot;description&quot;: &quot;Descubre una colección exclusiva de 12 especias seleccionadas de diferentes rincones del mundo. Presentado en frascos de vidrio con etiquetas artesanales, este kit es perfecto para dar un toque especial a cualquier plato y ampliar el repertorio culinario del destinatario.&quot;,
+            &quot;attributes&quot;: null,
+            &quot;brand&quot;: null,
+            &quot;category&quot;: null,
+            &quot;price&quot;: {
+                &quot;amount&quot;: &quot;29.50&quot;,
+                &quot;currency&quot;: &quot;EUR&quot;
+            }
+        }
     },
-    &quot;category&quot;: {
-        &quot;code&quot;: &quot;MC418292&quot;,
-        &quot;title&quot;: &quot;Zapatillas deportivas&quot;,
-        &quot;description&quot;: &quot;Calzado diseñado para ofrecer comodidad, soporte y rendimiento en actividades físicas o deportivas. Estas zapatillas también se adaptan al uso urbano y diario gracias a sus diseños modernos y materiales versátiles. Incluyen características como suelas antideslizantes, tejidos transpirables y estilos que combinan funcionalidad con moda.&quot;
-    },
-    &quot;imageUrl&quot;: &quot;https://m.media-amazon.com/images/I/61cELGQXXhL._AC_UL320_.jpg&quot;,
-    &quot;metadata&quot;: {
-        &quot;videoUrl&quot;: &quot;https://m.media-amazon.com/videos/C/dk14lkKlsnw._AC_UL1080_.mp4&quot;,
-        &quot;currentDiscountRate&quot;: &quot;50%&quot;,
-        &quot;isNew&quot;: true,
-        &quot;isFeatured&quot;: false
+    {
+        &quot;object&quot;: &quot;product&quot;,
+        &quot;id&quot;: &quot;pro_Yt7q1lRm4xzp90&quot;,
+        &quot;createdAt&quot;: &quot;2025-07-04T14:10:00+00:00&quot;,
+        &quot;updatedAt&quot;: null,
+        &quot;isActive&quot;: true,
+        &quot;payload&quot;: {
+            &quot;code&quot;: &quot;SJD2818&quot;,
+            &quot;title&quot;: &quot;Delantal personalizado con bolsillo – diseño vintage&quot;,
+            &quot;description&quot;: &quot;Un delantal elegante y funcional con diseño vintage, confeccionado en algodón grueso. Cuenta con bolsillo frontal y puede personalizarse con nombre o frase. Un detalle práctico y original para chefs aficionados.&quot;,
+            &quot;attributes&quot;: null,
+            &quot;brand&quot;: null,
+            &quot;category&quot;: null,
+            &quot;price&quot;: {
+                &quot;amount&quot;: &quot;19.95&quot;,
+                &quot;currency&quot;: &quot;EUR&quot;
+            }
+        }
     }
 }</code></pre>
 </doc-codeblock></div>
