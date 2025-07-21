@@ -7,10 +7,12 @@ icon: arrow-right
 Para cambiar los datos de un producto que ya cargaste, llama a [!badge variant="light" text="products()->ingest()"] nuevamente, pero esta vez especifica sólo los datos que cambian. También puedes especificar los demás datos si te resulta más cómodo, aunque no hayan cambiado.
 
 ```php
+use Biteral\Payload\Product\ProductPayload;
+
 $productPayload =
     new ProductPayload(
         code: 'N39291',
-        price: new PricePayload(49.95, Currency::EURO)
+        price: new PricePayload('49.95', 'EUR'),
     );
 
 $client->products()->ingest($productPayload);

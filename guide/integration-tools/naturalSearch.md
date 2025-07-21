@@ -13,11 +13,11 @@ Como no utilizamos sistemas tradicionales de búsqueda basados en palabras clave
 Como la búsqueda de productos se basa en información conceptualizada, los resultados también incluyen productos relevantes aunque el cliente realice consultas generales, cometa faltas de ortografía o incluso utilice otro idioma.
 !!!
 
-### Cargar tu primer producto
+### Realizar una búsqueda natural
 
 +++ PHP SDK
 
-Una vez hayas [instalado el SDK](/php-sdk/install), llama al método [!badge variant="info" text="products()->ingest"](/php-sdk/products/add-products) pasando un objeto [!badge variant="info" text="ProductPayload"](/php-sdk/payloads/product-payload) como parámetro:
+Una vez hayas [cargado vuestros productos](/guide/integration-data/products), llama al método [!badge variant="info" text="naturalSearch()->query"](/php-sdk/products/add-products) pasando un objeto [!badge variant="info" text="NaturalSearchQuery"](/php-sdk/entities/natural-search-query) como parámetro:
 
 ```php
 $product = $client->products()->ingest(
@@ -25,7 +25,7 @@ $product = $client->products()->ingest(
         code: 'N39291',
         title: 'Zapatillas deportivas urbanas para hombre – modelo AirFlow',
         description: 'Estas zapatillas combinan estilo y comodidad para el uso diario. Diseñadas con materiales transpirables, suela de goma antideslizante y plantilla ergonómica, son ideales tanto para caminar por la ciudad como para entrenar en interiores. El modelo AirFlow ofrece un ajuste perfecto y un diseño moderno que se adapta a cualquier look casual. Disponibles en varias tallas y colores.',
-        price: new PricePayload(45.95, Currency::EURO),
+        price: new PricePayload('45.95', 'EUR'),
         attributes: [
             new ProductAttributePayload('Material', 'cuero'),
             new ProductAttributePayload('Color', 'negro con detalles en gris'),

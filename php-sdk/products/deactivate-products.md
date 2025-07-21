@@ -13,6 +13,8 @@ En algunas ocasiones es posible que necesites desactivar temporalmente algunos p
 En tales casos, pon [!badge icon="screen-full" text="isActive"] en tu producto a `false`:
 
 ```php
+use Biteral\Payload\Product\ProductPayload;
+
 $productPayload =
     new ProductPayload(
         code: 'N39291',
