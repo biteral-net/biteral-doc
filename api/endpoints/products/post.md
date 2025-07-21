@@ -118,7 +118,13 @@ Crear o modificar un producto.
 
 ### Actualizar un producto
 
-Para actualizar los datos sobre un producto, realiza la misma petición `POST` a este endpoint con los nuevos datos. Los datos que no especifiques se eliminarán del producto.
+Para actualizar los datos sobre un producto, realiza la misma petición `POST` a este endpoint con los nuevos datos.
+
+Los datos que no especifiques mantendrán su valor anterior. Para eliminar un dato, pásalo como `null`
+
+!!!secondary
+Si actualizas los datos de un producto que está desactivado y deseas que siga desactivado, debes volver a enviar explícitamente [!badge variant="warning" text="isActive"] como `false` en la petición. Esto se debe a que el valor por defecto de [!badge variant="warning" text="isActive"] es `true` cuando no lo especificas en tus peticiones.
+!!!
 
 ### Cargar varios productos a la vez
 

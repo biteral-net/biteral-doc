@@ -87,13 +87,25 @@ Al cargar todo vuestro catálogo, realizar una petición por cada producto serí
 +++ PHP SDK
 El SDK permite realizar cargas masivas de productos de forma óptima, aquí encontrarás información sobre cómo hacerlo:
 
-[!ref text="Carga masiva con el SDK"](/php-sdk/products/add-products-batch)
+[!button icon="arrow-right" variant="info" text="Carga masiva con el SDK"](/php-sdk/products/add-products-batch)
 +++ API
 Puedes cargar varios productos a la vez pasando un array de productos a la API, aquí encontrarás los detalles sobre cómo hacerlo:
 
-[!ref text="Carga masiva con la API"](/api/endpoints/products/post/#cargar-varios-productos-a-la-vez)
+[!button icon="arrow-right" variant="info" text="Carga masiva con la API"](/api/endpoints/products/post/#cargar-varios-productos-a-la-vez)
 +++
 
 !!!
 Cuando cargas muchos productos a Biteral muy rápidamente, puede pasar un rato hasta que todos están disponibles para las herramientas de Biteral.
 !!!
+
+### Otras operaciones con productos
+
++++ PHP SDK
+El SDK te permite realizar otras operaciones con productos, como modificarlos, desactivarlos o eliminarlos.
+
+[!button icon="arrow-right" variant="info" text="Otras operaciones con productos con el SDK"](/php-sdk/products/update-products)
++++ API
+La API también te permite realizar otras operaciones con productos, como modificarlos, desactivarlos o eliminarlos.
+
+[!button icon="arrow-right" variant="info" text="Otras operaciones con productos con la API"](/api/endpoints/products/post)
++++
