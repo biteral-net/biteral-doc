@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.10.0.806401892493">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.10.0.806401934098">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.10.0">
@@ -33,12 +33,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link href="/static/favicon.png" rel="icon">
-    <link href="/resources/css/retype.css?v=3.10.0.806401892493" rel="stylesheet">
+    <link href="/resources/css/retype.css?v=3.10.0.806401934098" rel="stylesheet">
 
-    <script data-cfasync="false" src="/resources/js/config.js?v=3.10.0.806401892493" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="/resources/js/config.js?v=3.10.0.806401934098" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="/resources/js/retype.js?v=3.10.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="/resources/js/lunr.js?v=3.10.0.806401892493" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="/resources/js/prism.js?v=3.10.0.806401892493" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="/resources/js/lunr.js?v=3.10.0.806401934098" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="/resources/js/prism.js?v=3.10.0.806401934098" defer></script>
 
     <script>
         if (!window.localStorage.getItem('doc_theme')) {
@@ -232,22 +232,9 @@
     <span>NaturalSearchQuery</span>
 </a> como parámetro:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-php"><code v-pre class="language-php">$product = $client-&gt;products()-&gt;ingest(
-    new ProductPayload(
-        code: 'N39291',
-        title: 'Zapatillas deportivas urbanas para hombre – modelo AirFlow',
-        description: 'Estas zapatillas combinan estilo y comodidad para el uso diario. Diseñadas con materiales transpirables, suela de goma antideslizante y plantilla ergonómica, son ideales tanto para caminar por la ciudad como para entrenar en interiores. El modelo AirFlow ofrece un ajuste perfecto y un diseño moderno que se adapta a cualquier look casual. Disponibles en varias tallas y colores.',
-        price: new PricePayload('45.95', 'EUR'),
-        attributes: [
-            new ProductAttributePayload('Material', 'cuero'),
-            new ProductAttributePayload('Color', 'negro con detalles en gris'),
-            new ProductAttributePayload('Tallas disponibles', '39, 40, 41, 42, 43, 44'),
-            new ProductAttributePayload('Suela', 'goma antideslizante'),
-            new ProductAttributePayload('Peso', '850g (par, talla 42)'),
-            new ProductAttributePayload('Uso recomendado', 'Uso diario y entrenamiento ligero')
-        ],
-        brand: new BrandPayload('OW142398', 'Nike'),
-        category: new ProductCategoryPayload('MC418298', 'Zapatillas deportivas')
+<pre translate="no" class="language-php"><code v-pre class="language-php">$result = $client-&gt;naturalSearch()-&gt;query(
+    new NaturalSearchQuery(
+        query: 'N39291'
     )
 );</code></pre>
 </doc-codeblock></div>
