@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.10.0.806401412875">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.10.0.806401892493">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.10.0">
@@ -31,12 +31,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link href="/static/favicon.png" rel="icon">
-    <link href="/resources/css/retype.css?v=3.10.0.806401412875" rel="stylesheet">
+    <link href="/resources/css/retype.css?v=3.10.0.806401892493" rel="stylesheet">
 
-    <script data-cfasync="false" src="/resources/js/config.js?v=3.10.0.806401412875" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="/resources/js/config.js?v=3.10.0.806401892493" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="/resources/js/retype.js?v=3.10.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="/resources/js/lunr.js?v=3.10.0.806401412875" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="/resources/js/prism.js?v=3.10.0.806401412875" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="/resources/js/lunr.js?v=3.10.0.806401892493" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="/resources/js/prism.js?v=3.10.0.806401892493" defer></script>
 
     <script>
         if (!window.localStorage.getItem('doc_theme')) {
@@ -200,10 +200,12 @@
     <span>products()-&gt;ingest()</span>
 </span> nuevamente, pero esta vez especifica sólo los datos que cambian. También puedes especificar los demás datos si te resulta más cómodo, aunque no hayan cambiado.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-php"><code v-pre class="language-php">$productPayload =
+<pre translate="no" class="language-php"><code v-pre class="language-php">use Biteral\Payload\Product\ProductPayload;
+
+$productPayload =
     new ProductPayload(
         code: 'N39291',
-        price: new PricePayload(49.95, Currency::EURO)
+        price: new PricePayload('49.95', 'EUR'),
     );
 
 $client-&gt;products()-&gt;ingest($productPayload);</code></pre>
