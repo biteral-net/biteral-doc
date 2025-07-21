@@ -14,10 +14,10 @@ En su lugar, usa [!badge variant="light" text="productsBatchIngest()->ingest()"]
 // Obtén un ProductsBatchIngestService para poder reutilizarlo
 $productsBatchIngestService = $client->productsBatchIngest();
 
-// Inicia una sesión se ingestión de productos
+// Inicia una sesión de ingestión de productos
 $productsBatchIngestService->startIngestionSession();
 
-// Recorre los productos en un bucle, normalmente leyendo de tu base de datos
+// Recorre los productos en un bucle tal como lo harías normalmente con tu base de datos
 while ($product = $query->getRow()) {
 
     // Crea un objeto ProductPayload tal como hacías al cargar productos individualmente
