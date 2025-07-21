@@ -1,7 +1,7 @@
 ---
 label: Calidad de datos
 order: 500
-icon: arrow-right
+icon: thumbsup
 ---
 Cuanta más información precisa, estructurada y actualizada recibimos, mejores son las recomendaciones, análisis y resultados que podemos generar para tu e-commerce. Asegúrate de proporcionar títulos claros, descripciones completas y atributos relevantes.
 

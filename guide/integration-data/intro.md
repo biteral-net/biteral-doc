@@ -7,7 +7,7 @@ icon: arrow-right
 
 Biteral analiza los datos de vuestros productos y el comportamiento de vuestros clientes para ofrecer herramientas como recomendaciones personalizadas, búsqueda en lenguaje natural, análisis de tendencias o etiquetas de cliente. Por eso, enviar datos precisos y actualizados a Biteral es clave para obtener el máximo rendimiento de la plataforma.
 
-Aunque podéis enviarnos los datos en un archivo Excel o CSV, lo más recomendable es hacerlo a través de la API. Esto garantiza la máxima flexibilidad y permite que Biteral funcione en tiempo real, adaptándose siempre a los datos más recientes.
+Aunque podéis enviarnos los datos en un archivo Excel o CSV, lo más recomendable es hacerlo a través de la API o el SDK para PHP. Esto garantiza la máxima flexibilidad y permite que Biteral funcione en tiempo real, adaptándose siempre a los datos más recientes.
 
 !!!
 En muchos casos, esta inmediatez es clave: por ejemplo, Biteral puede sugerir productos más adecuados justo después de una compra, aprovechando al máximo el momento de mayor interés del cliente.

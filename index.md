@@ -3,14 +3,14 @@ icon: home
 ---
 # Documentación Biteral
 
-En esta documentación, orientada a desarrolladores, se describen los métodos disponibles para integrar Biteral en vuestro sistema de comercio electrónico. Para empezar, veamos los dos pasos en los que se divide la integración:
+Esta documentación está orientada a desarrolladores y describe los métodos disponibles para integrar Biteral en vuestro comercio electrónico. La integración se divide en dos pasos principales:
 
-### Integración de datos
-Enviáis a Biteral datos sobre vuestros productos y las acciones que los clientes realizan. El mejor método para implementar esta parte de la integración es utilizar la API, que nos permite recibir los datos sobre eventos, cambios en productos y similares tan pronto como suceden. De este modo las herramientas de Biteral podrán ofrecer también resultados en tiempo real. También podemos recibir datos en archivos Excel o CSV vía FTP.
+||| [!button size="m" icon="arrow-right" text="Integración de datos"](/guide/integration-data/intro)
+Enviais a Biteral los datos sobre vuestros productos y las acciones que realizan los clientes mediante el método de integración que mejor se adapte a vuestro sistema.
 
-[!ref Empieza con la guía de integración de datos](/guide/integration-data/intro)
+Procesamos los datos de productos, clientes y eventos tan pronto como los recibimos, lo que permite que las herramientas de Biteral ofrezcan resultados en tiempo real.
+|||  [!button size="m" icon="arrow-right" text="Integración de herramientas"](/guide/integration-tools/intro)
+Las herramientas de Biteral, como la [búsqueda en lenguaje natural](https://biteral.net/natural-search), las [recomendaciones personalizadas](https://biteral.net/personalized-recommend) o el [análisis de tendencias](https://biteral.net/trend-analysis), se integran fácilmente en vuestro entorno tecnológico.
 
-### Integración de herramientas
-La API permite integrar los resultados de Biteral en vuestro sistema muy fácilmente. Por ejemplo, basta tan sólo una petición API para obtener una lista de productos recomendados para un cliente, o para obtener los productos que resultan de una búsqueda realizada por el cliente en lenguaje natural.
-
-[!ref Empieza con la guía de integración de herramientas](/guide/integration-tools/intro)
+Por ejemplo, con una simple petición a la API o una línea de código usando el SDK, podéis obtener productos recomendados para un cliente o los resultados de una búsqueda.
+|||
