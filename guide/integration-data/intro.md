@@ -31,4 +31,4 @@ Si trabajas con PHP, te recomendamos utilizar el [SDK de Biteral para PHP](/php-
 Utiliza la [API de Biteral](/api/connect) desde cualquier plataforma o lenguaje de programación conectando directamente.
 |||
 
-Continúa a la página siguiente para aprender cómo enviar tus primeros productos a Biteral:
+Como primer paso, continúa a la siguiente página para aprender cómo enviar tus primeros productos a Biteral:
