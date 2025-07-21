@@ -25,9 +25,9 @@ Especifica uno de estos dos parámetros para obtener un producto a través de su
     "id": "pro_T743ujEHOI3Fz4",
     "createdAt": "2025-07-02T17:51:50+00:00",
     "updatedAt": null,
-    "isActive": true,
     "payload": {
         "code": "N30122",
+        "isActive": true,
         "title": "Zapatillas deportivas urbanas para hombre – modelo AirFlow",
         "description": "Estas zapatillas combinan estilo y comodidad para el uso diario. Diseñadas con materiales transpirables, suela de goma antideslizante y plantilla ergonómica, son ideales tanto para caminar por la ciudad como para entrenar en interiores. El modelo AirFlow ofrece un ajuste perfecto y un diseño moderno que se adapta a cualquier look casual. Disponibles en varias tallas y colores.",
         "attributes": [

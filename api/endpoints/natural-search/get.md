@@ -23,9 +23,9 @@ Obtener una lista de productos que encajan con una búsqueda realizada en lengua
     "id": "pro_Fj2f4kN1m2dk41",
     "createdAt": "2025-07-02T17:51:50+00:00",
     "updatedAt": null,
-    "isActive": true,
     "payload": {
         "code": "DJA8298",
+        "isActive": true,
         "title": "Set de regalo para aficionados a la cocina – edición gourmet",
         "description": "Este set de regalo es perfecto para quienes disfrutan cocinando. Incluye una tabla de cortar de bambú, cuchillo de chef profesional de acero inoxidable, delantal personalizado, y un libro de recetas gourmet. Todo presentado en una elegante caja de regalo. Ideal para sorprender a cualquier amante de la cocina con herramientas prácticas y de alta calidad.",
         "attributes": null,

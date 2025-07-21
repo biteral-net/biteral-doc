@@ -76,9 +76,9 @@ Todos los endpoints responden siempre en formato JSON, por ejemplo:
     "id": "pro_Fm3NC30gQHfxIP",
     "createdAt": "2025-07-09T10:21:11+00:00",
     "updatedAt": "2025-07-09T10:42:48+00:00",
-    "isActive": true,
     "payload": {
         "code": "N30122",
+        "isActive": true,
         "title": "Zapatillas deportivas urbanas para hombre – modelo AirFlow",
         "description": "Estas zapatillas combinan estilo y comodidad para el uso diario. Diseñadas con materiales transpirables, suela de goma antideslizante y plantilla ergonómica, son ideales tanto para caminar por la ciudad como para entrenar en interiores. El modelo AirFlow ofrece un ajuste perfecto y un diseño moderno que se adapta a cualquier look casual. Disponibles en varias tallas y colores.",
         "attributes": null,

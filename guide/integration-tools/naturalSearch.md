@@ -46,9 +46,9 @@ Y obtendrás los productos que coinciden así:
     "id": "pro_Fj2f4kN1m2dk41",
     "createdAt": "2025-07-02T17:51:50+00:00",
     "updatedAt": null,
-    "isActive": true,
     "payload": {
         "code": "DJA8298",
+        "isActive": true,
         "title": "Set de regalo para aficionados a la cocina – edición gourmet",
         "description": "Este set de regalo es perfecto para quienes disfrutan cocinando. Incluye una tabla de cortar de bambú, cuchillo de chef profesional de acero inoxidable, delantal personalizado, y un libro de recetas gourmet. Todo presentado en una elegante caja de regalo. Ideal para sorprender a cualquier amante de la cocina con herramientas prácticas y de alta calidad.",
         "attributes": null,
@@ -64,9 +64,9 @@ Y obtendrás los productos que coinciden así:
         "id": "pro_Bk3l0gX8m9aj27",
         "createdAt": "2025-07-03T09:22:30+00:00",
         "updatedAt": null,
-        "isActive": true,
         "payload": {
             "code": "FNN1848",
+            "isActive": true,
             "title": "Kit de especias del mundo – 12 sabores internacionales",
             "description": "Descubre una colección exclusiva de 12 especias seleccionadas de diferentes rincones del mundo. Presentado en frascos de vidrio con etiquetas artesanales, este kit es perfecto para dar un toque especial a cualquier plato y ampliar el repertorio culinario del destinatario.",
             "attributes": null,
@@ -83,9 +83,9 @@ Y obtendrás los productos que coinciden así:
         "id": "pro_Yt7q1lRm4xzp90",
         "createdAt": "2025-07-04T14:10:00+00:00",
         "updatedAt": null,
-        "isActive": true,
         "payload": {
             "code": "SJD2818",
+            "isActive": true,
             "title": "Delantal personalizado con bolsillo – diseño vintage",
             "description": "Un delantal elegante y funcional con diseño vintage, confeccionado en algodón grueso. Cuenta con bolsillo frontal y puede personalizarse con nombre o frase. Un detalle práctico y original para chefs aficionados.",
             "attributes": null,
