@@ -16,10 +16,10 @@ En tales casos, pon [!badge icon="screen-full" text="isActive"] en tu producto a
 use Biteral\Payload\Product\ProductPayload;
 
 $productPayload =
-    new ProductPayload(
-        code: 'N39291',
-        isActive: false
-    );
+    new ProductPayload([
+        'code' => 'N39291',
+        'isActive' => false
+    ]);
 
 $client->products()->ingest($productPayload);
 ```
@@ -27,5 +27,5 @@ $client->products()->ingest($productPayload);
 Cuando el producto vuelva a estar disponible, reactívalo poniendo [!badge icon="screen-full" text="isActive"] a `true`
 
 !!!
-Si actualizas los datos de un producto que está desactivado y deseas que siga desactivado, debes volver a enviar explícitamente [!badge icon="screen-full" text="isActive"] como `false` en la petición. Esto se debe a que el valor por defecto de [!badge icon="screen-full" text="isActive"] es `true` cuando no lo especificas en tus peticiones.
+Cuando cargas un producto por primera vez, [!badge icon="screen-full" text="isActive"] será `true` si no especificas lo contrario.
 !!!

@@ -2,6 +2,7 @@
 label: ProductAttributePayload
 expanded: false
 icon: arrow-right
+order: 999
 ---
 # ProductAttributePayload
 

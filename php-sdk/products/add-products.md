@@ -13,29 +13,35 @@ El SDK para PHP permite cargar productos en Biteral, modificarlos y eliminarlos,
 Llama a [!badge variant="light" text="products()->ingest()"] con un objeto [!badge variant="info" text="ProductPayload"](/php-sdk/payloads/product-payload) como parámetro:
 
 ```php
-use Biteral\Payload\Product\ProductPayload;
-use Biteral\Payload\Shared\PricePayload;
-use Biteral\Payload\Product\ProductAttributePayload;
 use Biteral\Payload\Brand\BrandPayload;
+use Biteral\Payload\Shared\PricePayload;
+use Biteral\Payload\Product\ProductPayload;
 use Biteral\Payload\Product\ProductCategoryPayload;
+use Biteral\Payload\Product\ProductAttributePayload;
 
 $productPayload =
-    new ProductPayload(
-        code: 'N39291',
-        title: 'Zapatillas deportivas urbanas para hombre – modelo AirFlow',
-        description: 'Estas zapatillas combinan estilo y comodidad para el uso diario. Diseñadas con materiales transpirables, suela de goma antideslizante y plantilla ergonómica, son ideales tanto para caminar por la ciudad como para entrenar en interiores. El modelo AirFlow ofrece un ajuste perfecto y un diseño moderno que se adapta a cualquier look casual. Disponibles en varias tallas y colores.',
-        price: new PricePayload('45.95', 'EUR'),
-        attributes: [
-            new ProductAttributePayload('Material', 'cuero'),
-            new ProductAttributePayload('Color', 'negro con detalles en gris'),
-            new ProductAttributePayload('Tallas disponibles', '39, 40, 41, 42, 43, 44'),
-            new ProductAttributePayload('Suela', 'goma antideslizante'),
-            new ProductAttributePayload('Peso', '850g (par, talla 42)'),
-            new ProductAttributePayload('Uso recomendado', 'Uso diario y entrenamiento ligero')
+    new ProductPayload([
+        'code' => 'N30122',
+        'title' => 'Zapatillas deportivas urbanas para hombre – modelo AirFlow',
+        'description' => 'Estas zapatillas combinan estilo y comodidad para el uso diario. Diseñadas con materiales transpirables, suela de goma antideslizante y plantilla ergonómica, son ideales tanto para caminar por la ciudad como para entrenar en interiores. El modelo AirFlow ofrece un ajuste perfecto y un diseño moderno que se adapta a cualquier look casual. Disponibles en varias tallas y colores.',
+        'attributes' => [
+            new ProductAttributePayload(['title' => 'Material', 'value' => 'Cuero']),
+            new ProductAttributePayload(['title' => 'Color', 'value' => 'Negro con acentos en gris']),
+            new ProductAttributePayload(['title' => 'Tallas disponibles', 'value' => '39, 40, 41, 42, 43, 44']),
+            new ProductAttributePayload(['title' => 'Suela', 'value' => 'Goma no-deslizante']),
+            new ProductAttributePayload(['title' => 'Peso', 'value' => '850g (par, talla 42)']),
+            new ProductAttributePayload(['title' => 'Uso recomendado', 'value' => 'Uso diario y entrenamiento suave'])
         ],
-        brand: new BrandPayload('OW142398', 'Nike'),
-        category: new ProductCategoryPayload('MC418298', 'Zapatillas deportivas')
-    );
+        'brand' => new BrandPayload(['code' => 'OW142302', 'name' => 'Nike']),
+        'category' => new ProductCategoryPayload([
+            'code' => 'MC418292',
+            'title' => 'Zapatillas deportivas',
+            'description' => 'Calzado diseñado para proporcionar comodidad, soporte y rendimiento en actividades físicas o deportivas. Estas zapatillas también son adecuadas para el uso urbano y diario gracias a sus diseños modernos y materiales versátiles. Cuentan con suelas antideslizantes, tejidos transpirables y estilos que combinan funcionalidad con moda.'
+        ]),
+        'price' => new PricePayload(['amount' => '49.95', 'currency' => 'EUR']),
+        'imageUrl' => 'https://m.media-amazon.com/images/I/61cELGQXXhL._AC_UL320_.jpg',
+        'url' => 'https://www.amazon.es/Hitmars-Zapatillas-Deportivas-Transpirables-Sneakers/dp/B0CYGMZVL7'
+    ]);
 
 $client->products()->ingest($productPayload);
 ```

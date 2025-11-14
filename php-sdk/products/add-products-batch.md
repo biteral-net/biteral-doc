@@ -22,11 +22,11 @@ while ($product = $query->getRow()) {
 
     // Crea un objeto ProductPayload tal como hacías al cargar productos individualmente
     $productPayload =
-        new ProductPayload(
-            code: $product->getCode(),
-            title: $product->getTitle(),
+        new ProductPayload([
+            'code' => $product->getCode(),
+            'title' => $product->getTitle(),
             [...]
-        );
+        ]);
 
     // Envía el producto para que sea cargado por bloques
     $productsBatchIngestService->ingest($productPayload);

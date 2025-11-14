@@ -36,6 +36,7 @@ Crear o modificar un producto.
         "description": "Calzado diseñado para ofrecer comodidad, soporte y rendimiento en actividades físicas o deportivas. Estas zapatillas también se adaptan al uso urbano y diario gracias a sus diseños modernos y materiales versátiles. Incluyen características como suelas antideslizantes, tejidos transpirables y estilos que combinan funcionalidad con moda."
     },
     "imageUrl": "https://m.media-amazon.com/images/I/61cELGQXXhL._AC_UL320_.jpg",
+    "url": "https://www.amazon.es/Hitmars-Zapatillas-Deportivas-Transpirables-Sneakers/dp/B0CYGMZVL7",
     "metadata": {
         "videoUrl": "https://m.media-amazon.com/videos/C/dk14lkKlsnw._AC_UL1080_.mp4",
         "currentDiscountRate": "50%",
@@ -102,6 +103,9 @@ Crear o modificar un producto.
 
 [!badge variant="warning" text="imageUrl"]
 : La URL de la imagen del producto, preferiblemente una imagen de aproximadamente 600 píxeles de ancho. Por ejemplo: `https://m.media-amazon.com/images/I/61cELGQXXhL._AC_UL320_.jpg`
+
+[!badge variant="warning" text="url"]
+: La URL pública del producto. Por ejemplo: `https://www.amazon.es/Hitmars-Zapatillas-Deportivas-Transpirables-Sneakers/dp/B0CYGMZVL7`
 
 [!badge variant="warning" text="metadata"]
 : Datos adicionales que te resulten útiles cuando recibas el producto como resultado de las herramientas de Biteral. Un objeto JSON [!badge variant="light" icon="arrow-both" text="60000"]. Por ejemplo:
