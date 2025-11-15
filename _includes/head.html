@@ -6,6 +6,16 @@
 </script>
 <style>
     code {
-        font-size: 9.5pt !important;
+        font-size: 8.5pt !important;
+    }
+
+    /** A way to match the icons on the left menu sidebar so they change to white in dark mode */
+    html.dark .flex.shrink-0.items-center.justify-center > img {
+        filter: invert(1);
+    }
+
+    /** A way to match the icons used at the left of headers so they change to white in dark mode */
+    html.dark h1 > span > img {
+        filter: invert(1);
     }
 </style>
