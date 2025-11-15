@@ -5,6 +5,8 @@ icon: /static/icons/customer.svg
 ---
 # ![](/static/icons/customer.svg){width="40"} Integrar clientes
 
+Biteral utiliza información sobre vuestros clientes para para alimentar herramientas como las recomendaciones personalizadas. Los datos de vuestros clientes siempre se envían anonimizados, de forma que no existe un vínculo directo entre la información que envías y el cliente final.
+
 ### Cargar un cliente
 
 +++ PHP SDK
