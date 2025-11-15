@@ -7,7 +7,6 @@ icon: arrow-right
 
 Eliminar un producto.
 
-
 +++ Documentación
 Especifica uno de estos dos parámetros para eliminar un producto a través de su código o de su Id en Biteral:
 
@@ -16,5 +15,4 @@ Especifica uno de estos dos parámetros para eliminar un producto a través de s
 
 [!badge variant="warning" text="id"]
 : Identificador del producto en Biteral, por ejemplo: `pro_f28Jfk0i28iXIs`
-
 +++

@@ -126,10 +126,6 @@ Para actualizar los datos sobre un producto, realiza la misma petición `POST` a
 
 Los datos que no especifiques mantendrán su valor anterior. Para eliminar un dato, pásalo como `null`
 
-!!!secondary
-Si actualizas los datos de un producto que está desactivado y deseas que siga desactivado, debes volver a enviar explícitamente [!badge variant="warning" text="isActive"] como `false` en la petición. Esto se debe a que el valor por defecto de [!badge variant="warning" text="isActive"] es `true` cuando no lo especificas en tus peticiones.
-!!!
-
 ### Cargar varios productos a la vez
 
 Puedes cargar los productos uno a uno, pero es más rápido cargarlos en bloques. Para hacerlo, pasa los productos en forma de un array, por ejemplo:
