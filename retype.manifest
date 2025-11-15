@@ -1,0 +1,273 @@
+{
+  "version": "3.8.1",
+  "created": "2025-11-15T09:32:43Z",
+  "files": [
+    {
+      "path": ".nojekyll"
+    },
+    {
+      "path": "404.html"
+    },
+    {
+      "path": "api/connect/index.html"
+    },
+    {
+      "path": "api/endpoints/customers/delete/index.html"
+    },
+    {
+      "path": "api/endpoints/customers/get/index.html"
+    },
+    {
+      "path": "api/endpoints/customers/post/index.html"
+    },
+    {
+      "path": "api/endpoints/natural-search/get/index.html"
+    },
+    {
+      "path": "api/endpoints/products/delete/index.html"
+    },
+    {
+      "path": "api/endpoints/products/get/index.html"
+    },
+    {
+      "path": "api/endpoints/products/post/index.html"
+    },
+    {
+      "path": "api/endpoints/status/index.html"
+    },
+    {
+      "path": "api/versions/index.html"
+    },
+    {
+      "path": "CNAME"
+    },
+    {
+      "path": "guide/integration-data/customers/index.html"
+    },
+    {
+      "path": "guide/integration-data/data-quality/index.html"
+    },
+    {
+      "path": "guide/integration-data/events/index.html"
+    },
+    {
+      "path": "guide/integration-data/intro/index.html"
+    },
+    {
+      "path": "guide/integration-data/products/index.html"
+    },
+    {
+      "path": "guide/integration-tools/intro/index.html"
+    },
+    {
+      "path": "guide/integration-tools/naturalsearch/index.html"
+    },
+    {
+      "path": "guide/integration-tools/personalizedrecommend/index.html"
+    },
+    {
+      "path": "guide/integration-tools/profiletags/index.html"
+    },
+    {
+      "path": "guide/integration-tools/trendanalysis/index.html"
+    },
+    {
+      "path": "index.html"
+    },
+    {
+      "path": "php-sdk/customers/add-customers-batch/index.html"
+    },
+    {
+      "path": "php-sdk/customers/add-customers/index.html"
+    },
+    {
+      "path": "php-sdk/customers/deactivate-customers/index.html"
+    },
+    {
+      "path": "php-sdk/customers/delete-customers/index.html"
+    },
+    {
+      "path": "php-sdk/customers/update-customers/index.html"
+    },
+    {
+      "path": "php-sdk/entities/brand/index.html"
+    },
+    {
+      "path": "php-sdk/entities/category/index.html"
+    },
+    {
+      "path": "php-sdk/entities/customer/index.html"
+    },
+    {
+      "path": "php-sdk/entities/index.html"
+    },
+    {
+      "path": "php-sdk/entities/product/index.html"
+    },
+    {
+      "path": "php-sdk/entities/status/index.html"
+    },
+    {
+      "path": "php-sdk/examples/index.html"
+    },
+    {
+      "path": "php-sdk/install/index.html"
+    },
+    {
+      "path": "php-sdk/payloads/brand-payload/index.html"
+    },
+    {
+      "path": "php-sdk/payloads/category-payload/index.html"
+    },
+    {
+      "path": "php-sdk/payloads/customer-payload/index.html"
+    },
+    {
+      "path": "php-sdk/payloads/index.html"
+    },
+    {
+      "path": "php-sdk/payloads/price-payload/index.html"
+    },
+    {
+      "path": "php-sdk/payloads/product-attribute-payload/index.html"
+    },
+    {
+      "path": "php-sdk/payloads/product-payload/index.html"
+    },
+    {
+      "path": "php-sdk/products/add-products-batch/index.html"
+    },
+    {
+      "path": "php-sdk/products/add-products/index.html"
+    },
+    {
+      "path": "php-sdk/products/deactivate-products/index.html"
+    },
+    {
+      "path": "php-sdk/products/discontinued-products/index.html"
+    },
+    {
+      "path": "php-sdk/products/update-products/index.html"
+    },
+    {
+      "path": "resources/css/retype.css"
+    },
+    {
+      "path": "resources/fonts/Inter-italic-latin-var.woff2"
+    },
+    {
+      "path": "resources/fonts/Inter-roman-latin-var.woff2"
+    },
+    {
+      "path": "resources/js/config.js"
+    },
+    {
+      "path": "resources/js/lunr.js"
+    },
+    {
+      "path": "resources/js/prism.js"
+    },
+    {
+      "path": "resources/js/retype.js"
+    },
+    {
+      "path": "resources/js/search.json"
+    },
+    {
+      "path": "resources/lunr.js.LICENSE.txt"
+    },
+    {
+      "path": "resources/mermaid.js.LICENSE.txt"
+    },
+    {
+      "path": "resources/prism.js.LICENSE.txt"
+    },
+    {
+      "path": "resources/retype.js.LICENSE.txt"
+    },
+    {
+      "path": "resources/retype.LICENSE.txt"
+    },
+    {
+      "path": "robots.txt"
+    },
+    {
+      "path": "sitemap.xml.gz"
+    },
+    {
+      "path": "static/.ds_store"
+    },
+    {
+      "path": "static/favicon.png"
+    },
+    {
+      "path": "static/fonts/.ds_store"
+    },
+    {
+      "path": "static/fonts/din/din-bold.woff"
+    },
+    {
+      "path": "static/fonts/din/din-condensed.woff"
+    },
+    {
+      "path": "static/fonts/din/din-exp-bold.woff"
+    },
+    {
+      "path": "static/fonts/din/din-exp.woff"
+    },
+    {
+      "path": "static/fonts/din/din.woff"
+    },
+    {
+      "path": "static/icons/.ds_store"
+    },
+    {
+      "path": "static/icons/customer.svg"
+    },
+    {
+      "path": "static/icons/event.svg"
+    },
+    {
+      "path": "static/icons/github.svg"
+    },
+    {
+      "path": "static/icons/product.svg"
+    },
+    {
+      "path": "static/icons/products/naturalsearch.svg"
+    },
+    {
+      "path": "static/icons/products/personalizedrecommend.svg"
+    },
+    {
+      "path": "static/icons/products/profiletags.svg"
+    },
+    {
+      "path": "static/icons/products/trendanalysis.svg"
+    },
+    {
+      "path": "static/icons/status.svg"
+    },
+    {
+      "path": "static/icons/technology/.ds_store"
+    },
+    {
+      "path": "static/icons/technology/anonimization.svg"
+    },
+    {
+      "path": "static/icons/technology/api.svg"
+    },
+    {
+      "path": "static/icons/technology/integration.svg"
+    },
+    {
+      "path": "static/icons/technology/methodology.svg"
+    },
+    {
+      "path": "static/icons/technology/sociologicprofile.svg"
+    },
+    {
+      "path": "static/logo.svg"
+    }
+  ]
+}
