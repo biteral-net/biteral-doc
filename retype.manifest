@@ -1,6 +1,6 @@
 {
   "version": "3.8.1",
-  "created": "2025-11-15T09:32:43Z",
+  "created": "2025-11-15T09:55:47Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -195,7 +195,8 @@
       "path": "sitemap.xml.gz"
     },
     {
-      "path": "static/.ds_store"
+      "path": "static/.ds_store",
+      "old": true
     },
     {
       "path": "static/favicon.png"
@@ -219,7 +220,8 @@
       "path": "static/fonts/din/din.woff"
     },
     {
-      "path": "static/icons/.ds_store"
+      "path": "static/icons/.ds_store",
+      "old": true
     },
     {
       "path": "static/icons/customer.svg"
@@ -234,22 +236,27 @@
       "path": "static/icons/product.svg"
     },
     {
-      "path": "static/icons/products/naturalsearch.svg"
+      "path": "static/icons/products/naturalsearch.svg",
+      "old": true
     },
     {
-      "path": "static/icons/products/personalizedrecommend.svg"
+      "path": "static/icons/products/personalizedrecommend.svg",
+      "old": true
     },
     {
-      "path": "static/icons/products/profiletags.svg"
+      "path": "static/icons/products/profiletags.svg",
+      "old": true
     },
     {
-      "path": "static/icons/products/trendanalysis.svg"
+      "path": "static/icons/products/trendanalysis.svg",
+      "old": true
     },
     {
       "path": "static/icons/status.svg"
     },
     {
-      "path": "static/icons/technology/.ds_store"
+      "path": "static/icons/technology/.ds_store",
+      "old": true
     },
     {
       "path": "static/icons/technology/anonimization.svg"
@@ -264,7 +271,8 @@
       "path": "static/icons/technology/methodology.svg"
     },
     {
-      "path": "static/icons/technology/sociologicprofile.svg"
+      "path": "static/icons/technology/sociologicprofile.svg",
+      "old": true
     },
     {
       "path": "static/logo.svg"
