@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.10.0.816688087840">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.10.0.816688988398">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.10.0">
@@ -30,11 +30,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link href="/static/favicon.png" rel="icon">
-    <link href="/resources/css/retype.css?v=3.10.0.816688087840" rel="stylesheet">
+    <link href="/resources/css/retype.css?v=3.10.0.816688988398" rel="stylesheet">
 
-    <script data-cfasync="false" src="/resources/js/config.js?v=3.10.0.816688087840" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="/resources/js/config.js?v=3.10.0.816688988398" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="/resources/js/retype.js?v=3.10.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="/resources/js/lunr.js?v=3.10.0.816688087840" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="/resources/js/lunr.js?v=3.10.0.816688988398" data-turbo-eval="false" defer></script>
 
     <script>
         if (!window.localStorage.getItem('doc_theme')) {
@@ -43,6 +43,22 @@
         }
     </script>
     <style>
+        /** Fix bug that adds a small top margin to the logo */
+        #docs-site-logo > span > img {
+            float: left;
+        }
+
+        /** Changes the style of the text block next to the logo */
+        #docs-site-header .hidden.px-2.py-1.ml-4.text-sm.font-semibold.leading-none.text-root-logo-label-text.bg-root-logo-label-bg.rounded-sm {
+            background-color: #235AFF !important;
+            color: #fff;
+        }
+
+        html.dark #docs-site-header .hidden.px-2.py-1.ml-4.text-sm.font-semibold.leading-none.text-root-logo-label-text.bg-root-logo-label-bg.rounded-sm {
+            background-color: #fff !important;
+            color: #1E1E1E;
+        }
+
         code {
             font-size: 8.5pt !important;
         }
@@ -75,7 +91,7 @@
                         <a id="retype-branding-logo" href="/" class="flex items-center leading-snug text-2xl">
                             <span class="grow-0 shrink-0 overflow-hidden">
                                 <img class="max-h-10 dark:hidden md:inline-block" src="/static/logo.svg">
-                                <img class="max-h-10 hidden dark:inline-block" src="/static/logo.svg">
+                                <img class="max-h-10 hidden dark:inline-block" src="/static/logo-dark.svg">
                             </span>
                         </a><span id="retype-branding-label" class="hidden mt-1 px-2 py-1 ml-4 text-xs font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-md md:inline-block">Docs</span>
                     </div>
