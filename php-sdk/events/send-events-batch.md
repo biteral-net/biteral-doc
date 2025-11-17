@@ -10,7 +10,7 @@ Si vuestro sistema genera muchos eventos, es mejor enviar los eventos en grupo.
 
 {{ include "/snippets/note_lots_of_events.md" }}
 
-Para enviar eventos en grupo, en lugar de utilizar [!badge variant="light" text="events()->ingest()"] cada vez que se produce un evento en vuestro sistema, utiliza algún mecanismo que recopile periódicamente los eventos en diferido y utiliza [!badge variant="light" text="eventsBatchIngest()->ingest()"]. Mira cómo funciona:
+Para enviar eventos en grupo, en lugar de utilizar [!badge variant="light" text="events()->ingest()"] cada vez que se produce un evento en vuestro sistema, utiliza algún mecanismo que recopile los eventos cuando se producen, y envíalos después en grupo cada poco tiempo o cuando hayas recopilado muchos, utilizando [!badge variant="light" text="eventsBatchIngest()->ingest()"]. Mira cómo funciona:
 
 ```php
 // Obtén un objeto EventsBatchIngestService para poder reutilizarlo
