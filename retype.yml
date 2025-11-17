@@ -11,7 +11,7 @@ branding:
   label: Docs
 
   logo: static/logo.svg
-  logoDark: static/logo.svg
+  logoDark: static/logo-dark.svg
   logoAlign: left
 
 favicon: static/favicon.png
