@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.10.0.816687700934">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.10.0.816688087840">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.10.0">
@@ -33,11 +33,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link href="/static/favicon.png" rel="icon">
-    <link href="/resources/css/retype.css?v=3.10.0.816687700934" rel="stylesheet">
+    <link href="/resources/css/retype.css?v=3.10.0.816688087840" rel="stylesheet">
 
-    <script data-cfasync="false" src="/resources/js/config.js?v=3.10.0.816687700934" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="/resources/js/config.js?v=3.10.0.816688087840" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="/resources/js/retype.js?v=3.10.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="/resources/js/lunr.js?v=3.10.0.816687700934" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="/resources/js/lunr.js?v=3.10.0.816688087840" data-turbo-eval="false" defer></script>
 
     <script>
         if (!window.localStorage.getItem('doc_theme')) {
@@ -55,13 +55,8 @@
             filter: invert(1);
         }
 
-        /** A way to match the icons used at the left of headers so they change to white in dark mode */
-        html.dark h1 > span > img {
-            filter: invert(1);
-        }
-
-        /** A way to match icons in other elements of rendered markdown files */
-        html.dark [id^="static-icons-"] img {
+        /** A way to match custom icons in other elements so they change to white in dark mode */
+        html.dark img.custom-icon {
             filter: invert(1);
         }
     </style>
@@ -247,8 +242,8 @@
 </div>
 </p>
    </doc-panel>
-   <doc-panel id="staticiconstechnologyapisvgwidth18-con-la-api" collapsed>
-       <template #title><strong><img src="/static/icons/technology/api.svg" alt="" width="18" /> Con la API</strong></template>
+   <doc-panel id="staticiconstechnologyapisvgcustom-iconwidth18-con-la-api" collapsed>
+       <template #title><strong><img src="/static/icons/technology/api.svg" alt="" class="custom-icon" width="18" /> Con la API</strong></template>
 <p>Una vez hayas aprendido <a href="/api/connect/">cómo conectar con la API</a>, haz una petición <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-6 px-2 text-xs rounded-md">
     <span>POST</span>
 </span> al endpoint <a href="/api/endpoints/products/post/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 border border-blue-100 hover:border-blue-300 dark:hover:bg-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">

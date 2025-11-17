@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.10.0.816687700934">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.10.0.816688087840">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.10.0">
@@ -31,11 +31,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link href="/static/favicon.png" rel="icon">
-    <link href="/resources/css/retype.css?v=3.10.0.816687700934" rel="stylesheet">
+    <link href="/resources/css/retype.css?v=3.10.0.816688087840" rel="stylesheet">
 
-    <script data-cfasync="false" src="/resources/js/config.js?v=3.10.0.816687700934" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="/resources/js/config.js?v=3.10.0.816688087840" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="/resources/js/retype.js?v=3.10.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="/resources/js/lunr.js?v=3.10.0.816687700934" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="/resources/js/lunr.js?v=3.10.0.816688087840" data-turbo-eval="false" defer></script>
 
     <script>
         if (!window.localStorage.getItem('doc_theme')) {
@@ -53,13 +53,8 @@
             filter: invert(1);
         }
 
-        /** A way to match the icons used at the left of headers so they change to white in dark mode */
-        html.dark h1 > span > img {
-            filter: invert(1);
-        }
-
-        /** A way to match icons in other elements of rendered markdown files */
-        html.dark [id^="static-icons-"] img {
+        /** A way to match custom icons in other elements so they change to white in dark mode */
+        html.dark img.custom-icon {
             filter: invert(1);
         }
     </style>
@@ -237,13 +232,13 @@
 <p>Éstos son los tres tipos de datos clave que debes enviar a Biteral:</p>
 <div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(3, minmax(0, 1fr));">
     <div class="flex items-center px-5 py-3 font-medium leading-snug text-gray-900 border-b border-gray-200 dark:border-dark-650 dark:text-white border-r">
-        <span><strong><img src="/static/icons/product.svg" alt="" width="18" /> Productos</strong></span>
+        <span><strong><img src="/static/icons/product.svg" alt="" class="custom-icon" width="18" /> Productos</strong></span>
     </div>
     <div class="flex items-center px-5 py-3 font-medium leading-snug text-gray-900 border-b border-gray-200 dark:border-dark-650 dark:text-white border-r">
-        <span><strong><img src="/static/icons/customer.svg" alt="" width="18" /> Clientes</strong></span>
+        <span><strong><img src="/static/icons/customer.svg" alt="" class="custom-icon" width="18" /> Clientes</strong></span>
     </div>
     <div class="flex items-center px-5 py-3 font-medium leading-snug text-gray-900 border-b border-gray-200 dark:border-dark-650 dark:text-white">
-        <span><strong><img src="/static/icons/event.svg" alt="" width="18" /> Eventos</strong></span>
+        <span><strong><img src="/static/icons/event.svg" alt="" class="custom-icon" width="18" /> Eventos</strong></span>
     </div>
     <div class="px-5 py-3 docs-columns-content border-r border-gray-200 dark:border-dark-650">
 <p>Los artículos que ofrecéis: nombre, descripción, precio, características, etc.</p>
@@ -266,7 +261,7 @@
         <span><strong><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"/></g></g></svg> SDK PHP</strong></span>
     </div>
     <div class="flex items-center px-5 py-3 font-medium leading-snug text-gray-900 border-b border-gray-200 dark:border-dark-650 dark:text-white">
-        <span><strong><img src="/static/icons/technology/api.svg" alt="" width="18" /> Api</strong></span>
+        <span><strong><img src="/static/icons/technology/api.svg" alt="" class="custom-icon" width="18" /> Api</strong></span>
     </div>
     <div class="px-5 py-3 docs-columns-content border-r border-gray-200 dark:border-dark-650">
 <p>Si trabajas con PHP, te recomendamos utilizar el <a href="/php-sdk/install/">SDK de Biteral para PHP</a>. Es la forma más sencilla, flexible y segura de integrar la plataforma.</p>
