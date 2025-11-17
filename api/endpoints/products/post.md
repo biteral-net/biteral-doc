@@ -7,7 +7,7 @@ icon: arrow-right
 
 Crear o modificar un producto.
 
-+++ JSON request body
++++ :icon-project-roadmap: JSON request body
 
 ```json
 {
@@ -46,7 +46,7 @@ Crear o modificar un producto.
 }
 ```
 
-+++ Documentación
++++ :icon-book: Documentación
 
 [!badge variant="danger" icon="lock" text="code"]
 : Código de producto, por ejemplo `N39291` [!badge variant="light" icon="arrow-both" text="255"]
@@ -149,6 +149,10 @@ Puedes cargar los productos uno a uno, pero es más rápido cargarlos en bloques
 ]
 ```
 
-!!!secondary
+!!!
 Puedes cargar hasta 100 productos a la vez utilizando este método
+!!!
+
+!!!
+Cuando cargas muchos productos a Biteral muy rápidamente, puede pasar un rato hasta que todos están disponibles para las herramientas de Biteral.
 !!!

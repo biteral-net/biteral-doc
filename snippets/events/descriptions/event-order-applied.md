@@ -1,0 +1,1 @@
+Se ha cambiado el orden de un listado de productos. Debe enviarse cuando, por ejemplo, el cliente ordena un listado de productos por precio, por novedad, etcétera.

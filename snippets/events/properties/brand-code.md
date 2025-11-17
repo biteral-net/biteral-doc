@@ -1,0 +1,1 @@
+Vuestro código interno identificador de la marca. Debe coincidir con el que especificaste al añadir productos a Biteral. Por ejemplo: `OW142302`

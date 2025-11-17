@@ -1,0 +1,1 @@
+Se ha comprado un producto. Debe enviarse cuando el cliente manifiesta su voluntad de comprar y pagar por el producto, aunque el pago aún no se haya realizado o haya fallado. Por ejemplo: Al pulsar el botón "Pagar" en el carrito.

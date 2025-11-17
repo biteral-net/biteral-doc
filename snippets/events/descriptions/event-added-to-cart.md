@@ -1,0 +1,1 @@
+Se ha añadido un producto al carrito.

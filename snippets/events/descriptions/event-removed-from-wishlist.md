@@ -1,0 +1,1 @@
+Se ha quitado un producto de la lista de productos deseados.

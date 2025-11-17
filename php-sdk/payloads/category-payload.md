@@ -8,7 +8,7 @@ order: 990
 
 Representa una de las categorías de los productos con los que trabajáis.
 
-!!!secondary
+!!!
 Si trabajáis con una estructura jerárquica con varios niveles de categorías y subcategorías, siempre representa a la subcategoría final a la que pertenece el producto.
 !!!
 

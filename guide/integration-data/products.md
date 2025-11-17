@@ -1,6 +1,6 @@
 ---
 label: Productos
-order: 1000
+order: 990
 icon: /static/icons/product.svg
 ---
 # ![](/static/icons/product.svg){width="40"} Integrar productos
@@ -9,116 +9,29 @@ Lo más recomendable es comenzar cargando todos los productos disponibles en vue
 
 ### Cargar tu primer producto
 
-+++ PHP SDK
+==- :icon-file-code: **Con PHP**
 
-Una vez hayas [instalado el SDK](/php-sdk/install), llama a [!badge variant="info" text="products()->ingest"](/php-sdk/products/add-products) con un objeto [!badge variant="info" text="ProductPayload"](/php-sdk/payloads/product-payload) como parámetro:
+Una vez hayas [instalado el SDK](/php-sdk/install), llama a [!badge variant="info" text="products()->ingest"](/php-sdk/products/add-products) con un objeto [!badge variant="info" text="ProductPayload"](/php-sdk/payloads/product-payload) como parámetro.
 
-```php
-use Biteral\Payload\Product\ProductPayload;
-use Biteral\Payload\Shared\PricePayload;
-use Biteral\Payload\Product\ProductAttributePayload;
-use Biteral\Payload\Brand\BrandPayload;
-use Biteral\Payload\Product\ProductCategoryPayload;
+[!ref icon="arrow-right" text="Cargar un producto con PHP"](/php-sdk/products/add-products)
 
-$product = $client->products()->ingest(
-    new ProductPayload([
-        'code' => 'N30122',
-        'title' => 'Zapatillas deportivas urbanas para hombre – modelo AirFlow',
-        'description' => 'Estas zapatillas combinan estilo y comodidad para el uso diario. Diseñadas con materiales transpirables, suela de goma antideslizante y plantilla ergonómica, son ideales tanto para caminar por la ciudad como para entrenar en interiores. El modelo AirFlow ofrece un ajuste perfecto y un diseño moderno que se adapta a cualquier look casual. Disponibles en varias tallas y colores.',
-        'attributes' => [
-            new ProductAttributePayload(['title' => 'Material', 'value' => 'Cuero']),
-            new ProductAttributePayload(['title' => 'Color', 'value' => 'Negro con acentos en gris']),
-            new ProductAttributePayload(['title' => 'Tallas disponibles', 'value' => '39, 40, 41, 42, 43, 44']),
-            new ProductAttributePayload(['title' => 'Suela', 'value' => 'Goma no-deslizante']),
-            new ProductAttributePayload(['title' => 'Peso', 'value' => '850g (par, talla 42)']),
-            new ProductAttributePayload(['title' => 'Uso recomendado', 'value' => 'Uso diario y entrenamiento suave'])
-        ],
-        'brand' => new BrandPayload(['code' => 'OW142302', 'name' => 'Nike']),
-        'category' => new ProductCategoryPayload([
-            'code' => 'MC418292',
-            'title' => 'Zapatillas deportivas',
-            'description' => 'Calzado diseñado para proporcionar comodidad, soporte y rendimiento en actividades físicas o deportivas. Estas zapatillas también son adecuadas para el uso urbano y diario gracias a sus diseños modernos y materiales versátiles. Cuentan con suelas antideslizantes, tejidos transpirables y estilos que combinan funcionalidad con moda.'
-        ]),
-        'price' => new PricePayload(['amount' => '49.95', 'currency' => 'EUR']),
-        'imageUrl' => 'https://m.media-amazon.com/images/I/61cELGQXXhL._AC_UL320_.jpg',
-        'url' => 'https://www.amazon.es/Hitmars-Zapatillas-Deportivas-Transpirables-Sneakers/dp/B0CYGMZVL7',
-        'metadata' => [
-            "videoUrl": "https://m.media-amazon.com/videos/C/dk14lkKlsnw._AC_UL1080_.mp4",
-            "currentDiscountRate": "50%",
-            "isNew": true,
-            "isFeatured": false
-        ]
-    ]);
-);
-```
-+++ API
+==- **![](/static/icons/technology/api.svg){width="18"} Con la API**
 
-Una vez hayas aprendido [cómo conectar con la API](/api/connect), haz una petición [!badge variant="success" text="POST"] al endpoint [!badge /products](/api/endpoints/products/post) con el JSON body:
+Una vez hayas aprendido [cómo conectar con la API](/api/connect), haz una petición [!badge variant="success" text="POST"] al endpoint [!badge /products](/api/endpoints/products/post)
 
-```json
-{
-    "code": "N30123",
-    "title": "Zapatillas deportivas urbanas para hombre – modelo AirFlow",
-    "description": "Estas zapatillas combinan estilo y comodidad para el uso diario. Diseñadas con materiales transpirables, suela de goma antideslizante y plantilla ergonómica, son ideales tanto para caminar por la ciudad como para entrenar en interiores. El modelo AirFlow ofrece un ajuste perfecto y un diseño moderno que se adapta a cualquier look casual. Disponibles en varias tallas y colores.",
-    "price": {
-        "amount": "49.95",
-        "currency": "EUR"
-    },
-    "attributes": [
-        {"title": "Material", "value": "Cuero"},
-        {"title": "Color", "value": "negro con detalles en gris"},
-        {"title": "Tallas disponibles", "value": "39, 40, 41, 42, 43, 44"},
-        {"title": "Suela", "value": "goma antideslizante"},
-        {"title": "Peso", "value": "850g (par, talla 42)"},
-        {"title": "Uso recomendado", "value": "Uso diario y entrenamiento ligero"}
-    ],
-    "brand": {
-        "code": "OW142302",
-        "name": "Nike"
-    },
-    "category": {
-        "code": "MC418292",
-        "title": "Zapatillas deportivas",
-        "description": "Calzado diseñado para ofrecer comodidad, soporte y rendimiento en actividades físicas o deportivas. Estas zapatillas también se adaptan al uso urbano y diario gracias a sus diseños modernos y materiales versátiles. Incluyen características como suelas antideslizantes, tejidos transpirables y estilos que combinan funcionalidad con moda."
-    },
-    "imageUrl": "https://m.media-amazon.com/images/I/61cELGQXXhL._AC_UL320_.jpg",
-    "url": "https://www.amazon.es/Hitmars-Zapatillas-Deportivas-Transpirables-Sneakers/dp/B0CYGMZVL7",
-    "metadata": {
-        "videoUrl": "https://m.media-amazon.com/videos/C/dk14lkKlsnw._AC_UL1080_.mp4",
-        "currentDiscountRate": "50%",
-        "isNew": true,
-        "isFeatured": false
-    }
-}
-```
-+++
+[!ref icon="arrow-right" text="Cargar un producto con la API"](/api/endpoints/products/post)
+==-
 
 ### Cargar muchos productos a la vez
 
 Al cargar todo vuestro catálogo, realizar una petición por cada producto sería muy lento. En su lugar, utiliza el método de carga masiva de productos:
 
-+++ PHP SDK
-El SDK permite realizar cargas masivas de productos de forma óptima, aquí encontrarás información sobre cómo hacerlo:
-
-[!button icon="arrow-right" variant="info" text="Carga masiva con el SDK"](/php-sdk/products/add-products-batch)
-+++ API
-Puedes cargar varios productos a la vez pasando un array de productos a la API, aquí encontrarás los detalles sobre cómo hacerlo:
-
-[!button icon="arrow-right" variant="info" text="Carga masiva con la API"](/api/endpoints/products/post/#cargar-varios-productos-a-la-vez)
-+++
-
-!!!
-Cuando cargas muchos productos a Biteral muy rápidamente, puede pasar un rato hasta que todos están disponibles para las herramientas de Biteral.
-!!!
+[!ref icon="arrow-right" text="Carga masiva con PHP"](/php-sdk/products/add-products-batch)
+[!ref icon="arrow-right" text="Carga masiva con la API"](/api/endpoints/products/post/#cargar-varios-productos-a-la-vez)
 
 ### Otras operaciones con productos
 
-+++ PHP SDK
-El SDK te permite realizar otras operaciones con productos, como modificarlos, desactivarlos o eliminarlos.
+También puedes realizar otras operaciones con productos, como modificarlos, desactivarlos o eliminarlos:
 
-[!button icon="arrow-right" variant="info" text="Otras operaciones con productos con el SDK"](/php-sdk/products/update-products)
-+++ API
-La API también te permite realizar otras operaciones con productos, como modificarlos, desactivarlos o eliminarlos.
-
-[!button icon="arrow-right" variant="info" text="Otras operaciones con productos con la API"](/api/endpoints/products/post)
-+++
+[!ref icon="arrow-right" text="Otras operaciones con productos con PHP"](/php-sdk/products/update-products)
+[!ref icon="arrow-right" text="Otras operaciones con productos con la API"](/api/endpoints/products/post)

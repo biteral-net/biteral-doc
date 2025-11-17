@@ -11,30 +11,34 @@ Si necesitas cargar muchos clientes en Biteral, llamar a [!badge variant="light"
 En su lugar, usa [!badge variant="light" text="customersBatchIngest()->ingest()"], que está diseñado específicamente para cargas masivas. Este método agrupa los clientes de forma óptima para maximizar la velocidad y reducir el riesgo de problemas relacionados con el uso de recursos. Mira cómo funciona:
 
 ```php
-// Obtén un ClientsBatchIngestService para poder reutilizarlo
-$clientsBatchIngestService = $client->clientsBatchIngest();
+// Obtén un objeto CustomersBatchIngestService para poder reutilizarlo
+$customersBatchIngestService = $client->customersBatchIngest();
 
 // Inicia una sesión de ingestión de clientes
-$clientsBatchIngestService->startIngestionSession();
+$customersBatchIngestService->startIngestionSession();
 
 // Recorre los clientes en un bucle tal como lo harías normalmente con tu base de datos
-while ($client = $query->getRow()) {
+while ($customer = $query->getRow()) {
 
-    // Crea un objeto ClientPayload tal como hacías al cargar clientes individualmente
-    $clientPayload =
-        new ClientPayload([
-            'code' => $client->getCode(),
-            'country' => $client->getCountry(),
-            'state' => $client->getState(),
-            'city' => $client->getCity(),
-            'yearBorn' => $client->getYearBorn(),
+    // Crea un objeto CustomerPayload tal como hacías al cargar clientes individualmente
+    $customerPayload =
+        new CustomerPayload([
+            'code' => $customer->getCode(),
+            'country' => $customer->getCountry(),
+            'state' => $customer->getState(),
+            'city' => $customer->getCity(),
+            'yearBorn' => $customer->getYearBorn(),
             [...]
         ]);
 
     // Envía el cliente para que sea cargado por bloques
-    $clientsBatchIngestService->ingest($clientPayload);
+    $customersBatchIngestService->ingest($customerPayload);
 }
 
 // Cuando el bucle haya terminado, no olvides cerrar la sesión de ingestión
-$batchIngestResult = $clientsBatchIngestService->finishIngestionSession();
+$batchIngestResult = $customersBatchIngestService->finishIngestionSession();
 ```
+
+!!!
+Cuando cargas muchos clientes a Biteral muy rápidamente, puede pasar un rato hasta que todos están disponibles para las herramientas de Biteral.
+!!!

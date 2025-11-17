@@ -7,7 +7,7 @@ icon: arrow-right
 
 Obtener un cliente.
 
-+++ Parámetros
++++ :icon-tasklist: Parámetros
 
 Especifica uno de estos dos parámetros para obtener un cliente a través de su código o de su Id en Biteral:
 
@@ -17,7 +17,7 @@ Especifica uno de estos dos parámetros para obtener un cliente a través de su 
 [!badge variant="warning" text="id"]
 : Identificador del cliente en Biteral, por ejemplo: `cus_C0fCLwecMysLj9`
 
-+++ Resultado
++++ :icon-project-roadmap: Resultado
 
 ```json
 {

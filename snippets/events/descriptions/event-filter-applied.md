@@ -1,0 +1,1 @@
+Se ha filtrado un listado de productos. Debe enviarse, por ejemplo, cuando el cliente especifica un filtro de productos por color, por precio, por material, etcétera.

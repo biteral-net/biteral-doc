@@ -7,7 +7,7 @@ icon: arrow-right
 
 Eliminar un producto.
 
-+++ Documentación
++++ :icon-tasklist: Parámetros
 Especifica uno de estos dos parámetros para eliminar un producto a través de su código o de su Id en Biteral:
 
 [!badge variant="warning" text="code"]

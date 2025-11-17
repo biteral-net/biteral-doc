@@ -7,7 +7,7 @@ order: 1000
 
 Obtiene información sobre el estado de la API y otros parámetros útiles como tus credenciales, la versión que estás utilizando y las versiones disponibles.
 
-+++ Resultado
++++ :icon-project-roadmap: Resultado
 ```json
 {
     "object": "status",

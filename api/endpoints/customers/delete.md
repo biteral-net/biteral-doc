@@ -7,7 +7,7 @@ icon: arrow-right
 
 Eliminar un cliente.
 
-+++ Documentación
++++ :icon-tasklist: Parámetros
 Especifica uno de estos dos parámetros para eliminar un cliente a través de su código o de su Id en Biteral:
 
 [!badge variant="warning" text="code"]

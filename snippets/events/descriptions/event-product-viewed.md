@@ -1,0 +1,1 @@
+Se ha visualizado la página donde se muestran los detalles sobre un producto en concreto.

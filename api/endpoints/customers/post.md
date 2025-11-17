@@ -7,7 +7,7 @@ icon: arrow-right
 
 Crear o modificar un cliente.
 
-+++ JSON request body
++++ :icon-project-roadmap: JSON request body
 
 ```json
 {
@@ -24,13 +24,13 @@ Crear o modificar un cliente.
 }
 ```
 
-+++ Documentación
++++ :icon-book: Documentación
 
 [!badge variant="danger" icon="lock" text="code"]
 : Código de cliente, por ejemplo `D314K1432` [!badge variant="light" icon="arrow-both" text="255"]
 
 [!badge variant="warning" text="isActive"]
-: Indica si el cliente está habilitado para ser utilizado por los servicios de Biteral, como recomendaciones, búsqueda o análisis. Si no se incluye este campo al enviar o actualizar el producto, se asume automáticamente que el cliente está activo `true`. Poner isActive a `false` permite mantener el cliente en el sistema sin que participe en ningún procesamiento o resultado de los servicios.
+: Indica si el cliente está habilitado para ser utilizado por los servicios de Biteral, como recomendaciones, búsqueda o análisis. Si no se incluye este campo al enviar o actualizar el cliente, se asume automáticamente que el cliente está activo `true`. Poner isActive a `false` permite mantener el cliente en el sistema sin que participe en ningún procesamiento o resultado de los servicios.
 
 [!badge variant="warning" text="country"]
 : País donde el cliente se ubica. Puede ser el nombre del país en inglés o en lengua nativa (por ejemplo, `España`), un código [ISO 3166-1 alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) (por ejemplo, `ESP`), un código [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) (por ejemplo, `ES`), un código [ISO 3166-1 numeric](https://en.wikipedia.org/wiki/ISO_3166-1_numeric) (por ejemplo, `724`) o un [WikiData ID](https://www.wikidata.org/wiki/Wikidata:Identifiers) (por ejemplo, `Q29`)
@@ -64,7 +64,7 @@ Para actualizar los datos sobre un cliente, realiza la misma petición `POST` a 
 
 Los datos que no especifiques mantendrán su valor anterior. Para eliminar un dato, pásalo como `null`
 
-### Cargar varios productos a la vez
+### Cargar varios clientes a la vez
 
 Puedes cargar los clientes uno a uno, pero es más rápido cargarlos en bloques. Para hacerlo, pasa los clientes en forma de un array, por ejemplo:
 
@@ -90,6 +90,10 @@ Puedes cargar los clientes uno a uno, pero es más rápido cargarlos en bloques.
 ]
 ```
 
-!!!secondary
+!!!
 Puedes cargar hasta 100 clientes a la vez utilizando este método
+!!!
+
+!!!
+Cuando cargas muchos clientes a Biteral muy rápidamente, puede pasar un rato hasta que todos están disponibles para las herramientas de Biteral.
 !!!

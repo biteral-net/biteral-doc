@@ -1,0 +1,1 @@
+Un objeto `DateTime` que indica el momento en el que se produjo el evento. Si no lo especificas, se utilizará el momento actual.

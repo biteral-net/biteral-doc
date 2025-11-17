@@ -1,0 +1,1 @@
+Se ha visualizado la página donde se muestran los productos de una marca en concreto.

@@ -1,0 +1,1 @@
+Vuestro código interno identificador del cliente. Debe coincidir con el que especificaste al añadir el cliente a Biteral. Por ejemplo: `JD934828`

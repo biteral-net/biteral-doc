@@ -1,0 +1,1 @@
+Se ha realizado una búsqueda de productos.

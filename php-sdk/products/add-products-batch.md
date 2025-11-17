@@ -11,7 +11,7 @@ Si necesitas cargar muchos productos en Biteral, llamar a [!badge variant="light
 En su lugar, usa [!badge variant="light" text="productsBatchIngest()->ingest()"], que está diseñado específicamente para cargas masivas. Este método agrupa los productos de forma óptima para maximizar la velocidad y reducir el riesgo de problemas relacionados con el uso de recursos. Mira cómo funciona:
 
 ```php
-// Obtén un ProductsBatchIngestService para poder reutilizarlo
+// Obtén un objeto ProductsBatchIngestService para poder reutilizarlo
 $productsBatchIngestService = $client->productsBatchIngest();
 
 // Inicia una sesión de ingestión de productos
@@ -35,3 +35,7 @@ while ($product = $query->getRow()) {
 // Cuando el bucle haya terminado, no olvides cerrar la sesión de ingestión
 $batchIngestResult = $productsBatchIngestService->finishIngestionSession();
 ```
+
+!!!
+Cuando cargas muchos productos a Biteral muy rápidamente, puede pasar un rato hasta que todos están disponibles para las herramientas de Biteral.
+!!!

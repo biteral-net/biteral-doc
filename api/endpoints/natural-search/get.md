@@ -7,7 +7,7 @@ icon: arrow-right
 
 Obtener una lista de productos que encajan con una búsqueda realizada en lenguage natural.
 
-+++ Parámetros
++++ :icon-tasklist: Parámetros
 
 [!badge variant="danger" icon="lock" text="query"]
 : La cadena escrita por el usuario para encontrar productos en lenguaje natural, por ejemplo `Un regalo para un aficionado a la cocina`
@@ -15,7 +15,7 @@ Obtener una lista de productos que encajan con una búsqueda realizada en lengua
 [!badge variant="warning" text="limit"]
 : Limita el número máximo de productos a obtener, por ejemplo `5`. Por defecto, se obtienen `10` productos como máximo.
 
-+++ Resultado
++++ :icon-project-roadmap: Resultado
 
 ```json
 {
