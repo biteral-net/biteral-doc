@@ -15,7 +15,7 @@ Llama a [!badge variant="info" text="customers()->ingest"](/php-sdk/customers/ad
 
 [!ref icon="arrow-right" text="Cargar un cliente con PHP"](/php-sdk/customers/add-customers)
 
-==- **![](/static/icons/technology/api.svg){width="18"} Con la API**
+==- **![](/static/icons/technology/api.svg){.custom-icon}{width="18"} Con la API**
 
 Haz una petición [!badge variant="success" text="POST"] al endpoint [!badge /customers](/api/endpoints/customers/post)
 

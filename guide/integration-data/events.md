@@ -15,7 +15,7 @@ Llama a [!badge variant="info" text="events()->ingest"](/php-sdk/events/send-eve
 
 [!ref icon="arrow-right" text="Enviar un evento con PHP"](/php-sdk/events/send-events)
 
-==- **![](/static/icons/technology/api.svg){width="18"} Con la API**
+==- **![](/static/icons/technology/api.svg){.custom-icon}{width="18"} Con la API**
 
 Haz una petición [!badge variant="success" text="POST"] al endpoint [!badge /events](/api/endpoints/events/post)
 

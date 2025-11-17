@@ -15,7 +15,7 @@ Una vez hayas [instalado el SDK](/php-sdk/install), llama a [!badge variant="inf
 
 [!ref icon="arrow-right" text="Cargar un producto con PHP"](/php-sdk/products/add-products)
 
-==- **![](/static/icons/technology/api.svg){width="18"} Con la API**
+==- **![](/static/icons/technology/api.svg){.custom-icon}{width="18"} Con la API**
 
 Una vez hayas aprendido [cómo conectar con la API](/api/connect), haz una petición [!badge variant="success" text="POST"] al endpoint [!badge /products](/api/endpoints/products/post)
 

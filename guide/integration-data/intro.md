@@ -15,11 +15,11 @@ En muchos casos, esta inmediatez es clave: por ejemplo, Biteral puede sugerir pr
 
 Éstos son los tres tipos de datos clave que debes enviar a Biteral:
 
-||| **![](/static/icons/product.svg){width="18"} Productos**
+||| **![](/static/icons/product.svg){.custom-icon}{width="18"} Productos**
 Los artículos que ofrecéis: nombre, descripción, precio, características, etc.
-||| **![](/static/icons/customer.svg){width="18"} Clientes**
+||| **![](/static/icons/customer.svg){.custom-icon}{width="18"} Clientes**
 Identificadores internos para el seguimiento de cada cliente: ubicación, tipo de cliente, etc.
-||| **![](/static/icons/event.svg){width="18"} Eventos**
+||| **![](/static/icons/event.svg){.custom-icon}{width="18"} Eventos**
 Acciones que los clientes realizan: visitas a productos, compras, añadir al carrito, etc.
 |||
 
@@ -27,7 +27,7 @@ Acciones que los clientes realizan: visitas a productos, compras, añadir al car
 
 ||| **:icon-file-code: SDK PHP**
 Si trabajas con PHP, te recomendamos utilizar el [SDK de Biteral para PHP](/php-sdk/install). Es la forma más sencilla, flexible y segura de integrar la plataforma.
-||| **![](/static/icons/technology/api.svg){width="18"} Api**
+||| **![](/static/icons/technology/api.svg){.custom-icon}{width="18"} Api**
 Utiliza la [API de Biteral](/api/connect) desde cualquier plataforma o lenguaje de programación conectando directamente.
 |||
 
