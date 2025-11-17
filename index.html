@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.10.0.816688988398">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.10.0.816689549172">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.10.0">
@@ -31,11 +31,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link href="/static/favicon.png" rel="icon">
-    <link href="/resources/css/retype.css?v=3.10.0.816688988398" rel="stylesheet">
+    <link href="/resources/css/retype.css?v=3.10.0.816689549172" rel="stylesheet">
 
-    <script data-cfasync="false" src="/resources/js/config.js?v=3.10.0.816688988398" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="/resources/js/config.js?v=3.10.0.816689549172" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="/resources/js/retype.js?v=3.10.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="/resources/js/lunr.js?v=3.10.0.816688988398" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="/resources/js/lunr.js?v=3.10.0.816689549172" data-turbo-eval="false" defer></script>
 
     <script>
         if (!window.localStorage.getItem('doc_theme')) {
@@ -227,28 +227,42 @@
     </h1>
 </doc-anchor-target>
 <p>Esta documentación está orientada a desarrolladores y describe los métodos disponibles para integrar Biteral en vuestro comercio electrónico. La integración se divide en dos pasos principales:</p>
-<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
-    <div class="flex items-center px-5 py-3 font-medium leading-snug text-gray-900 border-b border-gray-200 dark:border-dark-650 dark:text-white border-r">
-        <span><a href="/guide/integration-data/intro/" class="no-link inline-flex align-middle items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
-    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/></g></svg></span>
-    <span>Integración de datos</span>
-</a></span>
+<p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2">Integración de datos</span>
     </div>
-    <div class="flex items-center px-5 py-3 font-medium leading-snug text-gray-900 border-b border-gray-200 dark:border-dark-650 dark:text-white">
-        <span><a href="/guide/integration-tools/intro/" class="no-link inline-flex align-middle items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
-    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/></g></svg></span>
-    <span>Integración de herramientas</span>
-</a></span>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>/guide/integration-data/intro/</span>
     </div>
-    <div class="px-5 py-3 docs-columns-content border-r border-gray-200 dark:border-dark-650">
-<p>Envía los datos sobre vuestros productos y las acciones que realizan los clientes a Biteral mediante el método de integración que mejor se adapte a vuestro sistema.</p>
-<p>Procesamos los datos de productos, clientes y eventos tan pronto como los recibimos, lo que permite que las herramientas de Biteral ofrezcan resultados en tiempo real.</p>
-    </div>
-    <div class="px-5 py-3 docs-columns-content">
-<p>Integra las herramientas de Biteral como el <a href="https://biteral.net/natural-search">buscador natural</a>, las <a href="https://biteral.net/personalized-recommend">recomendaciones personalizadas</a>, el <a href="https://biteral.net/trend-analysis">análisis de tendencias</a> o las <a href="http://biteral.net/profile-tags">etiquetas de cliente</a> en vuestro sistema.</p>
-<p>Por ejemplo, con una simple petición a la API o una línea de código usando el SDK, podéis obtener productos recomendados para un cliente o los resultados de una búsqueda.</p>
-    </div>
+    <a href="/guide/integration-data/intro/" class="absolute block inset-0"></a>
 </div>
+</p>
+<blockquote>
+<p>Envía los datos sobre vuestros productos y las acciones que realizan los clientes a Biteral mediante el método de integración que mejor se adapte a vuestro sistema.
+Procesamos los datos de productos, clientes y eventos tan pronto como los recibimos, lo que permite que las herramientas de Biteral ofrezcan resultados en tiempo real.</p>
+</blockquote>
+<p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2">Integración de herramientas</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>/guide/integration-tools/intro/</span>
+    </div>
+    <a href="/guide/integration-tools/intro/" class="absolute block inset-0"></a>
+</div>
+</p>
+<blockquote>
+<p>Integra las herramientas de Biteral como el <a href="https://biteral.net/natural-search">buscador natural</a>, las <a href="https://biteral.net/personalized-recommend">recomendaciones personalizadas</a>, el <a href="https://biteral.net/trend-analysis">análisis de tendencias</a> o las <a href="http://biteral.net/profile-tags">etiquetas de cliente</a> en vuestro sistema.
+Por ejemplo, con una simple petición a la API o una línea de código usando el SDK, podéis obtener productos recomendados para un cliente o los resultados de una búsqueda.</p>
+</blockquote>
 
                                 
                                 <!-- Required only on API pages -->
