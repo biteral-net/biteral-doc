@@ -1,8 +1,3 @@
----
-label: Eventos
-order: 970
-icon: /static/icons/event.svg
----
 # ![](/static/icons/event.svg){width="40"} Integrar eventos
 
 Los eventos son las acciones que vuestros clientes realizan, y permiten a Biteral aprender cómo interactúan con vuestros productos. Por ejemplo, algunos de los eventos más importantes que Biteral recopila son la compra de productos, la navegación por vuestro catálogo o incluso las devoluciones.
@@ -11,7 +6,7 @@ Los eventos son las acciones que vuestros clientes realizan, y permiten a Bitera
 
 ==- :icon-file-code: **Con PHP**
 
-Llama a [!badge variant="info" text="events()->ingest"](/php-sdk/events/send-events) con uno de los [payloads de eventos](/php-sdk/payloads/events) disponibles que corresponda al evento que deseas enviar, por ejemplo: [!badge variant="info" text="EventSalePayload"](/php-sdk/payloads/events/event-sale-payload) como parámetro.
+Llama a [!badge variant="info" text="events()->ingest"](/php-sdk/events/send-events) con un objeto [!badge variant="info" text="EventPayload"](/php-sdk/payloads/event-payload) como parámetro. Consulta los [tipos de eventos disponibles](/guide/integration-data/events/types) para saber qué parametros adicionales debes añadir al objeto.
 
 [!ref icon="arrow-right" text="Enviar un evento con PHP"](/php-sdk/events/send-events)
 

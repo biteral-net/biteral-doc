@@ -1,1 +1,1 @@
-Un objeto `DateTime` que indica el momento en el que se produjo el evento. Si no lo especificas, se utilizará el momento actual.
+El momento en el que se produjo el evento. Si no lo especificas, se utilizará el momento actual. Al utilizar el SDK para PHP, un objeto `DateTimeImmutable`. Al utilizar la API, una cadena [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601).

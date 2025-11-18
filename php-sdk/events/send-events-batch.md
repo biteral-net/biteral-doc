@@ -22,22 +22,14 @@ $eventsBatchIngestService->startIngestionSession();
 // Recorre tus eventos pendientes por enviar en un bucle
 while ($event = $query->getRow()) {
 
-    /**
-     * Crea un objeto del tipo Payload que corresponda al evento que vas a enviar tal como hacías al
-     * cargar eventos individualmente
-     */
-    switch ($event->getType()) {
-
-        case 'sale':
-            $eventPayload =
-                new EventSalePayload([
-                    'timestamp' => new DateTime('@'.$event->getTimestamp()),
-                    'customerCode' => $event->getCustomerCode(),
-                    'productCode' => $event->getProductCode()
-                ]);
-            break;
-
-    }
+    // Crea un objeto EventPayload tal como hacías al cargar productos individualmente
+    $eventPayload =
+        new EventPayload([
+            'type' => $event->getType(),
+            'timestamp' => new DateTimeImmutable('@'.$event->getTimestamp()),
+            'customerCode' => $event->getCustomerCode(),
+            'productCode' => $event->getProductCode()
+        ]);
 
     // Envía el evento para que sea cargado por bloques
     $eventsBatchIngestService->ingest($eventPayload);
@@ -49,7 +41,9 @@ $batchIngestResult = $eventsBatchIngestService->finishIngestionSession();
 
 > Cuando envías los eventos en grupo, sí es imprescindible especificar `timestamp`, puesto que el momento en que envias el evento puede ser diferente al momento en que realmente se produjo.
 
-[!ref icon="arrow-right" text="Payloads de eventos disponibles"](/php-sdk/payloads/events)
+Recuerda que cada tipo `type` de evento requiere parámetros adicionales diferentes, consulta la guía de eventos disponibles para saber qué parametros debes añadir a cada tipo de evento:
+
+[!ref icon="arrow-right" text="Tipos de eventos disponibles"](/guide/integration-data/events/types)
 
 ### Ideas para recopilar los eventos en grupo
 
