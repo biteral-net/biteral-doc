@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.10.0.816689549172">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.10.0.816767688916">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.10.0">
@@ -31,12 +31,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link href="/static/favicon.png" rel="icon">
-    <link href="/resources/css/retype.css?v=3.10.0.816689549172" rel="stylesheet">
+    <link href="/resources/css/retype.css?v=3.10.0.816767688916" rel="stylesheet">
 
-    <script data-cfasync="false" src="/resources/js/config.js?v=3.10.0.816689549172" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="/resources/js/config.js?v=3.10.0.816767688916" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="/resources/js/retype.js?v=3.10.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="/resources/js/lunr.js?v=3.10.0.816689549172" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="/resources/js/prism.js?v=3.10.0.816689549172" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="/resources/js/lunr.js?v=3.10.0.816767688916" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="/resources/js/prism.js?v=3.10.0.816767688916" defer></script>
 
     <script>
         if (!window.localStorage.getItem('doc_theme')) {
@@ -248,7 +248,7 @@ de forma relativamente continuada, es necesario enviar los eventos en grupo.</p>
 </div>
 <p>Para enviar eventos en grupo, en lugar de utilizar <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-gray-700 dark:text-dark-600 bg-white border border-gray-300 dark:border-transparent h-6 px-2 text-xs rounded-md">
     <span>events()-&gt;ingest()</span>
-</span> cada vez que se produce un evento en vuestro sistema, utiliza algún mecanismo que recopile periódicamente los eventos en diferido y utiliza <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-gray-700 dark:text-dark-600 bg-white border border-gray-300 dark:border-transparent h-6 px-2 text-xs rounded-md">
+</span> cada vez que se produce un evento en vuestro sistema, utiliza algún mecanismo que recopile los eventos cuando se producen, y envíalos después en grupo cada poco tiempo o cuando hayas recopilado muchos, utilizando <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-gray-700 dark:text-dark-600 bg-white border border-gray-300 dark:border-transparent h-6 px-2 text-xs rounded-md">
     <span>eventsBatchIngest()-&gt;ingest()</span>
 </span>. Mira cómo funciona:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
@@ -261,22 +261,14 @@ $eventsBatchIngestService-&gt;startIngestionSession();
 // Recorre tus eventos pendientes por enviar en un bucle
 while ($event = $query-&gt;getRow()) {
 
-    /**
-     * Crea un objeto del tipo Payload que corresponda al evento que vas a enviar tal como hacías al
-     * cargar eventos individualmente
-     */
-    switch ($event-&gt;getType()) {
-
-        case 'sale':
-            $eventPayload =
-                new EventSalePayload([
-                    'timestamp' =&gt; new DateTime('@'.$event-&gt;getTimestamp()),
-                    'customerCode' =&gt; $event-&gt;getCustomerCode(),
-                    'productCode' =&gt; $event-&gt;getProductCode()
-                ]);
-            break;
-
-    }
+    // Crea un objeto EventPayload tal como hacías al cargar productos individualmente
+    $eventPayload =
+        new EventPayload([
+            'type' =&gt; $event-&gt;getType(),
+            'timestamp' =&gt; new DateTimeImmutable('@'.$event-&gt;getTimestamp()),
+            'customerCode' =&gt; $event-&gt;getCustomerCode(),
+            'productCode' =&gt; $event-&gt;getProductCode()
+        ]);
 
     // Envía el evento para que sea cargado por bloques
     $eventsBatchIngestService-&gt;ingest($eventPayload);
@@ -288,18 +280,19 @@ $batchIngestResult = $eventsBatchIngestService-&gt;finishIngestionSession();</co
 <blockquote>
 <p>Cuando envías los eventos en grupo, sí es imprescindible especificar <code v-pre>timestamp</code>, puesto que el momento en que envias el evento puede ser diferente al momento en que realmente se produjo.</p>
 </blockquote>
+<p>Recuerda que cada tipo <code v-pre>type</code> de evento requiere parámetros adicionales diferentes, consulta la guía de eventos disponibles para saber qué parametros debes añadir a cada tipo de evento:</p>
 <p>
 <div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
     <div class="flex items-center text-blue-500 dark:text-blue-400">
         <span class="inline-block mb-px">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/></svg>
         </span>
-        <span class="inline-block font-medium ml-2">Payloads de eventos disponibles</span>
+        <span class="inline-block font-medium ml-2">Tipos de eventos disponibles</span>
     </div>
     <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
-        <span>/php-sdk/payloads/events/</span>
+        <span>/guide/integration-data/events/types/</span>
     </div>
-    <a href="/php-sdk/payloads/events/" class="absolute block inset-0"></a>
+    <a href="/guide/integration-data/events/types/" class="absolute block inset-0"></a>
 </div>
 </p>
 <doc-anchor-target id="ideas-para-recopilar-los-eventos-en-grupo">
