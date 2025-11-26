@@ -20,4 +20,4 @@ Representa el estado actual de la API de Biteral, y además proporciona informac
 [!badge icon="screen-full" text="roles"]|array\<string\>|Los roles que posee la API key utilizada en esta petición a la API. Por ejemplo: `["ROLE_API_USER"]`.
 [!badge icon="screen-full" text="permissions"]|array\<string\>|Los permisos que posee la API key utilizada en esta petición a la API. Por ejemplo: `["all"]`.
 [!badge icon="screen-full" text="serverTime"]|DateTimeImmutable|La fecha y hora del servidor de API en el momento de realizar la petición. Por ejemplo: ` 2025-11-26T09:36:57+00:00`.
-[!badge icon="screen-full" text="environment"]|string|El entorno en el que está funcionando la API. Por ejemplo `production`
+[!badge icon="screen-full" text="environment"]|string|El entorno en el que está funcionando la API. Por ejemplo `prod`
